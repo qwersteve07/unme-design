@@ -1,0 +1,48 @@
+@import styles/variables
+
+.nav
+    display: flex
+    align-items: center
+    justify-content: space-between
+    font-family: "Crimson Text"
+    padding: 70px 0 130px
+
+    .logo
+        width: 120px
+
+    ul
+        display: flex
+        justify-content: space-between
+
+    li
+        list-style-type: none
+        padding: 10px
+        color: $white
+        margin: 0 22px
+
+    a
+        padding: 4px 8px
+        position: relative
+        color: $shallow-white
+        transition: 0.4s ease all
+
+        &::before
+            content: ""
+            position: absolute
+            width: 120%
+            height: 1px
+            background: $white
+            left: -10%
+            bottom: 0
+            opacity: 0
+            transform: translateY(10px)
+            transition: 0.4s ease all
+
+        &:hover
+            color: $white
+            transition: 0.4s ease all
+
+            &:before
+                opacity: 1
+                transform: translateY(0)
+                transition: 0.4s ease all

@@ -1,7 +1,27 @@
-import '../styles/globals.css'
+import App from "next/app";
+// add global css
+import "../styles/normalize.css";
+import "../styles/base.sass";
+import "../styles/variables.sass";
+import "@fortawesome/fontawesome-free/js/fontawesome";
+import "@fortawesome/fontawesome-free/js/solid";
+import "@fortawesome/fontawesome-free/js/regular";
+import "@fortawesome/fontawesome-free/js/brands";
 
-function MyApp({ Component, pageProps }) {
-  return <Component {...pageProps} />
-}
+// function MyApp({ Component, pageProps }) {
+//   return <Component {...pageProps} />;
+// }
 
-export default MyApp
+// Only uncomment this method if you have blocking data requirements for
+// every single page in your application. This disables the ability to
+// perform automatic static optimization, causing every page in your app to
+// be server-side rendered.
+//
+// MyApp.getInitialProps = async (appContext) => {
+//   // calls page's `getInitialProps` and fills `appProps.pageProps`
+//   const appProps = await App.getInitialProps(appContext);
+//
+//   return { ...appProps }
+// }
+
+export default App;
