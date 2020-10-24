@@ -1,7 +1,7 @@
 import React from "react";
 import styles from "projects/index.module.sass";
 import { useRouter } from "next/router";
-import Nav from "components/nav";
+import Nav from "../components/nav";
 
 const ProjectPost = () => {
   const router = useRouter();
