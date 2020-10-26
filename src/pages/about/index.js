@@ -1,6 +1,11 @@
 import React from "react";
 import styles from "pages/about/index.module.sass";
 import Nav from "components/nav";
+import Footer from "components/footer";
+import wolf from "images/wolf.jpg";
+import elephant from "images/elephant.jpg";
+import dog from "images/dog.jpg";
+import jellyfish from "images/jellyfish.jpg";
 
 const About = ({ memberData }) => {
   console.log(memberData);
@@ -35,13 +40,16 @@ const About = ({ memberData }) => {
             return (
               <div className={styles.member} key={name}>
                 <img src={image} alt="photo" />
-                <div className={styles.name}>{name}</div>
-                <div className={styles.titles}>{titles}</div>
+                <div className={styles.info}>
+                  <div className={styles.name}>{name}</div>
+                  <div className={styles.titles}>{titles}</div>
+                </div>
               </div>
             );
           })}
         </div>
       </div>
+      <Footer />
     </>
   );
 };
@@ -53,22 +61,22 @@ export async function getStaticProps() {
     {
       name: "Alpha",
       titles: "Founder",
-      image: "",
+      image: wolf,
     },
     {
       name: "Steve",
       titles: "Hentai",
-      image: "",
+      image: jellyfish,
     },
     {
       name: "vicky",
       titles: "Marketing",
-      image: "",
+      image: dog,
     },
     {
       name: "Nina",
       titles: "Designer",
-      image: "",
+      image: elephant,
     },
   ];
 

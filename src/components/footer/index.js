@@ -1,3 +1,4 @@
+import React from "react";
 import styles from "components/footer/index.module.sass";
 import logo from "images/logo-only.svg";
 

@@ -1,0 +1,65 @@
+@import styles/variables
+@import styles/extends
+
+.main
+    +globalPadding
+
+.intro
+    display: flex
+    align-items: flex-start
+
+.column
+    margin-right: 80px
+    flex: 1 0
+
+    &:last-of-type
+        margin: 0
+
+    .title
+        height: 75px
+        font-size: 18px
+        line-height: 1.5
+
+        &.quote
+            font-size: 20px
+            color: $unme-red
+            font-family: CrimsonText-Bold
+            font-style: italic
+
+    .desc
+        font-size: 16px
+        line-height: 2
+        font-weight: 300
+
+.team
+    margin: 100px 0 120px
+    display: flex
+
+.member
+    flex: 1 0
+    margin-right: 85px
+    position: relative
+
+    &::before
+        content: ""
+        position: absolute
+        top: 145px
+        left: 10px
+        width: 1px
+        height: 200px
+        background: $white
+
+    &:last-of-type
+        margin: 0
+
+.info
+    padding: 23px 30px
+    font-family: CrimsonText-Regular
+
+    .name
+        font-size: 20px
+        margin-bottom: 8px
+
+    .titles
+        font-size: 16px
+        color: $warm-grey
