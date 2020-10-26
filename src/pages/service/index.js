@@ -1,6 +1,6 @@
 import React from "react";
-import styles from "service/index.module.sass";
-import Nav from "../components/nav";
+import styles from "pages/service/index.module.sass";
+import Nav from "components/nav";
 
 const Service = () => {
   return (
