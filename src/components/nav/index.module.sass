@@ -5,7 +5,34 @@
     align-items: center
     justify-content: space-between
     font-family: "Crimson Text"
-    padding: 70px 85px 130px
+    height: 150px
+    padding: 0 85px
+    width: 100%
+    position: fixed
+    z-index: 10
+    box-sizing: border-box
+    background: $black
+    transition: all 0.4s ease
+    border-bottom: 1px solid $black
+
+    &::before
+        content: ""
+        position: absolute
+        left: 5vw
+        bottom: -1px
+        width: 90vw
+        height: 1px
+        background: transparent
+        transition: all 0.8s ease
+
+    &.fixed
+        height: 100px
+        padding: 35px 85px
+        transition: all 0.4s ease
+
+        &::before
+            background: rgba($white, 0.5)
+            transition: all 0.8s ease-in
 
     .logo
         width: 120px
@@ -46,3 +73,6 @@
                 opacity: 1
                 transform: translateY(0)
                 transition: 0.4s ease all
+
+.switcher
+    position: fixed

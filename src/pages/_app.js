@@ -10,7 +10,7 @@ import "@fortawesome/fontawesome-free/js/solid";
 import "@fortawesome/fontawesome-free/js/regular";
 import "@fortawesome/fontawesome-free/js/brands";
 
-function MyApp({ Component, pageProps }) {
+const MyApp = ({ Component, pageProps }) => {
   return (
     <>
       <Head>
@@ -23,12 +23,13 @@ function MyApp({ Component, pageProps }) {
           name="description"
           content="Web site created using create-react-app"
         />
+        <meta name="color-scheme" content="light" />
         <title>UNME DESIGN</title>
       </Head>
       <Component {...pageProps} />
     </>
   );
-}
+};
 
 MyApp.getInitialProps = async (appContext) => {
   const appProps = await App.getInitialProps(appContext);

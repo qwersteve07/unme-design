@@ -1,7 +1,14 @@
-=globalPadding
+=globalSidePadding
     padding-left: 80px
     padding-right: 80px
 
     @media screen and (max-width: 767px)
         padding-left: 50px
         padding-right: 50px
+
+=safeAreaPaddingBottom($paddingBottom)
+    @support (padding-bottom: constant(safe-area-inset-bottom))
+        padding-bottom: calc(constant(safe-area-inset-bottom) + $paddingBottom)
+
+    @support (padding-bottom: env(safe-area-inset-bottom))
+        padding-bottom: calc(env(safe-area-inset-bottom) + $paddingBottom)

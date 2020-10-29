@@ -2,7 +2,7 @@
 @import styles/extends
 
 .main
-    +globalPadding
+    +globalSidePadding
 
 .intro
     display: flex
@@ -64,17 +64,39 @@
         font-size: 16px
         color: $warm-grey
 
+.project
+    margin-bottom: 120px
+    position: relative
+
+    &::before
+        content: ""
+        position: absolute
+        left: 0
+        top: 0
+        background: $white
+        width: 75vw
+        height: calc(156px + 24vw)
+
+    .title
+        color: $black
+        font-size: 40px
+        padding: 70px 0 40px 200px
+        font-family: CrimsonText-Bold
+        position: relative
+
 .item
- 
     .image
-        overflow: hidden;
+        overflow: hidden
         height: 0
         padding-top: 60%
         position: relative
+        margin-bottom: 18px
+
         img
             position: absolute
             top: 0
             left: 0
+
     .tag
         margin-right: 10px
         border: 1px solid $unme-red
