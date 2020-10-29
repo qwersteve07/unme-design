@@ -1,0 +1,86 @@
+@import styles/variables
+
+.carousel
+    position: relative
+
+    .arrow.prev
+        top: calc(50% - 35px)
+        left: 32px
+
+    .arrow.next
+        top: calc(50% - 35px)
+        right: 32px
+
+    .carousel-wrapper
+        width: calc(100% - 168px)
+
+.container
+    overflow: hidden
+
+.list
+    display: flex
+    align-items: center
+    margin: 0
+    padding: 0
+
+.item
+    margin: 0 110px 0 0
+    list-style-type: none
+
+    &:hover
+        cursor: pointer
+
+.arrow
+    position: absolute
+    top: 70px
+    cursor: pointer
+    width: 40px
+    height: 40px
+    justify-content: center
+    align-items: center
+    display: none
+    border-radius: 50%
+
+    &.next
+        right: 6px
+
+    &.prev
+        left: 6px
+
+    &.show
+        display: flex
+
+    &.dark
+        background: rgba($black, 0.03)
+
+.indicator-container
+    margin: 33px 0 0
+    display: flex
+    justify-content: center
+    align-items: center
+
+.indicator
+    width: 6px
+    height: 6px
+    border-radius: 50%
+    margin: 0 4px
+    background: rgba($white, 0.5)
+
+    &.active
+        background: transparent
+        border: 1px solid $white
+
+    &.dark
+        background: rgba($black, 0.2)
+
+        &.active
+            background: transparent
+            border: 1px solid rgba($black, 0.2)
+
+@media (max-width: 767px)
+    .carousel
+        .carousel-wrapper
+            width: 100%
+
+        .carousel-ul
+            padding-left: calc(50% - 300px)

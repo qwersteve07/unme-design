@@ -1,3 +1,4 @@
+import dynamic from "next/dynamic";
 import React from "react";
 import styles from "pages/about/index.module.sass";
 import Nav from "components/nav";
@@ -6,9 +7,18 @@ import wolf from "images/wolf.jpg";
 import elephant from "images/elephant.jpg";
 import dog from "images/dog.jpg";
 import jellyfish from "images/jellyfish.jpg";
+import project01 from "images/project01.jpg";
+import project02 from "images/project02.jpg";
 
-const About = ({ memberData }) => {
-  console.log(memberData);
+const Carousel = dynamic(
+  () => {
+    return import("components/carousel");
+  },
+  { ssr: false }
+);
+
+const About = ({ memberData, projectsData }) => {
+  console.log(projectsData);
   return (
     <>
       <Nav />
@@ -49,6 +59,29 @@ const About = ({ memberData }) => {
           })}
         </div>
       </div>
+      <div className={styles.carousel}>
+        <Carousel
+          items={projectsData.map(({ image, tags, name }, key) => {
+            return (
+              <div className={styles.item} key={key}>
+                <div className={styles.image}>
+                  <img src={image} alt="project" />
+                </div>
+                <div className={styles.tags}>
+                  {tags.map((tag) => {
+                    return (
+                      <span key={tag} className={styles.tag}>
+                        {tag}
+                      </span>
+                    );
+                  })}
+                </div>
+                <div className={styles.name}>{name}</div>
+              </div>
+            );
+          })}
+        />
+      </div>
       <Footer />
     </>
   );
@@ -80,11 +113,45 @@ export async function getStaticProps() {
     },
   ];
 
+  const projectsData = await [
+    {
+      image: project01,
+      tags: ["Interior Design", "商空設計"],
+      name: "跪著聽音樂有限公司",
+    },
+    {
+      image: project02,
+      tags: ["CIS Design", "Logo Design"],
+      name: "GLAM IN BREEZE",
+    },
+    {
+      image: project01,
+      tags: ["Interior Design", "商空設計"],
+      name: "跪著聽音樂有限公司",
+    },
+    {
+      image: project02,
+      tags: ["CIS Design", "Logo Design"],
+      name: "GLAM IN BREEZE",
+    },
+    {
+      image: project01,
+      tags: ["Interior Design", "商空設計"],
+      name: "跪著聽音樂有限公司",
+    },
+    {
+      image: project02,
+      tags: ["CIS Design", "Logo Design"],
+      name: "GLAM IN BREEZE",
+    },
+  ];
+
   // By returning { props: posts }, the Blog component
   // will receive `posts` as a prop at build time
   return {
     props: {
       memberData,
+      projectsData,
     },
   };
 }

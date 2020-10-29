@@ -6,7 +6,7 @@ const Footer = () => {
   return (
     <div className={styles.footer}>
       <div className={styles.info}>
-        <img src={logo} alt />
+        <img src={logo} alt="logo" />
         <div className={styles.text}>
           <span>unme@unmedesign.co</span>
           <span>台北市中山區華陰街24巷3弄7號3F</span>
