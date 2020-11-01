@@ -1,6 +1,9 @@
-import React from "react";
-import App from "next/app";
+import React, { useEffect } from "react";
 import Head from "next/head";
+import localDataService from "service/local-data-service";
+import { Provider } from "react-redux";
+import { useStore } from "redux/store";
+
 // add global css
 import "styles/normalize.css";
 import "styles/base.sass";
@@ -10,7 +13,16 @@ import "@fortawesome/fontawesome-free/js/solid";
 import "@fortawesome/fontawesome-free/js/regular";
 import "@fortawesome/fontawesome-free/js/brands";
 
-const MyApp = ({ Component, pageProps }) => {
+const App = ({ Component, pageProps }) => {
+  const store = useStore(pageProps.initialState);
+
+  useEffect(() => {
+    const localTheme = localDataService.getTheme();
+    const preferDarkScheme = window.matchMedia("(prefers-color-scheme: light)");
+    if (localTheme === "light" || preferDarkScheme.matches) {
+      document.body.classList.add("light");
+    }
+  }, []);
   return (
     <>
       <Head>
@@ -26,15 +38,11 @@ const MyApp = ({ Component, pageProps }) => {
         <meta name="color-scheme" content="light" />
         <title>UNME DESIGN</title>
       </Head>
-      <Component {...pageProps} />
+      <Provider store={store}>
+        <Component {...pageProps} />
+      </Provider>
     </>
   );
 };
 
-MyApp.getInitialProps = async (appContext) => {
-  const appProps = await App.getInitialProps(appContext);
-  return { ...appProps };
-};
-
-// export default appWithTranslation(MyApp);
-export default MyApp;
+export default App;

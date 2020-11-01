@@ -13,12 +13,20 @@ const Footer = () => {
         </div>
       </div>
       <div className={styles.link}>
-        <span>
+        <a
+          href="https://www.facebook.com/UnMe.BrandDomain.Design"
+          target="_blank"
+          rel="noreferrer noopener"
+        >
           <i className="fab fa-facebook-f" />
-        </span>
-        <span>
+        </a>
+        <a
+          href="https://www.instagram.com/unme_design/"
+          target="_blank"
+          rel="noreferrer noopener"
+        >
           <i className="fab fa-instagram" />
-        </span>
+        </a>
       </div>
     </div>
   );

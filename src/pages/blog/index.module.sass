@@ -1,0 +1,73 @@
+@import styles/variables
+@import styles/extends
+
+.wrapper
+    display: grid
+    grid-template-columns: 35% 65%
+    grid-template-rows: 1fr
+    min-height: 100vh
+    width: 100%
+
+    +globalSidePadding
+
+.sidebar
+    color: var(--sub-color)
+    padding-right: 100px
+
+    .heading
+        padding: 14px 20px
+        background: var(--sub-color)
+        color: var(--main-color)
+
+    ul
+        padding: 10px 20px
+
+    li
+        padding: 10px 0
+
+.post
+    margin-bottom: 100px
+    color: var(--sub-color-third)
+
+    .thumbnail
+        +cropImage(40%)
+
+        cursor: pointer
+        margin-bottom: 30px
+
+        &::before
+            content: ""
+            height: 100%
+            width: 100%
+            background: linear-gradient(180deg, transparent 50%, rgba($black, 0.8))
+            position: absolute
+            z-index: 1
+            top: 0
+            left: 0
+
+    .info
+        position: absolute
+        z-index: 1
+        bottom: 36px
+        left: 26px
+
+        .catag
+            margin-bottom: 10px
+            color: $grey-warm
+
+        .title
+            font-size: 20px
+            color: $white
+
+    .desc
+        width: 80%
+        padding: 0 26px
+        line-height: 2
+
+    .sub-info
+        margin-top: 26px
+        padding: 0 26px
+        letter-spacing: 1px
+        display: flex
+        justify-content: space-between
+        align-items: center

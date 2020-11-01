@@ -1,0 +1,133 @@
+@import styles/variables
+@import styles/extends
+
+.project
+    display: flex
+    align-items: center
+    justify-content: space-between
+    margin-bottom: 230px
+
+    &.invert
+        flex-direction: row-reverse
+
+        .major
+            margin: 0 120px 0 0
+            text-align: right
+
+            .title .en
+                right: 0
+
+        .minor .intro
+            right: 0
+            left: 6%
+
+.filter-container
+    margin-bottom: 200px
+    display: flex
+    align-items: center
+
+    +globalSidePadding
+
+.filter
+    padding: 8px
+    margin-right: 35px
+    transition: 0.3s ease all
+    cursor: pointer
+    position: relative
+    color: var(--sub-color)
+    border: 1px solid transparent
+
+    &.active
+        color: var(--main-color)
+        transition: 0.3s ease all
+        background: var(--sub-color)
+
+    &:not(.active):hover
+        border: 1px solid var(--sub-color)
+
+        // color: $black-less
+
+        // background: $grey-light
+        transition: 0.3s ease all
+
+        .filter-sub
+            opacity: 1
+            transform: translateY(0)
+            transition: all ease 0.3s
+
+    .filter-sub
+        padding: 15px 0
+        color: var(--sub-color)
+        transition: all ease 0.3s
+        opacity: 0
+        transform: translateY(-15px)
+        position: absolute
+        top: 30px
+        left: 0
+
+    .sub
+        padding: 10px 0
+
+        &:hover
+            color: $unme-red
+
+.major
+    color: var(--sub-color)
+    flex: 1 0 calc(33.33% - 120px)
+    margin-left: 120px
+    box-sizing: border-box
+    position: relative
+
+    .title
+        margin-bottom: 30px
+        padding-top: 70px
+
+        .en
+            font-size: 70px
+            font-family: HindGuntur-Medium
+            letter-spacing: 7px
+            text-shadow: 0 0 30px var(--main-color)
+            position: absolute
+            top: 0
+            z-index: 1
+
+        .cn
+            font-size: 35px
+            letter-spacing: 4px
+
+    button
+        margin-top: 60px
+        font-size: 18px
+        padding: 15px 0
+        border-bottom: 1px solid var(--sub-color)
+        color: var(--sub-color)
+        letter-spacing: 2px
+
+.minor
+    flex: 1 0 66.66%
+    position: relative
+
+    .thumbnail
+        height: 0
+        padding-top: 60%
+        overflow: hidden
+        position: relative
+
+        img
+            position: absolute
+            top: 0
+            left: 0
+
+    .intro
+        position: absolute
+        bottom: -10%
+        right: 6%
+        width: 60%
+        background: $grey-light
+        padding: 36px 33px
+        line-height: 2
+        color: $black-less
+
+        .title
+            font-size: 18px
+            font-weight: bold

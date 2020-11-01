@@ -27,7 +27,6 @@
             font-style: italic
 
     .desc
-        font-size: 16px
         line-height: 2
         font-weight: 300
 
@@ -47,7 +46,7 @@
         left: 10px
         width: 1px
         height: 200px
-        background: $white
+        background: var(--sub-color)
 
     &:last-of-type
         margin: 0
@@ -61,10 +60,9 @@
         margin-bottom: 8px
 
     .titles
-        font-size: 16px
-        color: $warm-grey
+        color: $grey-warm
 
-.project
+.slider
     margin-bottom: 120px
     position: relative
 
@@ -73,12 +71,18 @@
         position: absolute
         left: 0
         top: 0
-        background: $white
+        background: var(--sub-color)
+
+        +themeTransition
+
         width: 75vw
         height: calc(156px + 24vw)
 
     .title
-        color: $black
+        color: var(--main-color)
+
+        +themeTransition
+
         font-size: 40px
         padding: 70px 0 40px 200px
         font-family: CrimsonText-Bold
@@ -97,15 +101,9 @@
             top: 0
             left: 0
 
-    .tag
-        margin-right: 10px
-        border: 1px solid $unme-red
-        padding: 8px
-        color: $unme-red
-        display: inline-block
-        font-size: 14px
-
     .name
         font-size: 18px
         margin-top: 14px
-        color: $white
+        color: var(--sub-color)
+
+        +themeTransition

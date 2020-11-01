@@ -2,10 +2,13 @@
 @import styles/extends
 
 .footer
-    border-top: 1px solid $black-blue
+    background: $grey-light-shallow
+    border-top: 1px solid $black-less
     padding-top: 40px
     padding-bottom: 45px
     font-size: 14px
+    color: $black-less
+
     +safeAreaPaddingBottom(45px)
     +globalSidePadding
 
@@ -20,6 +23,7 @@
     img
         width: 53px
         margin-right: 23px
+        filter: invert(1)
 
     .text
         display: flex
@@ -29,7 +33,7 @@
 .link
     display: flex
 
-    span
+    a
         position: relative
         overflow: hidden
         width: 40px

@@ -1,12 +1,28 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useLayoutEffect } from "react";
 import classnames from "classnames/bind";
+import { useSelector, useDispatch } from "react-redux";
 import Link from "next/link";
 import styles from "components/nav/index.module.sass";
 import logo from "images/logo.svg";
+import localDataService from "service/local-data-service";
+import { SET_DARK_MODE } from "redux/reducer/app";
 
 const Nav = () => {
   const cx = classnames.bind(styles);
   const [fixed, setFixed] = useState(false);
+  const state = useSelector((state) => state.appReducer);
+  const dispatch = useDispatch();
+  const setDarkMode = () => {
+    dispatch({
+      type: SET_DARK_MODE,
+      payload: localDataService.getTheme() !== "light",
+    });
+  };
+
+  useEffect(() => {
+    setDarkMode();
+  }, []);
+
   const navs = ["projects", "service", "about", "news", "blog", "contact"];
   const NavList = () => {
     return navs.map((nav) => {
@@ -39,22 +55,17 @@ const Nav = () => {
     fixed,
   });
 
+  const logoClass = cx({
+    logo: true,
+    "dark-mode": state.darkMode,
+  });
+
   const toggleTheme = () => {
-    if (window.matchMedia("(prefers-color-scheme)").media === "not all") {
-      return "";
-    }
-
-    let themeColor = document.querySelector('meta[name="color-scheme"]');
-    console.log(themeColor);
-    const darkModeOn = themeColor.content === "dark" ? true : false;
-    themeColor.content = darkModeOn ? "light" : "dark";
-
-    // const favicons = document.querySelectorAll('link[rel="icon"]');
-
-    // favicon
-    // favicons.forEach((link) => {
-    //   link.href = darkModeOn ? link.dataset.hrefDark : link.dataset.hrefLight;
-    // });
+    const bodyClass = document.body.classList;
+    const isDarkMode = !bodyClass.contains("light");
+    bodyClass.toggle("light");
+    localDataService.setTheme(isDarkMode ? "light" : "");
+    setDarkMode();
   };
 
   return (
@@ -62,7 +73,7 @@ const Nav = () => {
       <div className={styles.toggler} onClick={toggleTheme}>
         click me
       </div>
-      <div className={styles.logo}>
+      <div className={logoClass}>
         <Link href="/">
           <img src={logo} alt="logo" />
         </Link>

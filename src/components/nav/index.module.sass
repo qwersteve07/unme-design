@@ -1,4 +1,5 @@
 @import styles/variables
+@import styles/extends
 
 .nav
     display: flex
@@ -10,17 +11,16 @@
     width: 100%
     position: fixed
     z-index: 10
-    box-sizing: border-box
-    background: $black
-    transition: all 0.4s ease
-    border-bottom: 1px solid $black
+    background: var(--main-color)
+
+    +themeTransition
 
     &::before
         content: ""
         position: absolute
-        left: 5vw
+        left: 80px
         bottom: -1px
-        width: 90vw
+        width: calc(100vw - 160px)
         height: 1px
         background: transparent
         transition: all 0.8s ease
@@ -28,14 +28,20 @@
     &.fixed
         height: 100px
         padding: 35px 85px
-        transition: all 0.4s ease
+
+        +themeTransition
 
         &::before
-            background: rgba($white, 0.5)
+            background: var(--sub-color)
+            opacity: 0.5
             transition: all 0.8s ease-in
 
     .logo
         width: 120px
+        filter: invert(1)
+
+        &.dark-mode
+            filter: invert(0)
 
     ul
         display: flex
@@ -44,13 +50,12 @@
     li
         list-style-type: none
         padding: 10px
-        color: $white
         margin: 0 22px
 
     a
         padding: 4px 8px
         position: relative
-        color: $shallow-white
+        color: var(--sub-color-second)
         transition: 0.4s ease all
 
         &::before
@@ -58,7 +63,7 @@
             position: absolute
             width: 120%
             height: 1px
-            background: $white
+            background: var(--sub-color)
             left: -10%
             bottom: 0
             opacity: 0
@@ -66,7 +71,7 @@
             transition: 0.4s ease all
 
         &:hover
-            color: $white
+            color: var(--sub-color)
             transition: 0.4s ease all
 
             &:before
@@ -74,5 +79,7 @@
                 transform: translateY(0)
                 transition: 0.4s ease all
 
-.switcher
+.toggler
     position: fixed
+    right: 20px
+    top: 20px
