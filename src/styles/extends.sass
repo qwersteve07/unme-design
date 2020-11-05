@@ -1,17 +1,26 @@
+=hover
+    @media not all and (pointer: coarse)
+        &:hover
+            @content
+
 =globalSidePadding
     padding-left: 80px
     padding-right: 80px
 
     @media screen and (max-width: 767px)
-        padding-left: 50px
-        padding-right: 50px
+        padding-left: 25px
+        padding-right: 25px
 
-=safeAreaPaddingBottom($paddingBottom)
-    @support (padding-bottom: constant(safe-area-inset-bottom))
-        padding-bottom: calc(constant(safe-area-inset-bottom) + $paddingBottom)
+=globalMaxWidth
+    max-width: 1440px
+    margin: 0 auto
 
-    @support (padding-bottom: env(safe-area-inset-bottom))
-        padding-bottom: calc(env(safe-area-inset-bottom) + $paddingBottom)
+=safeAreaPaddingBottom($paddingBottom: 0px)
+    @supports (padding-bottom: constant(safe-area-inset-bottom))
+        padding-bottom: calc(constant(safe-area-inset-bottom) + #{$paddingBottom})
+
+    @supports (padding-bottom: env(safe-area-inset-bottom))
+        padding-bottom: calc(env(safe-area-inset-bottom) + #{$paddingBottom})
 
 =themeTransition
     transition: 0.4s ease all

@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import styles from "pages/blog/index.module.sass";
 import { useSelector } from "react-redux";
 import PageContainer from "components/page-container";
@@ -8,39 +8,54 @@ import post03 from "images/post/post03.jpg";
 import Link from "next/link";
 import Arrow from "components/arrow";
 
-const Blog = ({ postData }) => {
+const Posts = ({ data }) => {
   const state = useSelector((state) => state.appReducer);
+  const [hoverId, setHoverId] = useState("");
 
-  const Posts = () => {
-    return postData.map(
-      ({ thumbnail, catag, title, desc, createDate, author, id }, key) => {
-        return (
-          <div className={styles.post} key={key}>
-            <Link href={`/blog/${id}`}>
+  return data.map(
+    ({ thumbnail, catag, title, desc, createDate, author, id }, key) => {
+      const setMouseOver = (e) => {
+        if (e.currentTarget.id === id) setHoverId(id);
+      };
+      const setMouseLeave = () => setHoverId("");
+
+      return (
+        <div
+          className={styles.post}
+          key={key}
+          onMouseOver={setMouseOver}
+          onMouseLeave={setMouseLeave}
+          id={id}
+        >
+          <Link href={`/blog/${id}`}>
+            <div className={styles.top}>
+              <div className={styles.info}>
+                <div className={styles.catag}>/ {catag}</div>
+                <div className={styles.title}>{title}</div>
+              </div>
               <div className={styles.thumbnail}>
-                <div className={styles.info}>
-                  <div className={styles.catag}>/ {catag}</div>
-                  <div className={styles.title}>{title}</div>
-                </div>
                 <img src={thumbnail} alt="thumbnail" />
               </div>
-            </Link>
-            <div className={styles.desc}>{desc}</div>
-            <div className={styles["sub-info"]}>
-              <div>
-                {createDate} - by {author}
-              </div>
-              <div className={styles.readmore}>
-                <Link href={`/blog/${id}`}>
-                  <Arrow dark={state.darkMode} />
-                </Link>
-              </div>
+            </div>
+          </Link>
+          <div className={styles.desc}>{desc}</div>
+          <div className={styles["sub-info"]}>
+            <div>
+              {createDate} - by {author}
+            </div>
+            <div className={styles.readmore}>
+              <Link href={`/blog/${id}`}>
+                <Arrow dark={state.darkMode} hover={hoverId === id} />
+              </Link>
             </div>
           </div>
-        );
-      }
-    );
-  };
+        </div>
+      );
+    }
+  );
+};
+
+const Blog = ({ postData }) => {
   return (
     <PageContainer>
       <div className={styles.wrapper}>
@@ -54,7 +69,7 @@ const Blog = ({ postData }) => {
           </ul>
         </div>
         <div className={styles.blog}>
-          <Posts />
+          <Posts data={postData} />
         </div>
       </div>
     </PageContainer>

@@ -11,7 +11,6 @@ const PageContainer = ({ children }) => {
       <Footer />
     </>
   );
-  return;
 };
 
 export default PageContainer;

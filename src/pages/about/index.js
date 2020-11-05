@@ -42,7 +42,9 @@ const About = ({ memberData, projectsData }) => {
           {memberData.map(({ name, titles, image }) => {
             return (
               <div className={styles.member} key={name}>
-                <img src={image} alt="photo" />
+                <div className={styles.image}>
+                  <img src={image} alt="photo" />
+                </div>
                 <div className={styles.info}>
                   <div className={styles.name}>{name}</div>
                   <div className={styles.titles}>{titles}</div>

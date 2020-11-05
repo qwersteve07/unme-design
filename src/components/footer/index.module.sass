@@ -62,10 +62,28 @@
             transform: translateY(100%)
             transition: ease 0.4s all
 
-        &:hover
+        +hover
             color: $white
             transition: ease 0.4s all
 
             &:before
                 transform: translateY(0)
                 transition: ease 0.4s all
+
+@media (max-width: 767px)
+    .footer
+        flex-direction: column
+        align-items: flex-start
+        padding: 25px
+
+    .info
+        width: 100%
+        justify-content: space-between
+
+        .text
+            align-items: flex-end
+
+    .link
+        justify-content: flex-end
+        width: 100%
+        margin-top: 15px

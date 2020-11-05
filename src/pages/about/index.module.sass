@@ -3,6 +3,7 @@
 
 .main
     +globalSidePadding
+    +globalMaxWidth
 
 .intro
     display: flex
@@ -33,26 +34,31 @@
 .team
     margin: 100px 0 120px
     display: flex
+    flex-wrap: wrap
 
 .member
-    flex: 1 0
+    width: calc((100% - 255px) / 4)
     margin-right: 85px
     position: relative
 
     &::before
+        z-index: 1
         content: ""
         position: absolute
-        top: 145px
-        left: 10px
+        top: 30%
+        left: 15px
         width: 1px
-        height: 200px
+        height: 17vw
         background: var(--sub-color)
 
     &:last-of-type
         margin: 0
 
+.image
+    +cropImage(140%)
+
 .info
-    padding: 23px 30px
+    padding: 23px 35px
     font-family: CrimsonText-Regular
 
     .name
@@ -107,3 +113,47 @@
         color: var(--sub-color)
 
         +themeTransition
+
+@media (max-width: 1023px)
+    .member
+        width: calc((100% - 60px) / 4)
+        margin-right: 20px
+
+    .slider:before
+        width: 70vw
+
+@media (max-width: 767px)
+    .intro
+        flex-direction: column
+
+    .column
+        margin: 0 0 50px
+
+    .team
+        margin-bottom: 90px
+
+    .member
+        width: calc((100% - 20px) / 2)
+        margin-bottom: 35px
+
+        &:nth-of-type(2n)
+            margin-right: 0
+
+        &::before
+            top: 40%
+            height: 37vw
+
+    .info
+        display: flex
+        flex-direction: column
+        justify-content: center
+        align-items: center
+        padding: 10px 0
+
+    .slider
+        &:before
+            width: 50vw
+            height: calc((100vw - 50px) * 0.6 + 116px)
+
+        .title
+            padding: 35px 60px

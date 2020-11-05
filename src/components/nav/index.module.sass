@@ -2,24 +2,25 @@
 @import styles/extends
 
 .nav
+    position: relative
     display: flex
     align-items: center
     justify-content: space-between
     font-family: "Crimson Text"
     height: 150px
-    padding: 0 85px
     width: 100%
     position: fixed
     z-index: 10
     background: var(--main-color)
 
+    +globalSidePadding
     +themeTransition
 
     &::before
         content: ""
         position: absolute
         left: 80px
-        bottom: -1px
+        bottom: 0
         width: calc(100vw - 160px)
         height: 1px
         background: transparent
@@ -36,16 +37,9 @@
             opacity: 0.5
             transition: all 0.8s ease-in
 
-    .logo
-        width: 120px
-        filter: invert(1)
-
-        &.dark-mode
-            filter: invert(0)
-
-    ul
-        display: flex
-        justify-content: space-between
+.menu
+    display: flex
+    justify-content: space-between
 
     li
         list-style-type: none
@@ -70,16 +64,116 @@
             transform: translateY(10px)
             transition: 0.4s ease all
 
-        &:hover
+        +hover
             color: var(--sub-color)
             transition: 0.4s ease all
 
             &:before
                 opacity: 1
                 transform: translateY(0)
-                transition: 0.4s ease all
+                    transition: 0.4s ease all
+
+.logo
+    width: 115px
+    filter: invert(1)
+    display: flex
+    justify-content: center
+    &.dark-mode
+        filter: invert(0)
 
 .toggler
-    position: fixed
-    right: 20px
-    top: 20px
+    position: absolute
+    right: 38px
+    top: calc(50% - 14px)
+    height: 20px
+    width: 20px
+    background-image: url("../../images/sun.png")
+    background-size: cover
+
+    &.dark-mode
+        background-image: url("../../images/moon.png")
+.hamburger
+    display: none
+
+@media (max-width: 1040px)
+    .nav
+        li
+            margin: 0 10px
+
+@media (max-width: 991px)
+    .nav
+        li
+            margin: 0
+
+@media (max-width: 767px)
+    .nav
+        height: 60px
+
+        &::before
+            width: calc(100vw - 40px)
+            left: 20px
+
+        &.fixed
+            height: 60px
+            padding: 0 25px
+
+    .menu
+        pointer-events: none
+        opacity: 0
+        position: fixed
+        top: 0
+        left: 0
+        width: 100%
+        height: calc(var(--vh) * 100)
+        transition: 0.4s ease all
+        flex-direction: column
+        justify-content: center
+        align-items: center
+        +safeAreaPaddingBottom
+
+        &.open
+            pointer-events: inherit
+            opacity: 1
+            transition: 0.4s ease all
+            @supports (backdrop-filter: blur(15px))
+                backdrop-filter: blur(15px);
+            @supports not(backdrop-filter: blur(15px))
+                &::before
+                    content: ''
+                    position: absolute
+                    top: 0
+                    left: 0
+                    background: var(--main-color)
+                    filter: blur(10px);
+                    width: 100%
+                    height: 100%
+        li
+            font-size: 20px
+            padding: 20px 0
+            letter-spacing: 1px
+                
+    .logo
+        width: 80px
+
+    .toggler
+        top: calc(50% - 10px)
+        right: 80px
+
+    .hamburger
+        display: inherit
+        position: absolute
+        top: 22px
+        right: 33px
+        width: 20px
+        height: 15px
+        border-top: 1px solid var(--sub-color)
+        border-bottom: 1px solid var(--sub-color)
+
+        &:before
+            content: ""
+            position: absolute
+            top: 6px
+            width: 20px
+            height: 1px
+            background: var(--sub-color)
+            left: 0

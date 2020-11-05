@@ -1,6 +1,5 @@
 import React, { useState, useEffect, useCallback } from "react";
 import styles from "components/carousel/index.module.sass";
-import classnames from "classnames/bind";
 import UseDeviceType from "utils/useDeviceType";
 
 const Carousel = ({ items }) => {
@@ -12,6 +11,7 @@ const Carousel = ({ items }) => {
   const [direction, setDirection] = useState("");
   const [isMoving, setIsMoving] = useState(false);
   const [dragImage, setDragImage] = useState(null);
+  const [itemWidth, setItemWidth] = useState(0);
 
   useEffect(() => {
     const img = new Image();
@@ -32,23 +32,6 @@ const Carousel = ({ items }) => {
       });
     };
   }, []);
-
-  //   change item count through deviceType hook
-  //   useEffect(() => {
-  //     switch (deviceType) {
-  //       case "desktop":
-  //         setItemCount(3);
-  //         break;
-  //       case "pad":
-  //         setItemCount(2);
-  //         break;
-  //       case "mobile":
-  //         setItemCount(1);
-  //         break;
-  //       default:
-  //         break;
-  //     }
-  //   }, [deviceType]);
 
   useEffect(() => {
     if (isMoving) {
@@ -113,6 +96,7 @@ const Carousel = ({ items }) => {
       setPointMove(result);
     }
   };
+
   const touchEnd = () => {
     if (Math.abs(pointMove) > window.innerWidth / 5) {
       if (pointMove > 0) {
@@ -156,35 +140,32 @@ const Carousel = ({ items }) => {
     setDirection("");
   };
 
-  const itemWidth = useCallback(() => {
-    let width;
-    width = window.innerWidth / 2.5;
-    // if (itemCount === 1) {
-    //   width = window.innerWidth - 40;
-    // } else {
-    //   // offset width, need adjsut
-    // }
-    return width;
-  }, [itemCount]);
+  useEffect(() => {
+    const resizeItemWidth = () => {
+      let width;
+
+      if (deviceType === "mobile") {
+        width = window.innerWidth - 50;
+      } else {
+        width = window.innerWidth / 2.5;
+      }
+      setItemWidth(width);
+    };
+    resizeItemWidth();
+
+    window.addEventListener("resize", resizeItemWidth);
+    return () => {
+      window.removeEventListener("resize", resizeItemWidth);
+    };
+  }, [deviceType]);
 
   const ulOffset = useCallback(() => {
-    let width = itemWidth() + 110;
-    let offset = window.innerWidth < 767 ? 15 : 200;
-    // let margin = 0;
-    // if (window.innerWidth > 767) {
-    //   margin = 84;
+    let itemMargin = 110;
+    let width = itemWidth + itemMargin;
+    let offset = deviceType === "mobile" ? 25 : 200;
 
-    //   if (window.innerWidth <= 767) {
-    //     margin = window.innerWidth - 600 / 2;
-    //   }
-    //   if (items.length === 1) {
-    //     offset = window.innerWidth / 2 - width / 2 - margin;
-    //   } else if (items.length === 2) {
-    //     offset = window.innerWidth / 2 - width - margin;
-    //   }
-    // }
     return -(index * width * itemCount + pointMove) + offset;
-  }, [itemCount, pointMove, index, itemWidth, items.length]);
+  }, [itemCount, pointMove, index, itemWidth]);
 
   return (
     <div className={styles.carousel}>
@@ -206,7 +187,7 @@ const Carousel = ({ items }) => {
               <li
                 key={i}
                 className={styles.item}
-                style={{ flex: `0 0 ${itemWidth()}px` }}
+                style={{ flex: `0 0 ${itemWidth}px` }}
                 onTouchStart={touchStart}
                 onTouchMove={touchMove}
                 onTouchEnd={touchEnd}

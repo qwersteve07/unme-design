@@ -16,6 +16,7 @@ import "@fortawesome/fontawesome-free/js/brands";
 const App = ({ Component, pageProps }) => {
   const store = useStore(pageProps.initialState);
 
+  // set mode
   useEffect(() => {
     const localTheme = localDataService.getTheme();
     const preferDarkScheme = window.matchMedia("(prefers-color-scheme: light)");
@@ -23,6 +24,22 @@ const App = ({ Component, pageProps }) => {
       document.body.classList.add("light");
     }
   }, []);
+
+  // set init css variable
+  useEffect(() => {
+    let h = window.innerHeight * 0.01;
+    document.documentElement.style.setProperty("--vh", `${h}px`);
+
+    const onResize = () => {
+      let h = window.innerHeight * 0.01;
+      document.documentElement.style.setProperty("--vh", `${h}px`);
+    };
+    window.addEventListener("resize", onResize);
+    return () => {
+      window.removeEventListener("resize", onResize);
+    };
+  }, []);
+
   return (
     <>
       <Head>

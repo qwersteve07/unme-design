@@ -1,4 +1,9 @@
-import React, { useState, useEffect, useLayoutEffect } from "react";
+import React, { useState, useEffect } from "react";
+import {
+  disableBodyScroll,
+  enableBodyScroll,
+  clearAllBodyScrollLocks,
+} from "body-scroll-lock";
 import classnames from "classnames/bind";
 import { useSelector, useDispatch } from "react-redux";
 import Link from "next/link";
@@ -10,8 +15,10 @@ import { SET_DARK_MODE } from "redux/reducer/app";
 const Nav = () => {
   const cx = classnames.bind(styles);
   const [fixed, setFixed] = useState(false);
+  const [menuOpen, setMenuOpen] = useState(false);
   const state = useSelector((state) => state.appReducer);
   const dispatch = useDispatch();
+
   const setDarkMode = () => {
     dispatch({
       type: SET_DARK_MODE,
@@ -22,6 +29,19 @@ const Nav = () => {
   useEffect(() => {
     setDarkMode();
   }, []);
+
+  // body scroll lock when open menu
+  useEffect(() => {
+    let body = document.body;
+    if (menuOpen) {
+      disableBodyScroll(body);
+    } else {
+      enableBodyScroll(body);
+    }
+    return () => {
+      clearAllBodyScrollLocks();
+    };
+  }, [menuOpen]);
 
   const navs = ["projects", "service", "about", "news", "blog", "contact"];
   const NavList = () => {
@@ -68,19 +88,40 @@ const Nav = () => {
     setDarkMode();
   };
 
+  useEffect(() => {
+    document.addEventListener("colorschemechange", (e) => {
+      console.log(`Color scheme changed to ${e.detail.colorScheme}.`);
+    });
+  }, []);
+
+  const togglerClass = cx({
+    toggler: true,
+    "dark-mode": state.darkMode,
+  });
+
+  const menuClass = cx({
+    menu: true,
+    open: menuOpen,
+  });
+
+  const setNav = () => {
+    setMenuOpen(!menuOpen);
+  };
+
   return (
     <nav className={navClass}>
-      <div className={styles.toggler} onClick={toggleTheme}>
-        click me
+      <div className={togglerClass} onClick={toggleTheme}>
+        <div className={styles.icon} />
       </div>
       <div className={logoClass}>
         <Link href="/">
           <img src={logo} alt="logo" />
         </Link>
       </div>
-      <ul>
+      <ul className={menuClass}>
         <NavList />
       </ul>
+      <div className={styles.hamburger} onClick={setNav} />
     </nav>
   );
 };
