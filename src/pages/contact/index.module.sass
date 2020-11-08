@@ -1,0 +1,78 @@
+@import styles/variables
+@import styles/extends
+
+.contact
+    +globalSidePadding
+
+.desc
+    margin-bottom: 20px
+
+.form
+    fieldset
+        margin-top: 20px
+        display: flex
+        align-items: center
+
+        &:first-of-type
+            margin: 0
+
+        &.select
+            position: relative
+
+            &::before
+                content: ""
+                width: 15px
+                height: 15px
+                border-top: 1px solid var(--sub-color-second)
+                border-right: 1px solid var(--sub-color-second)
+                transform: rotate(135deg)
+                position: absolute
+                left: 530px
+                top: 8px
+
+    label
+        width: 150px
+        display: inline-block
+        width: 10 0px
+
+    input
+        appearance: none
+        color: var(--sub-color)
+        height: 40px
+        padding: 0 8px
+        border-radius: 0
+        border: 0
+        width: 400px
+        outline: 0
+        border-bottom: 1px solid var(--sub-color-second)
+        background: transparent
+        transition: all 0.2s ease
+
+        &:place-holder
+            color: var(--sub-color-third)
+
+        &:focus
+            transition: all 0.2s ease
+            border-bottom-color: var(--sub-color)
+
+        &:-webkit-autofill
+            background: var(--main-color)
+
+    select
+        appearance: none
+        border: 0
+        padding: 8px
+
+        &::before
+            content: "efef"
+
+        &:focus
+            outline: none
+
+    textarea
+        padding: 8px
+        line-height: 1.5
+        width: 400px
+        border: 1px solid var(--sub-color)
+
+    button
