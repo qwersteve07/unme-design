@@ -3,6 +3,7 @@ import Head from "next/head";
 import localDataService from "service/local-data-service";
 import { Provider } from "react-redux";
 import { useStore } from "redux/store";
+import emailjs from "emailjs-com";
 
 // add global css
 import "styles/normalize.css";
@@ -15,6 +16,10 @@ import "@fortawesome/fontawesome-free/js/brands";
 
 const App = ({ Component, pageProps }) => {
   const store = useStore(pageProps.initialState);
+
+  useEffect(() => {
+    emailjs.init("unme");
+  }, []);
 
   // set mode
   useEffect(() => {
@@ -54,6 +59,7 @@ const App = ({ Component, pageProps }) => {
         />
         <meta name="color-scheme" content="light" />
         <title>UNME DESIGN</title>
+        <script src="https://smtpjs.com/v3/smtp.js" />
       </Head>
       <Provider store={store}>
         <Component {...pageProps} />
