@@ -2,17 +2,26 @@ import React, { useEffect, useState } from "react";
 import styles from "components/arrow/index.module.sass";
 import classnames from "classnames/bind";
 
-const Arrow = ({ dark = false, hover = false }) => {
-  const [arrowHover, setArrowHover] = useState(hover);
+const Arrow = ({
+  dark = false,
+  hoverState = false,
+  hoverWithContainer = false,
+  text = "readmore",
+  onClick,
+}) => {
   const cx = classnames.bind(styles);
+  const [arrowHover, setArrowHover] = useState(hoverState);
 
   useEffect(() => {
-    setArrowHover(hover);
-  }, [hover]);
+    if (hoverWithContainer) {
+      setArrowHover(hoverState);
+    }
+  }, [hoverState]);
 
   const containerClass = cx({
     container: true,
     hover: arrowHover,
+    hoverWithContainer,
   });
   const arrowClass = cx({
     arrow: true,
@@ -20,9 +29,9 @@ const Arrow = ({ dark = false, hover = false }) => {
   });
 
   return (
-    <div className={containerClass}>
+    <div className={containerClass} onClick={onClick}>
       <div className={arrowClass}>
-        <span>readmore</span>
+        <span>{text}</span>
       </div>
     </div>
   );

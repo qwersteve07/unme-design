@@ -7,13 +7,17 @@
     padding-left: 80px
     padding-right: 80px
 
-    @media screen and (max-width: 767px)
+    +mobileStyle
         padding-left: 25px
         padding-right: 25px
 
 =globalMaxWidth
     max-width: 1440px
     margin: 0 auto
+
+=gloabalContentStyle
+    line-height: 2
+    font-weight: 300
 
 =safeAreaPaddingBottom($paddingBottom: 0px)
     @supports (padding-bottom: constant(safe-area-inset-bottom))
@@ -35,3 +39,11 @@
         position: absolute
         top: 0
         left: 0
+
+=padStyle
+    @media screen and (max-width: 1023px)
+        @content
+
+=mobileStyle
+    @media screen and (max-width: 767px)
+         @content

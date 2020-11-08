@@ -16,6 +16,7 @@ body
     color: var(--sub-color)
     --main-color: #{$black}
     --main-color-second: #{$black-less}
+    --main-color-third: #{$black-middle}
     --sub-color: #{$white}
     --sub-color-second: #{$white-less}
     --sub-color-third: #{$grey-warm}
@@ -23,11 +24,12 @@ body
     &.light
         --main-color: #{$white}
         --main-color-second: #{$white-less}
+        --main-color-third: #{$white-middle}
         --sub-color: #{$black}
         --sub-color-second: #{$black-less}
         --sub-color-third: #{$grey-dark}
 
-    @media (max-width: 767px)
+    +mobileStyle
         font-size: 14px
 
 // hide scrollbar
@@ -61,3 +63,4 @@ li
 fieldset
     padding: 0
     border: 0
+    margin: 0
