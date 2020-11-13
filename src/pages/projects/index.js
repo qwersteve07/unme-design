@@ -10,40 +10,23 @@ import soundShine from "images/projects/soundshine01.jpg";
 import voicetube from "images/projects/voicetube01.jpg";
 import dongyei from "images/projects/dongyei01.jpg";
 import yogibo from "images/projects/yogibo01.jpg";
-import { SET_FILTER } from "redux/reducer/projects";
+import { SET_FILTER, SET_SUB_FILTER } from "redux/reducer/projects";
 
 const Projects = ({ projectsData, moreData }) => {
   const cx = classnames.bind(styles);
   const state = useSelector((state) => state.projectsReducer);
   const dispatch = useDispatch();
   const setFilter = (id) => dispatch({ type: SET_FILTER, payload: id });
+  const setSubFilter = (id) => dispatch({ type: SET_SUB_FILTER, payload: id });
 
-  return (
-    <PageContainer>
+  const Filter = () => {
+    return (
       <div className={styles["filter-container"]}>
         {state.filters.map((filter) => {
           const filterClass = cx({
             filter: true,
             active: state.currentFilter === filter.id,
           });
-
-          const FilterSubs = ({ data }) => {
-            return (
-              <ul className={styles["filter-sub"]}>
-                {filter.subs.map((sub) => {
-                  const subClass = cx({
-                    sub: true,
-                    active: state.currentSubFilter === sub.id,
-                  });
-                  return (
-                    <div className={subClass} key={sub.id}>
-                      - {sub.name}
-                    </div>
-                  );
-                })}
-              </ul>
-            );
-          };
 
           return (
             <div
@@ -52,11 +35,40 @@ const Projects = ({ projectsData, moreData }) => {
               onClick={() => setFilter(filter.id)}
             >
               {filter.name}
-              {filter.subs && <FilterSubs data={filter.subs} />}
             </div>
           );
         })}
       </div>
+    );
+  };
+
+  const SubFilter = () => {
+    return (
+      <ul className={styles["sub-filter-container"]}>
+        {state.subFilters.map((filter) => {
+          console.log(state.currentSubFilter);
+          const subFilterClass = cx({
+            "sub-filter": true,
+            active: state.currentSubFilter === filter.id,
+          });
+          return (
+            <div
+              className={subFilterClass}
+              key={filter.id}
+              onClick={() => setSubFilter(filter.id)}
+            >
+              {filter.name}
+            </div>
+          );
+        })}
+      </ul>
+    );
+  };
+
+  return (
+    <PageContainer>
+      <Filter />
+      <SubFilter />
       <div className={styles.projects}>
         {projectsData.map(
           ({ titleEn, titleCn, tags, thumbnail, intro, pathname }, key) => {
@@ -174,11 +186,13 @@ export async function getStaticProps() {
 
   const moreData = [
     {
+      id: "service",
       title: "Our Service",
       desc: "深入了解0-4維度的設計規劃，以及專案服務的流程",
       path: "/service",
     },
     {
+      id: "contact",
       title: "Contact Us",
       desc:
         "歡迎分享更多關於你的事情，讓我們與你一同探索出企業的獨特性，陪伴品牌一同成長。",

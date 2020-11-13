@@ -22,13 +22,63 @@
             left: 6%
 
 .filter-container
-    margin-bottom: 200px
+    margin-bottom: 50px
     display: flex
     align-items: center
 
     +globalSidePadding
 
 .filter
+    padding: 8px
+    margin-right: 35px
+    transition: 0.3s ease all
+    cursor: pointer
+    position: relative
+    color: var(--sub-color)
+    border: 1px solid transparent
+
+    &.active
+        color: var(--main-color)
+        transition: 0.3s ease all
+        background: var(--sub-color)
+
+    &:not(.active):hover
+        border: 1px solid var(--sub-color)
+
+        // color: $black-less
+
+        // background: $grey-light
+        transition: 0.3s ease all
+
+        .filter-sub
+            opacity: 1
+            transform: translateY(0)
+            transition: all ease 0.3s
+
+    .filter-sub
+        padding: 15px 0
+        color: var(--sub-color)
+        transition: all ease 0.3s
+        opacity: 0
+        transform: translateY(-15px)
+        position: absolute
+        top: 30px
+        left: 0
+
+    .sub
+        padding: 10px 0
+
+        &:hover
+            color: $unme-red
+
+.sub-filter-container
+    margin-bottom: 200px
+    display: flex
+    align-items: center
+
+    +globalSidePadding
+
+.sub-filter
     padding: 8px
     margin-right: 35px
     transition: 0.3s ease all
@@ -131,3 +181,31 @@
         .title
             font-size: 18px
             font-weight: bold
+
++padStyle
+    .project.invert
+        .major
+            margin: 0 50px 0 0
+
+        .minor .intro
+            right: 0
+            left: 0
+
+    .major
+        margin-left: 50px
+
+        .title
+            margin-bottom: 20px
+            padding-top: 50px
+
+            .en
+                font-size: 40px
+
+            .cn
+                font-size: 20px
+
+    .minor
+        .intro
+            bottom: -15%
+            right: 0
+            width: 80%

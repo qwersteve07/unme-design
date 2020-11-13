@@ -4,6 +4,7 @@ import {
   enableBodyScroll,
   clearAllBodyScrollLocks,
 } from "body-scroll-lock";
+import { useRouter } from "next/router";
 import classnames from "classnames/bind";
 import { useSelector, useDispatch } from "react-redux";
 import Link from "next/link";
@@ -13,6 +14,7 @@ import localDataService from "service/local-data-service";
 import { SET_DARK_MODE } from "redux/reducer/app";
 
 const Nav = () => {
+  const router = useRouter();
   const cx = classnames.bind(styles);
   const [fixed, setFixed] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
@@ -46,8 +48,11 @@ const Nav = () => {
   const navs = ["projects", "service", "about", "news", "blog", "contact"];
   const NavList = () => {
     return navs.map((nav) => {
+      const liClass = cx({
+        active: router.pathname.replace("/", "") === nav,
+      });
       return (
-        <li key={nav}>
+        <li key={nav} className={liClass}>
           <Link href={`/${nav}`} as={`/${nav}`}>
             <a>{nav}</a>
           </Link>
@@ -56,6 +61,7 @@ const Nav = () => {
     });
   };
 
+  // fixed top style
   useEffect(() => {
     const handleScroll = () => {
       if (window.scrollY > 30) {

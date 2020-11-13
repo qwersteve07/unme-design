@@ -45,7 +45,11 @@ const Posts = ({ data }) => {
             </div>
             <div className={styles.readmore}>
               <Link href={`/blog/${id}`}>
-                <Arrow dark={state.darkMode} hover={hoverId === id} />
+                <Arrow
+                  dark={state.darkMode}
+                  hoverState={hoverId === id}
+                  hoverWithContainer={true}
+                />
               </Link>
             </div>
           </div>

@@ -45,20 +45,29 @@
         list-style-type: none
         padding: 10px
         margin: 0 22px
+        &.active
+            a
+                color: var(--sub-color)
+                &:before
+                    opacity: 1
+                    transform: translateY(0)
+                +hover
+                    color: var(--sub-color)
+
 
     a
         padding: 4px 8px
         position: relative
-        color: var(--sub-color-second)
+        color: var(--sub-color-third)
         transition: 0.4s ease all
 
         &::before
             content: ""
             position: absolute
-            width: 120%
+            width: 100%
             height: 1px
             background: var(--sub-color)
-            left: -10%
+            left: 0
             bottom: 0
             opacity: 0
             transform: translateY(10px)
@@ -71,7 +80,7 @@
             &:before
                 opacity: 1
                 transform: translateY(0)
-                    transition: 0.4s ease all
+                transition: 0.4s ease all
 
 .logo
     width: 115px
