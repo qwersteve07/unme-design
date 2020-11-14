@@ -51,6 +51,7 @@ thumbnail: '/projects/yogibo-xinyi/yogibo-xinyi01.jpg'
 這次的信義店設計，我們刻意將整體的視覺高度降低，減少壓迫感。並針對周圍環境營造不同區域的功能性，藉此提高與其他櫃位的「互動性」將人流導入櫃位中，產生更多的人流效果。
 
 </section>
+
 <section>
 
 ## 空間設計
@@ -58,6 +59,7 @@ thumbnail: '/projects/yogibo-xinyi/yogibo-xinyi01.jpg'
 櫃位風格上，我們撇除上一代的白綠風格。將設計的線條、精緻度柔化並提高，並針對其餘傢具品牌做市場調查，刻意跳脫出黃藍搭配的趣味空間，針對時尚、年輕的媽咪族群與 10 歲以下的孩童喜好，量身打造未來的 Yogibo 品牌空間。
 
 </section>
+
 <section>
 
 ## 品牌設計
