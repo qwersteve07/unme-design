@@ -9,7 +9,7 @@ import ReactMarkdown from "react-markdown/with-html";
 import PageContainer from "components/page-container";
 import UseIntersect from "utils/useIntersect";
 
-const Post = ({ content }) => {
+const Post = ({ data, content }) => {
   const cx = classnames.bind(styles);
   const [init, setInit] = useState(false);
 
@@ -47,10 +47,30 @@ const Post = ({ content }) => {
     init,
   });
 
+  const Title = () => {
+    if (!data.titleEn) return data.titleCn;
+    if (!data.titleCn) return data.titleEn;
+    return `${data.titleEn} | ${data.titleCn}`;
+  };
+
   return (
     <PageContainer>
       <div className={postClass}>
-        <ReactMarkdown allowDangerousHtml source={content} />
+        <article>
+          <header>
+            <img src={data.thumbnail} alt="first-image" />
+            <h1>
+              <Title />
+            </h1>
+            <h2>{data.define}</h2>
+            <p>
+              <b>{data.contain}</b>
+            </p>
+            <p>{data.description}</p>
+          </header>
+          <hr />
+          <ReactMarkdown allowDangerousHtml source={content} />
+        </article>
       </div>
     </PageContainer>
   );
@@ -74,10 +94,11 @@ export const getStaticProps = async ({ params: { id } }) => {
   const markdownWithMetadata = fs.readFileSync(
     path.join(PROJECT_CONTENT_PATH, id + ".md").toString()
   );
-  const { content } = matter(markdownWithMetadata);
+  const { data, content } = matter(markdownWithMetadata);
 
   return {
     props: {
+      data,
       content,
     },
   };

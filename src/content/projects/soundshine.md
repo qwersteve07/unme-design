@@ -2,33 +2,15 @@
 titleEn: SOUNDSHINE
 titleCn: 軒言文創
 tags: ["Space Branding Design", "品牌空間設計"]
-define: 企業形象整體規劃｜品牌空間設計
-sub: 理念規劃 ｜ 品牌標誌設計 | 品牌理念溝通 | 相關延伸物設計 | 品牌識別相關諮詢
+define: 企業形象整體規劃 ｜ 品牌空間設計
 description: "運用空間設計、品牌設計、品牌顧問的能力，一次性規劃新創公司初期的每個「品牌接觸點」，讓TA的情緒張力產生共鳴，藉此分享企業該有的品牌願景，是我們一直想呈現的設計整合方式。"
 thumbnail: "/projects/soundshine/soundshine01.jpg"
+contain: 理念規劃 ｜ 品牌標誌設計 ｜ 品牌理念溝通 ｜ 相關延伸物設計 ｜ 品牌識別相關諮詢
 ---
-
-<article>
-
-<header>
-
-<img alt="soundShine01" src="/projects/soundshine/soundshine01.jpg" />
-
-# SOUNDSHINE | 軒言文創
-
-## 企業形象整體規劃 & 品牌空間設計
-
-**理念規劃 ｜ 品牌標誌設計 ｜ 品牌理念溝通 ｜ 相關延伸物設計 ｜ 品牌識別相關諮詢**
-
-運用空間設計、品牌設計、品牌顧問的能力，一次性規劃新創公司初期的每個「品牌接觸點」，讓 TA 的情緒張力產生共鳴，藉此分享企業該有的品牌願景，是我們一直想呈現的設計整合方式。
-
----
-
-</header>
 
 <section>
 
-## BRAND CONNECT ｜品牌是種人生旅途，層層堆疊的堅持才有精彩的靈魂　
+## BRAND CONNECT ｜ 品牌是種人生旅途，層層堆疊的堅持才有精彩的靈魂　
 
 從尋找辦公室地點，並同步討論 Logo 本身所代表的涵意，都由 UnMe Design 一手包辦。
 
@@ -43,6 +25,8 @@ thumbnail: "/projects/soundshine/soundshine01.jpg"
 在完成品牌設計、辦公空間設計規劃的一年後。如今我們也成軒言文創的品牌形象顧問，讓初始參與公司創立的我們，一同軒言的新夥伴，重新將使用者經驗與設計思維導入企業形象中。用設計與心理學，一同打造能夠讓社會更好的企業目標。
 
 </section>
+
+<section>
 
 <img alt="soundShine02" data-src="/projects/soundshine/soundshine02.jpg" />
 <img alt="soundShine03" data-src="/projects/soundshine/soundshine03.jpg" />
@@ -67,4 +51,4 @@ thumbnail: "/projects/soundshine/soundshine01.jpg"
 <img alt="soundShine22" data-src="/projects/soundshine/soundshine22.jpg" />
 <img alt="soundShine23" data-src="/projects/soundshine/soundshine23.jpg" />
 
-</article>
+</section>

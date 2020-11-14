@@ -1,30 +1,13 @@
 ---
 titleEn: YOGIBO
 titleCn: 信義店
-tags: ['Interior Design','商空設計']
-define: 懶骨頭沙發品牌｜百貨專櫃設計
+tags: ['Interior Design','專櫃設計']
+define: 懶骨頭沙發品牌 ｜ 百貨專櫃設計
 description: '今年的信義專櫃，我們協助Yogibo進入品牌空間的第二個階段：影響力。  
 過往執行的Yogibo台茂、新竹、桃園、台南、台中的多點專櫃長期規劃後，我們利用在不同點為上的佈局與工程規劃，開始鎖定在消費者行為與多彩產品下的專櫃風格創造，來創造專屬「悠式生活」的品牌空間。'
 thumbnail: '/projects/yogibo-xinyi/yogibo-xinyi01.jpg'
+contain: 櫃位設計 ｜ 視覺設計 ｜ 風格定位 ｜ 市場調查分析 ｜ 動線行為規劃 ｜ 產品陳列優化
 ---
-
-<article>
-
-<header>
-
-<img alt="yogibo-xinyi01" src="/projects/yogibo-xinyi/yogibo-xinyi01.jpg" />
-
-# YOGIBO | 信義店
-
-## 懶骨頭沙發品牌｜百貨專櫃設計
-
-**櫃位設計 ｜ 視覺設計 ｜ 風格定位 ｜ 市場調查分析 ｜ 動線行為規劃 ｜ 產品陳列優化**
-
-如何打造從美國來的懶骨頭品牌，使其符合亞洲文化的喜好。是我們針對 Yogibo 在地深化階段，於專櫃設計中希望達成的目標。
-
----
-
-</header>
 
 <section>
 
@@ -68,6 +51,8 @@ thumbnail: '/projects/yogibo-xinyi/yogibo-xinyi01.jpg'
 
 </section>
 
+<section>
+
 <img alt="yogibo-xinyi02" data-src="/projects/yogibo-xinyi/yogibo-xinyi02.jpg"/>
 <img alt="yogibo-xinyi03" data-src="/projects/yogibo-xinyi/yogibo-xinyi03.jpg"/>
 <img alt="yogibo-xinyi04" data-src="/projects/yogibo-xinyi/yogibo-xinyi04.jpg"/>
@@ -82,4 +67,4 @@ thumbnail: '/projects/yogibo-xinyi/yogibo-xinyi01.jpg'
 <img alt="yogibo-xinyi13" data-src="/projects/yogibo-xinyi/yogibo-xinyi13.jpg"/>
 <img alt="yogibo-xinyi14" data-src="/projects/yogibo-xinyi/yogibo-xinyi14.jpg"/>
 
-</article>
+</section>

@@ -4,7 +4,6 @@ import classnames from "classnames/bind";
 import { useSelector } from "react-redux";
 import validator from "validator";
 import PageContainer from "components/page-container";
-import useResize from "utils/useResize";
 import emailjs from "emailjs-com";
 import Arrow from "components/arrow";
 
@@ -15,42 +14,52 @@ const Contact = () => {
   const [email, setEmail] = useState("");
   const [phone, setPhone] = useState("");
   const [elseContact, setElseContact] = useState("");
-  const [textareaWidth, setTextareaWidth] = useState();
+  const [startDate, setStartDate] = useState("");
+  const [endDate, setEndDate] = useState("");
   const state = useSelector((state) => state.appReducer);
 
-  const [caseType, setCaseType] = useState("brand-domain-design");
+  const [caseType, setCaseType] = useState("domain-design");
   const [comment, setComment] = useState("");
   const [nameInputError, setNameInputError] = useState(false);
   const [emailInputError, setEmailInputError] = useState(false);
   const [errorMessage, setErrorMessage] = useState("");
   const [successMessage, setSuccessMessage] = useState("");
 
-  const textareaWidthCalc = () => {
-    if (window.innerWidth < 768) {
-      setTextareaWidth(window.innerWidth - 50);
-    } else {
-      setTextareaWidth(window.innerWidth - 160);
-    }
-  };
-
-  useResize(textareaWidthCalc);
-
+  console.log();
   const caseData = [
     {
-      key: "brand-domain-design",
-      value: "Brand Domain Design 品牌空間設計",
+      name: "維度專案 Domain Projects",
+      data: [
+        {
+          key: "domain-design",
+          value: "Domain Design｜維度設計合作",
+        },
+        {
+          key: "consulting-and-cooperation",
+          value: "Consulting and Cooperation｜顧問諮詢與合作",
+        },
+        {
+          key: "Social-enterprise-projects",
+          value: "Social Enterprise Projects｜社會企業專案申請",
+        },
+      ],
     },
     {
-      key: "interior-design",
-      value: "Interior Design 空間規劃設計",
-    },
-    {
-      key: "idendity-design",
-      value: "Idendity Design 品牌識別設計",
-    },
-    {
-      key: "consulting-cooperation",
-      value: "Consulting and Cooperation 顧問諮詢與合作",
+      name: "設計專案 Design Projects",
+      data: [
+        {
+          key: "web-design",
+          value: "Web Design｜品牌網站設計",
+        },
+        {
+          key: "idendity-design",
+          value: "Idendity Design｜品牌識別設計",
+        },
+        {
+          key: "space-branding-design",
+          value: "Space Branding Design｜品牌空間設計",
+        },
+      ],
     },
   ];
 
@@ -78,8 +87,13 @@ const Contact = () => {
       email,
       phone,
       elseContact,
-      caseType: caseData.find((x) => x.key === caseType).value,
+      caseType: caseData
+        .map((data) => data.data)
+        .flat()
+        .find((x) => x.key === caseType).value,
       comment,
+      startDate,
+      endDate,
     };
 
     let serviceId = "unme";
@@ -121,13 +135,11 @@ const Contact = () => {
 
   return (
     <PageContainer>
-      <div className={styles.contact}>
-        <div className={styles.desc}>
-          非我設計運用斜槓與創新的技能，將一切內部作業線上化，
-          省下的空間經營成本，讓夥伴吃得更胖，合作CP值變高！
-          <br />
-          要找我們開會？去你那喝杯咖啡吧！或是找家咖啡廳吧！
-        </div>
+      <main className={styles.contact}>
+        <h1>UnMe Design｜Dots makes brand happen</h1>
+        <p className={styles.desc}>
+          聯繫非我設計的維度動物們，運用設計堆疊出品牌的獨特樣貌！
+        </p>
         <form className={styles.form}>
           <fieldset>
             <label htmlFor="name">稱呼</label>
@@ -184,30 +196,52 @@ const Contact = () => {
               id="else"
               type="text"
               value={elseContact}
-              placeholder="ex. LINE: unme"
+              placeholder="Line id、FB"
               onChange={(e) => setElseContact(e.target.value)}
             />
           </fieldset>
           <fieldset className={styles.select}>
             <label htmlFor="caseType">案件類型</label>
             <select id="caseType" onChange={(e) => setCaseType(e.target.value)}>
-              {caseData.map((data) => {
+              {caseData.map((groupData) => {
                 return (
-                  <option key={data.key} value={data.key}>
-                    {data.value}
-                  </option>
+                  <optgroup label={groupData.name} key={groupData.name}>
+                    {groupData.data.map((data) => {
+                      return (
+                        <option key={data.key} value={data.key}>
+                          {data.value}
+                        </option>
+                      );
+                    })}
+                  </optgroup>
                 );
               })}
             </select>
           </fieldset>
           <fieldset>
+            <label htmlFor="start_date">預計開案日期</label>
+            <input
+              id="start_date"
+              type="date"
+              value={startDate}
+              onChange={(e) => {
+                console.log(e.target.value);
+                setStartDate(e.target.value);
+              }}
+            />
+          </fieldset>
+          <fieldset>
+            <label htmlFor="end_date">預計完成日期</label>
+            <input
+              id="end_date"
+              type="date"
+              value={endDate}
+              onChange={(e) => setEndDate(e.target.value)}
+            />
+          </fieldset>
+          <fieldset>
             <label htmlFor="comment">關於我們即將來臨的合作...</label>
             <textarea
-              style={{
-                width: textareaWidth,
-                maxWidth: textareaWidth,
-                minWidth: textareaWidth,
-              }}
               id="comment"
               rows="5"
               width="360"
@@ -227,7 +261,7 @@ const Contact = () => {
             />
           </div>
         </form>
-      </div>
+      </main>
     </PageContainer>
   );
 };

@@ -1,26 +1,6 @@
 @import styles/variables
 @import styles/extends
 
-.project
-    display: flex
-    align-items: center
-    justify-content: space-between
-    margin-bottom: 230px
-
-    &.invert
-        flex-direction: row-reverse
-
-        .major
-            margin: 0 120px 0 0
-            text-align: right
-
-            .title .en
-                right: 0
-
-        .minor .intro
-            right: 0
-            left: 6%
-
 .filter-container
     margin-bottom: 50px
     display: flex
@@ -121,25 +101,42 @@
         &:hover
             color: $unme-red
 
-.major
-    color: var(--sub-color)
-    flex: 1 0 calc(33.33% - 120px)
-    margin-left: 120px
-    box-sizing: border-box
+.item
+    display: flex
+    align-items: center
+    justify-content: flex-end
     position: relative
+    margin: 0 -80px 230px
+
+    &.invert
+        justify-content: flex-start
+
+        .info
+            right: 120px
+            left: inherit
+            text-align: right
+
+            .title .en
+                right: 0
+
+        .image .intro
+            right: 0
+            left: 6%
+
+.info
+    position: absolute
+    z-index: 1
+    top: 20%
+    left: 120px
+    width: 40%
+    color: var(--sub-color)
 
     .title
         margin-bottom: 30px
-        padding-top: 70px
-
-        .en
-            font-size: 70px
-            font-family: HindGuntur-Medium
-            letter-spacing: 7px
-            text-shadow: 0 0 30px var(--main-color)
-            position: absolute
-            top: 0
-            z-index: 1
+        font-family: HindGuntur-Medium
+        letter-spacing: 7px
+        text-shadow: 0 0 30px var(--main-color)
+        font-size: 70px
 
         .cn
             font-size: 35px
@@ -153,8 +150,8 @@
         color: var(--sub-color)
         letter-spacing: 2px
 
-.minor
-    flex: 1 0 66.66%
+.image
+    width: 60%
     position: relative
 
     .thumbnail
@@ -193,7 +190,7 @@
                 filter: blur(0)
                 transition: 1.5s ease all
 
-            h1, h2, p, hr, img
+            h1, h2, p, img
                 opacity: 1
                 transform: translateY(0)
 
@@ -206,9 +203,9 @@
             p
                 transition: 1s ease all 0.9s
 
-            hr
-                opacity: 0.5
-                transition: 1s ease all 1.2s
+        hr
+            opacity: 0.5
+            transition: 1s ease all 1.2s
 
         section
             opacity: 1
@@ -224,7 +221,7 @@
             filter: blur(15px)
             opacity: 0
 
-        h1, h2, p, hr
+        h1, h2, p
             transform: translateY(-15px)
             opacity: 0
 
@@ -242,16 +239,19 @@
             letter-spacing: 5px
             font-size: 27px
 
-        hr
-            height: 1px
-            width: 40%
-            margin: 140px auto
-            background: linear-gradient(to left, transparent 0%, var(--sub-color-third) 15%, var(--sub-color-third) 85%, transparent 100%)
-            border: 0
+    hr
+        height: 1px
+        width: 40%
+        margin: 140px auto
+        background: linear-gradient(to left, transparent 0%, var(--sub-color-third) 15%, var(--sub-color-third) 85%, transparent 100%)
+        border: 0
+        transform: translateY(-15px)
+        opacity: 0
 
     section
         margin-bottom: 100px
         opacity: 0
+    
 
     h2
         letter-spacing: 2px
@@ -272,34 +272,68 @@
             width: 100%
             opacity: 0
             transform: scale(0.85)
+    ul
+        margin-left: 25px
+    li
+        list-style-type: inherit
+    iframe
+        position: absolute
+        top: 0;
+        left: 0
+        width: 100%
+        height: 100%
 
 +padStyle
-    .project.invert
-        .major
-            margin: 0 50px 0 0
+    .item
+        margin-bottom: 260px
+        &.invert
+            .info
+                right: 60px
+            .image .intro
+                right: 0
+                left: 0
 
-        .minor .intro
-            right: 0
-            left: 0
-
-    .major
-        margin-left: 50px
-
+    .info
+        left: 60px
         .title
-            margin-bottom: 20px
-            padding-top: 50px
-
-            .en
-                font-size: 40px
+            font-size: 40px
 
             .cn
                 font-size: 20px
 
-    .minor
+    .image
+        width: 65%
         .intro
-            bottom: -15%
+            bottom: -40%
             right: 0
-            width: 80%
+            width: 90%
+
+
++mobileStyle
+    .item
+        flex-direction: column-reverse
+        margin: 0 auto 100px
+        align-items: inherit;
+        &.invert
+            .info
+                text-align: left
+        .info
+            position: static
+            width: auto
+            .title
+                font-size: 25px
+                letter-spacing: 3px
+                margin: 20px 0
+            button
+                margin: 0
+        .image
+            width: auto
+            margin: 0 -25px
+            .intro
+                display: none
+
+
+
 
     // post
     .post

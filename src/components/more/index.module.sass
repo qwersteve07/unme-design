@@ -1,31 +1,52 @@
 @import styles/variables
+@import styles/extends
 
 .container
     display: flex
     height: 320px
 
-    .more
-        width: 50%
-        background: $grey-light-shallow
-        padding: 0 80px
-        position: relative
-        color: $black-less
-        cursor: pointer
+.more
+    flex: 1 1 50%
+    background: $grey-light-shallow
+    padding: 0 80px
+    position: relative
+    color: $black-less
+    cursor: pointer
+    transition: 0.4s ease all
+
+    &:hover
+        background: $grey-light
         transition: 0.4s ease all
 
-        &:hover
-            background: $grey-light
-            transition: 0.4s ease all
+.title
+    font-family: CrimsonText-SemiBold
+    font-size: 30px
+    padding: 70px 0 40px
 
-        .title
-            font-family: CrimsonText-SemiBold
-            font-size: 30px
-            padding: 70px 0 40px
+.desc
+    line-height: 2
 
-        .desc
-            line-height: 2
+.readmore
+    position: absolute
+    right: 100px
+    bottom: 75px
 
-        .readmore
-            position: absolute
-            right: 100px
-            bottom: 75px
++padStyle
+    .readmore
+        bottom: 40px
+
+
++mobileStyle
+    .container
+        height: auto
+        flex-direction: column
+
+    .more
+        padding: 40px 40px 80px
+
+    .title
+        padding: 0 0 20px
+
+    .readmore
+        right: 40px
+        bottom: 25px
