@@ -2,6 +2,11 @@
 @import styles/extends
 
 .page-container
+    min-height: calc(var(--vh) * 100 - 128px )
+
+    +globalMaxWidth
+    +globalSidePadding
+
     padding-top: 250px
 
 +mobileStyle

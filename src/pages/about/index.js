@@ -13,9 +13,29 @@ import project02 from "images/project02.jpg";
 const Carousel = dynamic(() => import("components/carousel"), { ssr: false });
 
 const About = ({ memberData, projectsData }) => {
+  const Slider = () => {
+    return (
+      <div className={styles.slider}>
+        <div className={styles["title"]}>Projects</div>
+        <Carousel
+          items={projectsData.map(({ image, tags, name }, key) => {
+            return (
+              <div className={styles.item} key={key}>
+                <div className={styles.image}>
+                  <img src={image} alt="project" />
+                </div>
+                <Tags data={tags} />
+                <div className={styles.name}>{name}</div>
+              </div>
+            );
+          })}
+        />
+      </div>
+    );
+  };
   return (
-    <PageContainer>
-      <div className={styles.main}>
+    <>
+      <PageContainer exception={<Slider />}>
         <div className={styles.intro}>
           <div className={styles.column}>
             <div className={styles.title}>
@@ -53,24 +73,8 @@ const About = ({ memberData, projectsData }) => {
             );
           })}
         </div>
-      </div>
-      <div className={styles.slider}>
-        <div className={styles["title"]}>Projects</div>
-        <Carousel
-          items={projectsData.map(({ image, tags, name }, key) => {
-            return (
-              <div className={styles.item} key={key}>
-                <div className={styles.image}>
-                  <img src={image} alt="project" />
-                </div>
-                <Tags data={tags} />
-                <div className={styles.name}>{name}</div>
-              </div>
-            );
-          })}
-        />
-      </div>
-    </PageContainer>
+      </PageContainer>
+    </>
   );
 };
 

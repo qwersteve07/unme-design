@@ -58,7 +58,7 @@ const App = ({ Component, pageProps }) => {
           content="Web site created using create-react-app"
         />
         <meta name="color-scheme" content="light" />
-        <title>UNME DESIGN</title>
+        <title>UNME DESIGN 非我設計</title>
         <script src="https://smtpjs.com/v3/smtp.js" />
       </Head>
       <Provider store={store}>

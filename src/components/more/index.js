@@ -30,6 +30,7 @@ const More = ({ data }) => {
                   dark={false}
                   hoverState={hoverId === d.id}
                   hoverWithContainer={true}
+                  text={d.text}
                 />
               </div>
             </div>

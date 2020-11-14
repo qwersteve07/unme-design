@@ -1,2 +1,5 @@
 const withImages = require("next-images");
-module.exports = withImages();
+const compose = require("./next.compose");
+// const withMDX = require("@next/mdx")();
+
+module.exports = compose([[withImages]]);
