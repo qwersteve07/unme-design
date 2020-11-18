@@ -14,6 +14,7 @@
     "classnames": "^2.2.6",
     "emailjs-com": "^2.6.3",
     "gray-matter": "^4.0.2",
+    "lottie-react-web": "^2.2.2",
     "next": "9.5.1",
     "next-images": "^1.6.0",
     "node-sass": "^4.14.1",
@@ -23,7 +24,8 @@
     "react-redux": "^7.2.2",
     "redux": "^4.0.5",
     "sass": "^1.26.10",
-    "validator": "^13.1.17"
+    "validator": "^13.1.17",
+    "vivus": "^0.4.5"
   },
   "devDependencies": {
     "eslint": "^7.6.0",

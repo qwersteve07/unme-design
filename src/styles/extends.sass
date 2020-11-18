@@ -18,6 +18,7 @@
 =gloabalContentStyle
     line-height: 2
     font-weight: 300
+    letter-spacing: 1px
 
 =safeAreaPaddingBottom($paddingBottom: 0px)
     @supports (padding-bottom: constant(safe-area-inset-bottom))
@@ -41,9 +42,9 @@
         left: 0
 
 =padStyle
-    @media screen and (max-width: 1023px)
+    @media (max-width: 1023px)
         @content
 
 =mobileStyle
-    @media screen and (max-width: 767px)
+    @media (max-width: 767px)
          @content

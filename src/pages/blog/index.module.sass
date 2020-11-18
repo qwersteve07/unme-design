@@ -25,7 +25,7 @@
     li
         padding: 10px 0
 
-.post
+.item
     margin-bottom: 100px
     color: var(--sub-color-third)
 
@@ -98,6 +98,40 @@
         display: flex
         justify-content: space-between
         align-items: center
+
+.post
+    color: var(--sub-color)
+    line-height: 1.5
+
+    header
+        margin-bottom: 80px
+
+        h1
+            border-bottom: 1px solid var(--sub-color)
+            padding-bottom: 20px
+
+    h2
+        letter-spacing: 2px
+
+    p
+        letter-spacing: 1px
+        color: var(--sub-color-third)
+
+    section
+        margin: 80px 0
+
+    figcaption
+        color: var(--sub-color-third)
+        font-size: 13px
+
+    blockquote
+        font-style: italic
+        margin: 40px 0
+        border-left: 5px solid var(--sub-color)
+        padding-left: 25px
+
+        & > p
+            color: var(--sub-color)
 
 +padStyle
     .post .desc

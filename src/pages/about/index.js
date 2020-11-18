@@ -2,6 +2,8 @@ import dynamic from "next/dynamic";
 import React from "react";
 import styles from "pages/about/index.module.sass";
 import PageContainer from "components/page-container";
+import Lottie from "lottie-react-web";
+import circle from "images/circle.json";
 import Tags from "components/tags";
 import wolf from "images/wolf.jpg";
 import elephant from "images/elephant.jpg";
@@ -36,6 +38,12 @@ const About = ({ memberData, projectsData }) => {
   return (
     <>
       <PageContainer exception={<Slider />}>
+        <Lottie
+          options={{
+            animationData: circle,
+          }}
+          width="80%"
+        />
         <div className={styles.intro}>
           <div className={styles.column}>
             <div className={styles.title}>
