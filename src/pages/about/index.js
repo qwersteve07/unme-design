@@ -11,10 +11,44 @@ import dog from "images/dog.jpg";
 import jellyfish from "images/jellyfish.jpg";
 import project01 from "images/project01.jpg";
 import project02 from "images/project02.jpg";
+import Card from "components/card";
 
 const Carousel = dynamic(() => import("components/carousel"), { ssr: false });
 
-const About = ({ memberData, projectsData }) => {
+const About = ({ projectsData }) => {
+  const memberData = [
+    {
+      name: "Alpha",
+      titles: "Founder",
+      image: wolf,
+    },
+    {
+      name: "Steve",
+      titles: "Hentai",
+      image: jellyfish,
+    },
+    {
+      name: "vicky",
+      titles: "Marketing",
+      image: dog,
+    },
+    {
+      name: "Nina",
+      titles: "Designer",
+      image: elephant,
+    },
+    {
+      name: "Tong",
+      titles: "Designer",
+      image: dog,
+    },
+    {
+      name: "Kevin",
+      titles: "Designer",
+      image: elephant,
+    },
+  ];
+
   const Slider = () => {
     return (
       <div className={styles.slider}>
@@ -67,17 +101,26 @@ const About = ({ memberData, projectsData }) => {
           </div>
         </div>
         <div className={styles.team}>
-          {memberData.map(({ name, titles, image }) => {
+          {memberData.map((data) => {
+            const Info = () => {
+              return (
+                <>
+                  <div className={styles.name}>{data.name}</div>
+                  <div className={styles.titles}>{data.titles}</div>
+                </>
+              );
+            };
             return (
-              <div className={styles.member} key={name}>
-                <div className={styles.image}>
-                  <img src={image} alt="photo" />
-                </div>
-                <div className={styles.info}>
-                  <div className={styles.name}>{name}</div>
-                  <div className={styles.titles}>{titles}</div>
-                </div>
-              </div>
+              <Card
+                className={styles.member}
+                imageHeight="120%"
+                lineHeight="230px"
+                key={data.name}
+                data={{
+                  image: data.image,
+                  info: <Info />,
+                }}
+              />
             );
           })}
         </div>
@@ -87,29 +130,6 @@ const About = ({ memberData, projectsData }) => {
 };
 
 export async function getStaticProps() {
-  const memberData = await [
-    {
-      name: "Alpha",
-      titles: "Founder",
-      image: wolf,
-    },
-    {
-      name: "Steve",
-      titles: "Hentai",
-      image: jellyfish,
-    },
-    {
-      name: "vicky",
-      titles: "Marketing",
-      image: dog,
-    },
-    {
-      name: "Nina",
-      titles: "Designer",
-      image: elephant,
-    },
-  ];
-
   const projectsData = await [
     {
       image: project01,
@@ -147,7 +167,6 @@ export async function getStaticProps() {
   // will receive `posts` as a prop at build time
   return {
     props: {
-      memberData,
       projectsData,
     },
   };

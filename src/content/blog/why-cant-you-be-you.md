@@ -19,7 +19,7 @@ thumbnail: "/blog/post01.jpg"
 
 <section>
 
-## 不過別誤會，我也喜歡唐鳳，只是他的課題不屬於任何人
+## <a name="1"></a> 不過別誤會，我也喜歡唐鳳，只是他的課題不屬於任何人
 
 <figure>
     <img src="/blog/post02.jpg" alt="tongfong">
@@ -39,7 +39,7 @@ thumbnail: "/blog/post01.jpg"
 
 <section>
 
-## 與眾不同是常態，與之相同是錯覺。
+## <a name="2"></a> 與眾不同是常態，與之相同是錯覺
 
 <figure>
     <img src="/blog/post03.png" alt="tongfong">
@@ -54,7 +54,7 @@ thumbnail: "/blog/post01.jpg"
 
 <section>
 
-## 革命式生活｜因為過去，所以你才是你。
+## <a name="3"></a> 革命式生活｜因為過去，所以你才是你
 
 人在所有相對應關係中，很容易產生某一個時代的共通語言，簡而言之「過往造就一個人的現在」，那是一個十分尷尬的課題，因為沒有人永生，所以其實世代之間或許有共同的歷史認知，卻沒有對於某些經驗上的情緒共鳴。
 

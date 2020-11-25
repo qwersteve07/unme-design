@@ -12,10 +12,10 @@ import More from "components/more";
 const Post = ({ data, content, moreData }) => {
   const cx = classnames.bind(styles);
   const [init, setInit] = useState(false);
+  const [sticky, setSticky] = useState(false);
 
   // load css effect
   useEffect(() => {
-    window.scrollTo(0, 0);
     const exec = () => setInit(true);
     setTimeout(exec, 500);
     return () => {
@@ -28,10 +28,46 @@ const Post = ({ data, content, moreData }) => {
     init,
   });
 
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY > 250) {
+        setSticky(true);
+      } else {
+        setSticky(false);
+      }
+    };
+    window.addEventListener("scroll", handleScroll);
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
+
+  let catagList = [...content.matchAll(/## .*\s/g)];
+
+  const sidebarClass = cx({
+    sidebar: true,
+    sticky,
+    "in-post": true,
+  });
+
   return (
     <PageContainer exception={<More data={moreData} />}>
       <div className={styles.wrapper}>
-        <div className={styles.sidebar}></div>
+        <div className={sidebarClass}>
+          <div className={styles.heading}>目錄</div>
+          <ul>
+            <li onClick={() => window.scrollTo(0, 0)}>{data.title}</li>
+            {catagList.map((catag, key) => {
+              let original = catag[0].replace("## ", "").split("</a>");
+              let tag = original[0].split('"')[1];
+              return (
+                <li key={key}>
+                  <a href={`#${tag}`}>{original[1]}</a>
+                </li>
+              );
+            })}
+          </ul>
+        </div>
         <div className={postClass}>
           <article>
             <header>

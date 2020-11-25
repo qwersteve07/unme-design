@@ -3,7 +3,7 @@ import styles from "components/page-container/index.module.sass";
 import Nav from "components/nav";
 import Footer from "components/footer";
 
-const PageContainer = ({ children, exception }) => {
+const PageContainer = ({ children, exception, loading }) => {
   return (
     <>
       <Nav />

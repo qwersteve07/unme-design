@@ -14,7 +14,6 @@ const Post = ({ data, content }) => {
   const [init, setInit] = useState(false);
 
   const onEnterView = (entries, observer) => {
-    console.log(entries);
     entries.forEach((entry) => {
       if (entry.isIntersecting) {
         const img = entry.target;
@@ -28,7 +27,6 @@ const Post = ({ data, content }) => {
 
   // load css effect
   useEffect(() => {
-    window.scrollTo(0, 0);
     const exec = () => setInit(true);
     setTimeout(exec, 500);
     return () => {

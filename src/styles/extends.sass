@@ -16,9 +16,8 @@
     margin: 0 auto
 
 =gloabalContentStyle
-    line-height: 2
-    font-weight: 300
-    letter-spacing: 1px
+    line-height: 1.8
+    color: var(--sub-color-third)
 
 =safeAreaPaddingBottom($paddingBottom: 0px)
     @supports (padding-bottom: constant(safe-area-inset-bottom))
@@ -30,9 +29,8 @@
 =themeTransition
     transition: 0.4s ease all
 
-=cropImage($height)
+=cropImage
     height: 0
-    padding-top: $height
     overflow: hidden
     position: relative
 
@@ -40,6 +38,10 @@
         position: absolute
         top: 0
         left: 0
+        
+=largeScreenStyle
+    @media (min-width: 1440px)
+        @content
 
 =padStyle
     @media (max-width: 1023px)

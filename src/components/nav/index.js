@@ -94,12 +94,6 @@ const Nav = () => {
     setDarkMode();
   };
 
-  useEffect(() => {
-    document.addEventListener("colorschemechange", (e) => {
-      console.log(`Color scheme changed to ${e.detail.colorScheme}.`);
-    });
-  }, []);
-
   const togglerClass = cx({
     toggler: true,
     "dark-mode": state.darkMode,

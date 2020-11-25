@@ -25,7 +25,6 @@ const Contact = () => {
   const [errorMessage, setErrorMessage] = useState("");
   const [successMessage, setSuccessMessage] = useState("");
 
-  console.log();
   const caseData = [
     {
       name: "維度專案 Domain Projects",
@@ -224,10 +223,7 @@ const Contact = () => {
               id="start_date"
               type="date"
               value={startDate}
-              onChange={(e) => {
-                console.log(e.target.value);
-                setStartDate(e.target.value);
-              }}
+              onChange={(e) => setStartDate(e.target.value)}
             />
           </fieldset>
           <fieldset>

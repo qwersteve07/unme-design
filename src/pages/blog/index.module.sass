@@ -8,11 +8,17 @@
     min-height: 100vh
     width: 100%
 
-    +globalSidePadding
-
 .sidebar
     color: var(--sub-color)
     padding-right: 100px
+    height: 1px
+    transition: all ease 0.4s
+
+    &.sticky
+        transform: translateY(150px)
+        transition: all ease 0.4s
+        position: sticky
+        top: 0
 
     .heading
         padding: 14px 20px
@@ -23,7 +29,23 @@
         padding: 10px 20px
 
     li
-        padding: 10px 0
+        line-height: 1.5
+        color: var(--sub-color-third)
+        cursor: pointer
+
+        &:first-of-type
+            padding: 10px 0
+
+        +hover
+            color: var(--sub-color)
+
+
+        & > a
+            display: block
+            padding: 10px 0
+
+            +hover
+                color: var(--sub-color)
 
 .item
     margin-bottom: 100px
@@ -67,7 +89,7 @@
             transition: 0.4s ease all
 
     .thumbnail
-        +cropImage(40%)
+        +cropImage
 
     .info
         position: absolute
@@ -94,7 +116,6 @@
     .sub-info
         margin-top: 26px
         padding: 0 26px
-        letter-spacing: 1px
         display: flex
         justify-content: space-between
         align-items: center
@@ -102,6 +123,8 @@
 .post
     color: var(--sub-color)
     line-height: 1.5
+    padding-bottom: 150px
+    scroll-behavior: smooth
 
     header
         margin-bottom: 80px
@@ -113,8 +136,12 @@
     h2
         letter-spacing: 2px
 
+        a
+            position: relative
+            top: -150px
+            visibility: hidden
+
     p
-        letter-spacing: 1px
         color: var(--sub-color-third)
 
     section
@@ -164,3 +191,11 @@
 
         .readmore
             display: none
+
+    .sidebar.in-post
+        display: none
+
+    .post
+        header img
+            margin: 0 -25px
+            width: 100vw

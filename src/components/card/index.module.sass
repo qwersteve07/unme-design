@@ -1,0 +1,22 @@
+@import styles/variables
+@import styles/extends
+
+.card
+    position: relative
+
+    &.reverse
+        .line
+            background: var(--main-color)
+
+.line
+    position: absolute
+    top: 40%
+    left: 30px
+    width: 1px
+    background: var(--sub-color)
+
+.image
+    +cropImage
+
+.info
+    padding: 35px 0 35px 60px

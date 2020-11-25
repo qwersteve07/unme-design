@@ -10,7 +10,6 @@ const More = ({ data }) => {
     <div className={styles.container}>
       {data.map((d, key) => {
         const setMouseOver = (e) => {
-          console.log(e.currentTarget);
           if (e.currentTarget.id === d.id) setHoverId(d.id);
         };
         const setMouseLeave = () => setHoverId("");

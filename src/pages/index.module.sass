@@ -1,0 +1,178 @@
+@import styles/variables
+@import styles/extends
+
+.heading
+    padding: 300px 0
+
+    .word
+        font-size: 150px
+        font-family: Crimson Text
+        -webkit-text-fill-color: transparent
+        -webkit-text-stroke-width: 1px
+        -webkit-text-stroke-color: var(--sub-color-third)
+        text-align: center
+
+.intro
+    margin-bottom: 110px
+
+    h1
+        font-size: 40px
+        line-height: 2
+        font-family: Crimson Text
+        font-weight: normal
+        letter-spacing: 3px
+        margin: 0
+
+    h2
+        font-size: 24px
+        margin: 0 0 45px
+        font-weight: normal
+
+    p
+        font-size: 18px
+
+        +gloabalContentStyle
+
+.service
+    margin-bottom: 270px
+
+    .container
+        display: flex
+
+    .step
+        flex: 1 0 50%
+        font-size: 18px
+        position: relative
+
+        .content
+            position: absolute
+            opacity: 0
+            transform: translateY(-15px)
+            transition: 0.6s ease all
+            width: calc(100% - 160px)
+
+            &.active
+                opacity: 1
+                transform: translateY(0)
+                transition: 0.6s ease all 0.6s
+
+        .animation
+            height: 250px
+
+        .title
+            margin-bottom: 10px
+
+        .desc
+            +gloabalContentStyle
+
+    .list
+        flex: 1 0 50%
+
+    .item
+        font-family: Crimson Text
+        font-weight: normal
+        transform: skewX(-10deg)
+        padding: 24px 6px
+        border-bottom: 1px solid $grey-warm
+        font-size: 36px
+        color: var(--sub-color-third)
+        cursor: pointer
+        transition: 0.4s ease all
+
+        span
+            width: 50px
+            display: inline-block
+
+        pre
+            font-size: 18px
+            font-family: inherit
+            display: inline
+            top: -15px
+            left: 1px
+            position: relative
+
+        &.active
+            padding-left: 15px
+            transition: 0.4s ease all
+            border-color: $unme-red
+            color: var(--sub-color)
+
+    .learn
+        font-size: 20px
+        padding: 50px 0
+        display: flex
+        justify-content: flex-end
+
+.project
+    position: relative
+    margin: 0 -80px
+
+    .title
+        position: absolute
+        top: -50px
+        left: 100px
+        color: $grey-warm
+        font-size: 100px
+        font-family: HindGuntur-Bold
+        letter-spacing: 20px
+        z-index: 1
+
+        +themeTransition
+
+    .top
+        position: relative
+
+        .image
+            width: 75%
+            margin-bottom: -2px
+
+        .info
+            position: absolute
+            top: 50%
+            right: 0
+            width: 45%
+            background: var(--sub-color)
+            color: var(--main-color)
+            padding: 40px 70px
+
+            +themeTransition
+
+    .name
+        font-size: 30px
+        font-weight: normal
+        margin-bottom: 10px
+        letter-spacing: 3px
+
+    .tags
+        font-size: 16px
+        margin-bottom: 40px
+
+    .define
+        font-weight: bold
+        margin-bottom: 10px
+
+    .desc
+        line-height: 1.8
+
+    .bottom
+        width: 100vw
+        margin-left: calc(-50vw + 720px)
+        background: var(--sub-color)
+
+        +themeTransition
+
+    .list
+        +globalMaxWidth
+
+        color: var(--main-color)
+        padding: 130px 80px
+        display: grid
+        grid-template-columns: 1fr 1fr
+        grid-template-rows: auto
+        grid-column-gap: 180px
+
+    .item
+        padding-bottom: 110px
+
+        &:nth-of-type(2n)
+            transform: translateY(140px)

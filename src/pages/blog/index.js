@@ -37,7 +37,7 @@ const Posts = ({ data }) => {
                 <div className={styles.catag}>/ {catag}</div>
                 <div className={styles.title}>{title}</div>
               </div>
-              <div className={styles.thumbnail}>
+              <div className={styles.thumbnail} style={{ paddingTop: "40%" }}>
                 <img src={thumbnail} alt="thumbnail" />
               </div>
             </div>
