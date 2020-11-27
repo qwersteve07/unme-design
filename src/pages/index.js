@@ -31,7 +31,7 @@ const Intro = () => {
 };
 
 const Service = () => {
-  const [currentService, setCurrentService] = useState("");
+  const [currentService, setCurrentService] = useState("zero");
   const dimensionContent = [
     {
       id: "zero",

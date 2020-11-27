@@ -2,10 +2,10 @@
 @import styles/extends
 
 .heading
-    padding: 300px 0
+    padding: 75px 0 235px
 
     .word
-        font-size: 150px
+        font-size: 10vw
         font-family: Crimson Text
         -webkit-text-fill-color: transparent
         -webkit-text-stroke-width: 1px
@@ -78,6 +78,15 @@
         color: var(--sub-color-third)
         cursor: pointer
         transition: 0.4s ease all
+        &:before
+            content: ''
+            position: absolute
+            width: 0
+            height: 1px
+            bottom: -1px
+            left: 0
+            background: $unme-red
+            transition: all 0.4s ease                
 
         span
             width: 50px
@@ -94,8 +103,11 @@
         &.active
             padding-left: 15px
             transition: 0.4s ease all
-            border-color: $unme-red
             color: var(--sub-color)
+            &:before
+                transition: all 0.4s ease                
+                width: 100%
+                
 
     .learn
         font-size: 20px

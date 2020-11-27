@@ -3,7 +3,7 @@ import React from "react";
 import styles from "pages/about/index.module.sass";
 import PageContainer from "components/page-container";
 import Lottie from "lottie-react-web";
-import circle from "images/circle.json";
+import dot from "images/dot.json";
 import Tags from "components/tags";
 import wolf from "images/wolf.jpg";
 import elephant from "images/elephant.jpg";
@@ -12,6 +12,7 @@ import jellyfish from "images/jellyfish.jpg";
 import project01 from "images/project01.jpg";
 import project02 from "images/project02.jpg";
 import Card from "components/card";
+
 
 const Carousel = dynamic(() => import("components/carousel"), { ssr: false });
 
@@ -74,7 +75,7 @@ const About = ({ projectsData }) => {
       <PageContainer exception={<Slider />}>
         <Lottie
           options={{
-            animationData: circle,
+            animationData: dot,
           }}
           width="80%"
         />
