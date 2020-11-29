@@ -18,8 +18,6 @@ import "@fortawesome/fontawesome-free/js/regular";
 import "@fortawesome/fontawesome-free/js/brands";
 // for splash page
 import "components/splash/splash.sass";
-// for service svg
-import "pages/service/svg.sass";
 
 const App = ({ Component, pageProps }) => {
   const store = useStore(pageProps.initialState);

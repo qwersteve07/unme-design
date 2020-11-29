@@ -1,6 +1,11 @@
 @import styles/variables
 @import styles/extends
 
+.service
+    h1
+        text-align: center
+        font-family: Crimson Text
+        font-size: 50px
 
 .section
     text-align: center
@@ -10,13 +15,15 @@
     .title
         font-family: CrimsonText-SemiBold
         font-weight: bold
-        line-height: 2
+        line-height: 1
         color: var(--sub-color)
         font-size: 50px
+        margin-bottom: 20px
 
     .sub-title
         line-height: 2
-        font-size: 30px
+        font-size: 25px
+        margin: 10px 0
 
 .content
     position: relative
@@ -44,14 +51,17 @@
 .steps
     width: 80%
 
-
 .step
     +gloabalContentStyle
 
+    position: relative
     transition: 1.5s ease all
     margin: 40px 0
     opacity: 0
     font-size: 15px
+
+    &.step0
+        display: none
 
     .title
         font-family: CrimsonText-SemiBold
@@ -59,10 +69,45 @@
         font-size: 22px
         line-height: 2
         color: var(--sub-color)
+        margin-bottom: 15px
+
+    .sub-title
+        font-size: 16px
+        font-weight: bold
+        line-height: 1.5
+        color: var(--sub-color)
+        margin: 15px auto
 
     &.in
         opacity: 0.8
-    
+
+.process
+    width: 80%
+    margin: 0 auto
+
+    .st0
+        fill: none
+        stroke: var(--sub-color)
+        stroke-width: 1
+
+    .st1
+        fill: none
+        stroke: var(--main-color)
+        stroke-width: 1
+
+    .st2
+        fill: $unme-red
+        stroke: var(--sub-color)
+
+    .st3
+        font-family: Noto Sans CJK TC
+        font-weight: 300
+        font-size: 14px
+        fill: var(--sub-color)
+
+    .st5
+        fill: var(--sub-color)
+
 .arrow-scroll
     position: fixed
     bottom: 70px
@@ -74,8 +119,10 @@
     border: 1px solid var(--sub-color)
     opacity: 1
     transition: opacity 0.5s
+
     &.hide
         opacity: 0
+
     &::before
         content: ""
         position: absolute
@@ -89,15 +136,111 @@
         animation: arrowScroll 1.5s infinite linear
         opacity: 0
 
+@keyframes arrowScroll
+    0%
+        transform: translateY(-15px)
+        opacity: 0
 
-@keyframes arrowScroll 
-  0% 
-    transform: translateY(-15px)
-    opacity: 0
-  50% 
-    transform: translateY(0)
-    opacity: 1
-  100% 
-    transform: translateY(15px)
-    opacity: 0
-  
+    50%
+        transform: translateY(0)
+        opacity: 1
+
+    100%
+        transform: translateY(15px)
+        opacity: 0
+
+@media (max-width: 1280px)
+    .dimension
+        width: 450px
+
+    .content
+        height: 900px
+
+    .step
+        margin: 70px 0
+        opacity: 1
+
+        &::before
+
+        .title
+            cursor: pointer
+            font-size: 20px
+            font-weight: normal
+            transition: 0.4s ease all
+
+            &:hover
+                transition: 0.4s ease all
+                color: $unme-red
+
+        .desc
+            opacity: 0
+            position: absolute
+            top: 0
+            left: calc(100% + 15px)
+            width: 400px
+            background: var(--sub-color)
+            color: var(--main-color)
+            padding: 20px
+            transition: 0.5s all ease
+            pointer-events: none
+
+        .sub-title
+            color: var(--main-color)
+
+        &.active
+            z-index: 1
+
+            .desc
+                pointer-events: inherit
+                opacity: 1
+                transition: 0.5s all ease
+
++mobileStyle
+    .service
+        h1
+            font-size: 30px
+
+    .top
+        display: none
+
+    .content
+        height: auto
+        flex-direction: column
+        margin: 0 0 100px
+
+    .steps
+        width: auto
+
+    .step
+        text-align: left
+
+        &.step0
+            display: inherit
+
+        &.in
+            opacity: 1
+
+        .sub-title
+            color: var(--sub-color)
+
+        .desc
+            opacity: 1
+            position: static
+            padding: 0
+            background: inherit
+            color: inherit
+            pointer-events: inherit
+            width: auto
+
+    .dimension
+        margin: 0 auto
+        width: 80%
+
+        & > svg:first-of-type
+            position: static
+
+    .arrow-scroll
+        display: none
+
+    .process
+        width: auto

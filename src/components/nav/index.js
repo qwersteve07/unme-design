@@ -45,7 +45,8 @@ const Nav = () => {
     };
   }, [menuOpen]);
 
-  const navs = ["projects", "service", "about", "news", "blog", "contact"];
+  // const navs = ["projects", "service", "about", "news", "blog", "contact"];
+  const navs = ["projects", "service", "about", "contact"];
   const NavList = () => {
     return navs.map((nav) => {
       const liClass = cx({

@@ -3,12 +3,50 @@ import styles from "pages/index.module.sass";
 import PageContainer from "components/page-container";
 import classnames from "classnames/bind";
 import Card from "components/card";
+import UseInterval from "utils/useInterval";
+import UseDeviceType from "utils/useDeviceType";
 const cx = classnames.bind(styles);
 
 const Heading = () => {
+  const [currentIndex, setCurrentIndex] = useState(0);
+  const [active, setActive] = useState(false);
+  const text = [
+    "Zero Dimension",
+    "First Dimension",
+    "Second Dimension",
+    "Third Dimension",
+    "Fourth Dimension",
+  ];
+
+  UseInterval(() => {
+    setActive(true);
+    setTimeout(() => {
+      setCurrentIndex((currentIndex) => {
+        let newIndex = currentIndex + 1;
+        if (newIndex % 5 === 0) return 0;
+        return newIndex;
+      });
+      setActive(false);
+    }, 1000);
+  }, 3000);
+
+  let inComingIndex = currentIndex + 1 > 4 ? 0 : currentIndex + 1;
+
+  const currentWordClass = cx({
+    word: true,
+    out: active,
+  });
+
+  const incomingWordClass = cx({
+    word: true,
+    incoming: true,
+    in: active,
+  });
+
   return (
     <header className={styles.heading}>
-      <div className={styles.word}>Zero Dimension</div>
+      <div className={currentWordClass}>{text[currentIndex]}</div>
+      <div className={incomingWordClass}>{text[inComingIndex]}</div>
     </header>
   );
 };
@@ -31,6 +69,7 @@ const Intro = () => {
 };
 
 const Service = () => {
+  const deviceType = UseDeviceType();
   const [currentService, setCurrentService] = useState("zero");
   const dimensionContent = [
     {
@@ -118,9 +157,46 @@ const Service = () => {
       ),
     },
   ];
-  return (
-    <section className={styles.service}>
-      <div className={styles.container}>
+
+  const ServiceContainer = () => {
+    if (deviceType === "mobile") {
+      return (
+        <>
+          {dimensionItem.map((item) => {
+            const content = dimensionContent.find((x) => x.id === item.id);
+            const itemClass = cx({
+              item: true,
+              active: currentService === item.id,
+            });
+            const stepClass = cx({
+              step: true,
+              active: content.id === currentService,
+            });
+            return (
+              <div className={styles["step-block"]} key={item.id}>
+                <div
+                  className={itemClass}
+                  onClick={() => {
+                    setCurrentService(item.id);
+                  }}
+                >
+                  {item.value}
+                </div>
+                <div className={stepClass}>
+                  <div className={styles.animation}></div>
+                  <div className={styles.text}>
+                    <div className={styles.title}>{content.title}</div>
+                    <div className={styles.desc}>{content.desc}</div>
+                  </div>
+                </div>
+              </div>
+            );
+          })}
+        </>
+      );
+    }
+    return (
+      <>
         <div className={styles.step}>
           {dimensionContent.map((content) => {
             const contentClass = cx({
@@ -157,7 +233,12 @@ const Service = () => {
             );
           })}
         </ul>
-      </div>
+      </>
+    );
+  };
+  return (
+    <section className={styles.service}>
+      <div className={styles.container}>{ServiceContainer()}</div>
       <div className={styles.learn}>了解服務流程</div>
     </section>
   );
