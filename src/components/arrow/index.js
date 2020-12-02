@@ -8,6 +8,7 @@ const Arrow = ({
   hoverWithContainer = false,
   text = "readmore",
   onClick,
+  reverse = false,
 }) => {
   const cx = classnames.bind(styles);
   const [arrowHover, setArrowHover] = useState(hoverState);
@@ -26,6 +27,7 @@ const Arrow = ({
   const arrowClass = cx({
     arrow: true,
     dark: dark,
+    reverse,
   });
 
   return (

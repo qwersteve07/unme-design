@@ -2,41 +2,122 @@
 @import styles/extends
 
 .service
+    +gloabalContentStyle
+
+    text-align: center
+
     h1
         text-align: center
         font-family: Crimson Text
         font-size: 50px
+        letter-spacing: 10px
+        color: var(--sub-color)
+        margin-top: 0
 
-.section
-    text-align: center
+    h2
+        font-family: CrimsonText-SemiBold
+        font-weight: bold
+        line-height: 1
+        font-size: 50px
+        margin-bottom: 20px
+        color: var(--sub-color)
 
+    h3
+        line-height: 2
+        font-size: 25px
+        margin: 10px 0
+        color: var(--sub-color)
+
+.steps
+    display: grid
+    grid-gap: 80px
+    grid-template-columns: 1fr 1fr
+    grid-template-rows: 3fr
+    grid-template-areas: "header header" "main main" "footer footer"
+    margin: 170px auto
+
+.step
     +gloabalContentStyle
+
+
+    text-align: left
+    position: relative
+    transition: 1.5s ease all
+    margin: 40px 0
+    font-size: 15px
 
     .title
         font-family: CrimsonText-SemiBold
         font-weight: bold
-        line-height: 1
+        font-size: 22px
+        line-height: 3
         color: var(--sub-color)
-        font-size: 50px
-        margin-bottom: 20px
+        text-align: center
 
     .sub-title
-        line-height: 2
-        font-size: 25px
-        margin: 10px 0
+        font-size: 16px
+        font-weight: bold
+        line-height: 1.5
+        color: var(--sub-color)
+        margin: 15px auto
+        text-align: center
 
-.content
+.step3
+    grid-area: main
+    width: 60%
+    margin: 0 auto
+
+.top
     position: relative
-    margin: 170px auto
-    display: flex
-    justify-content: space-between
+
+    .step
+        text-align: center
+        opacity: 1
+
+.first
+    width: 40px
+    height: 40px
+    border-radius: 50%
+    border: 1px solid var(--sub-color)
+    position: absolute
+    left: calc(50% - 20px)
+    bottom: -100px
+    animation: firstAnimation infinite 5s ease
+
+    &::before
+        content: ""
+        position: absolute
+        top: 8px
+        left: 8px
+        width: 20px
+        height: 20px
+        border-radius: 50%
+        border: 1px solid var(--sub-color)
+
+    &.in
+        animation: inherit
+        bottom: -200px
+        opacity: 0
+        transition: 0.8s ease-in all
+
+@keyframes firstAnimation
+    0%
+        transform: scale(1)
+
+    50%
+        transform: scale(1.2)
+
+    100%
+        transform: scale(1)
 
 .dimension
-    margin: 0 auto
+    margin: 100px auto 0
     position: relative
     width: 600px
-    margin-left: 100px
     flex: 1 0 auto
+
+    & > svg:first-of-type
+        position: static
 
     .st0, .st1
         stroke: var(--sub-color)
@@ -48,42 +129,104 @@
         top: 0
         left: 0
 
-.steps
-    width: 80%
-
-.step
-    +gloabalContentStyle
-
-    position: relative
-    transition: 1.5s ease all
-    margin: 40px 0
+.dimension-text
+    position: absolute
+    line-height: 1.5
+    background: var(--main-color)
+    transform: translateY(-15px)
     opacity: 0
-    font-size: 15px
+    z-index: 1
 
-    &.step0
-        display: none
-
-    .title
-        font-family: CrimsonText-SemiBold
-        font-weight: bold
-        font-size: 22px
-        line-height: 2
-        color: var(--sub-color)
-        margin-bottom: 15px
-
-    .sub-title
-        font-size: 16px
-        font-weight: bold
+    & > div
+        position: absolute
         line-height: 1.5
-        color: var(--sub-color)
-        margin: 15px auto
+        background: var(--main-color)
+        transform: translateY(-15px)
+        opacity: 0
 
     &.in
-        opacity: 0.8
+        transform: translateY(0)
+        opacity: 1
+
+        & > div
+            transform: translateY(0)
+            opacity: 1
+
+    &.one
+        top: 255px
+        left: -25px
+
+        &.in
+            transition: 0.5s ease all 1.5s
+
+    &.two
+        top: 255px
+        right: -25px
+        text-align: right
+
+        &.in
+            transition: 0.5s ease all 2s
+
+    &.three
+        top: 440px
+        width: 100%
+
+        &.in
+            transition: 0.5s ease all 2.5s
+
+        & > div
+            &:first-of-type
+                left: calc(50% - 30px)
+                top: 30px
+
+            &:nth-of-type(2)
+                left: 135px
+                top: 0px
+
+            &:nth-of-type(3)
+                right: 135px
+                top: 0px
+
+            &:last-of-type
+                left: calc(50% - 49px)
+                top: 250px
+
+            &.in
+                transition: 0.5s ease all 2.5s
+
+    &.four
+        top: 880px
+        width: 100%
+
+        &.in
+            transition: 0.5s ease all 2.5s
+
+        & > div
+            &:first-of-type
+                left: calc(50% - 30px)
+                top: 0
+
+            &:nth-of-type(2)
+                left: 0
+                top: 225px
+
+            &:last-of-type
+                right: 0
+                top: 225px
+
+            &.in
+                transition: 0.5s ease all 2.5s
+
+    &.five
+        top: 1257px
+        left: calc(50% - 42px)
+
+        &.in
+            transition: 0.5s ease all 3s
 
 .process
     width: 80%
-    margin: 0 auto
+    margin: 0 auto 50px
 
     .st0
         fill: none
@@ -99,7 +242,7 @@
         fill: $unme-red
         stroke: var(--sub-color)
 
-    .st3
+    .st3, .st6
         font-family: Noto Sans CJK TC
         font-weight: 300
         font-size: 14px
@@ -149,98 +292,108 @@
         transform: translateY(15px)
         opacity: 0
 
-@media (max-width: 1280px)
-    .dimension
-        width: 450px
-
-    .content
-        height: 900px
-
-    .step
-        margin: 70px 0
-        opacity: 1
-
-        &::before
-
-        .title
-            cursor: pointer
-            font-size: 20px
-            font-weight: normal
-            transition: 0.4s ease all
-
-            &:hover
-                transition: 0.4s ease all
-                color: $unme-red
-
-        .desc
-            opacity: 0
-            position: absolute
-            top: 0
-            left: calc(100% + 15px)
-            width: 400px
-            background: var(--sub-color)
-            color: var(--main-color)
-            padding: 20px
-            transition: 0.5s all ease
-            pointer-events: none
-
-        .sub-title
-            color: var(--main-color)
-
-        &.active
-            z-index: 1
-
-            .desc
-                pointer-events: inherit
-                opacity: 1
-                transition: 0.5s all ease
-
 +mobileStyle
     .service
-        h1
-            font-size: 30px
-
-    .top
-        display: none
-
-    .content
-        height: auto
-        flex-direction: column
-        margin: 0 0 100px
-
-    .steps
-        width: auto
-
-    .step
+        font-size: 13px
         text-align: left
 
-        &.step0
-            display: inherit
+        h1
+            font-size: 40px
 
-        &.in
-            opacity: 1
+        h2
+            font-size: 40px
+    .top
+        .step
+            text-align: left
+            margin: 0
+
+    .steps
+        display: block
+        margin: 50px 0
+
+    .step
+        margin: 50px 0
+
+        .title
+            text-align: left
+            line-height: 1.5
+            margin-bottom: 15px
 
         .sub-title
-            color: var(--sub-color)
+            text-align: left
 
-        .desc
-            opacity: 1
-            position: static
-            padding: 0
-            background: inherit
-            color: inherit
-            pointer-events: inherit
-            width: auto
+    .step3
+        width: auto
 
     .dimension
-        margin: 0 auto
-        width: 80%
+        margin: 80px auto 120px
+        width: 100%
 
-        & > svg:first-of-type
-            position: static
+    .dimension-text
+        &.one
+            top: 38vw
+            left: 0
+
+        &.two
+            top: 38vw
+            right: 0
+
+        &.three
+            top: 68vw
+
+            & > div
+                &:nth-of-type(2)
+                    left: 18vw
+
+                &:nth-of-type(3)
+                    right: 18vw
+
+                &:last-of-type
+                    top: 39vw
+                    left: calc(50% - 44px);
+        &.four
+            top: 132vw
+            &>div
+                &:nth-of-type(2)
+                    top: 35vw
+                    left: 0
+
+                &:last-of-type
+                    top: 35vw
+                    right: 0
+        &.five
+            top: 190vw
 
     .arrow-scroll
         display: none
 
     .process
         width: auto
+
+@media (max-width: 400px)
+    .dimension-text
+     
+        &.three
+            top: 60vw
+
+            & > div
+                &:nth-of-type(2)
+                    left: 15vw
+
+                &:nth-of-type(3)
+                    right: 15vw
+
+          
+        &.four
+            top: 125vw
+            &>div
+                &:nth-of-type(2)
+                    top: 35vw
+                    left: 0
+
+                &:last-of-type
+                    top: 35vw
+                    right: 0
+        &.five
+            top: 185vw
+    

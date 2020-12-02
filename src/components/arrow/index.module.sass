@@ -22,6 +22,10 @@
                     transform: translateX(-10px)
                     opacity: 1
 
+                &.reverse
+                    span
+                        transform: translateX(10px)
+
 
     &.hover.hoverWithContainer
         .arrow
@@ -36,6 +40,10 @@
                 transition: ease all 0.4s 0.1s
                 transform: translateX(-10px)
                 opacity: 1
+
+            &.reverse
+                span
+                    transform: translateX(10px)
 
 .arrow
     width: 100px
@@ -80,3 +88,22 @@
         right: 10px
         top: -11px
         opacity: 0
+
+    &.reverse
+        left: 0
+        right: auto
+
+        &::before
+            transform: rotate(-45deg)
+            left: 3px
+            right: auto
+
+        &::after
+            transform: rotate(45deg)
+            left: 0
+            right: auto
+            transform-origin: left bottom
+
+        span
+            left: 10px
+            right: 0

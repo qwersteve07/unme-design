@@ -22,6 +22,8 @@ const Contact = () => {
   const [comment, setComment] = useState("");
   const [nameInputError, setNameInputError] = useState(false);
   const [emailInputError, setEmailInputError] = useState(false);
+  const [companyInputError, setCompanyInputError] = useState(false);
+  const [phoneInputError, setPhoneInputError] = useState(false);
   const [errorMessage, setErrorMessage] = useState("");
   const [successMessage, setSuccessMessage] = useState("");
 
@@ -66,13 +68,17 @@ const Contact = () => {
     const preCheck = () => {
       const emailCheck = validator.isEmail(email);
       const nameCheck = name.length !== 0;
+      const companyCheck = company.length !== 0;
+      const phoneCheck = phone.length !== 0;
 
-      const pass = emailCheck && nameCheck;
+      const pass = emailCheck && nameCheck && companyCheck && phoneCheck;
       if (!pass) {
         setSuccessMessage("");
         setNameInputError(!nameCheck);
         setEmailInputError(!emailCheck);
-        setErrorMessage("請填入姓名和正確的信箱，幫助我們能夠正確的與您做聯繫");
+        setCompanyInputError(!companyCheck);
+        setPhoneInputError(!phoneCheck);
+        setErrorMessage("請填入必要資訊，幫助我們能夠正確的與您做聯繫");
       }
       return pass;
     };
@@ -122,6 +128,16 @@ const Contact = () => {
     error: emailInputError,
   });
 
+  const companyInputClass = cx({
+    company: true,
+    error: companyInputError,
+  });
+
+  const phoneInputClass = cx({
+    name: true,
+    error: phoneInputError,
+  });
+
   const errorMessageClass = cx({
     "error-message": true,
     show: errorMessage,
@@ -157,21 +173,29 @@ const Contact = () => {
           <fieldset>
             <label htmlFor="company">公司</label>
             <input
+              className={companyInputClass}
               id="company"
               type="text"
               value={company}
               placeholder="公司名稱"
-              onChange={(e) => setCompany(e.target.value)}
+              onChange={(e) => {
+                setCompanyInputError(false);
+                setCompany(e.target.value);
+              }}
             />
           </fieldset>
           <fieldset>
             <label htmlFor="phone">電話</label>
             <input
+              className={phoneInputClass}
               id="phone"
               type="tel"
               value={phone}
               placeholder="聯絡電話"
-              onChange={(e) => setPhone(e.target.value)}
+              onChange={(e) => {
+                setPhoneInputError(false);
+                setPhone(e.target.value);
+              }}
             />
           </fieldset>
           <fieldset>

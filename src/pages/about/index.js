@@ -1,5 +1,5 @@
 import dynamic from "next/dynamic";
-import React from "react";
+import React, { useState, useEffect } from "react";
 import styles from "pages/about/index.module.sass";
 import PageContainer from "components/page-container";
 import Lottie from "lottie-react-web";
@@ -12,11 +12,17 @@ import jellyfish from "images/jellyfish.jpg";
 import project01 from "images/project01.jpg";
 import project02 from "images/project02.jpg";
 import Card from "components/card";
-
+import useResize from "utils/useResize";
 
 const Carousel = dynamic(() => import("components/carousel"), { ssr: false });
 
 const About = ({ projectsData }) => {
+  const [lottieWidth, setLottieWidth] = useState("");
+
+  useResize(() => {
+    setLottieWidth(window.innerWidth > 768 ? "50%" : "70%");
+  });
+
   const memberData = [
     {
       name: "Alpha",
@@ -77,12 +83,12 @@ const About = ({ projectsData }) => {
           options={{
             animationData: dot,
           }}
-          width="80%"
+          width={lottieWidth}
         />
         <div className={styles.intro}>
           <div className={styles.column}>
             <div className={styles.title}>
-              UNME是間跨領域設計公司，運用設計協助企業在不同階段的成長
+              UNME 是間跨領域設計公司，運用設計協助企業品牌在不同階段的成長
             </div>
             <div className={styles.desc}>
               2019年成立於台北，主力於品牌空間設計，並提供品牌設計與空間設計服務。

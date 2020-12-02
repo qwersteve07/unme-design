@@ -16,6 +16,7 @@ import { SET_DARK_MODE } from "redux/reducer/app";
 const Nav = () => {
   const router = useRouter();
   const cx = classnames.bind(styles);
+  const [navs, setNavs] = useState([]);
   const [fixed, setFixed] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
   const state = useSelector((state) => state.appReducer);
@@ -46,12 +47,12 @@ const Nav = () => {
   }, [menuOpen]);
 
   // const navs = ["projects", "service", "about", "news", "blog", "contact"];
-  const navs = ["projects", "service", "about", "contact"];
   const NavList = () => {
     return navs.map((nav) => {
       const liClass = cx({
         active: router.pathname.replace("/", "") === nav,
       });
+      if (nav === "home" && window.innerWidth > 767) return;
       return (
         <li key={nav} className={liClass}>
           <Link href={`/${nav}`} as={`/${nav}`}>
@@ -64,6 +65,12 @@ const Nav = () => {
 
   // fixed top style
   useEffect(() => {
+    setNavs(() =>
+      window.innerWidth > 767
+        ? ["projects", "service", "about", "contact"]
+        : ["home", "projects", "service", "about", "contact"]
+    );
+
     const handleScroll = () => {
       if (window.scrollY > 30) {
         setFixed(true);

@@ -10,36 +10,11 @@
 .arrows
     position: absolute
     top: -100px
-    right: 80px
+    right: 50px
     display: flex
 
     & > div
-        cursor: pointer
-        width: 60px
-        height: 60px
-        border: 1px solid $white
-        border-radius: 50%
-        position: relative
-        margin: 0 10px
-        display: flex
-        justify-content: center
-        align-items: center
-
-        &::before
-            position: absolute
-            content: ""
-            width: 12px
-            height: 12px
-            border-top: 2px solid $white
-            border-left: 2px solid $white
-
-    .prev
-        &:before
-            transform: translateX(3px) rotate(-45deg)
-
-    .next
-        &:before
-            transform: translateX(-3px) rotate(135deg)
+        margin-left: 20px
 
 .container
     overflow: hidden
@@ -54,23 +29,6 @@
     &:hover
         cursor: pointer
 
-.arrow
-    position: absolute
-    top: 70px
-    cursor: pointer
-    width: 40px
-    height: 40px
-    justify-content: center
-    align-items: center
-    display: none
-    border-radius: 50%
-
-    &.next
-        right: 6px
-
-    &.prev
-        left: 6px
-
 +mobileStyle
     .carousel
         .carousel-wrapper
@@ -81,3 +39,7 @@
 
         .arrows
             right: 45px
+            flex-direction: column
+
+            & > div
+                margin: 5px 0

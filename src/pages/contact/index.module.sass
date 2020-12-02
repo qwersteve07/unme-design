@@ -51,9 +51,9 @@
         appearance: none
         height: 40px
         border-bottom: 1px solid var(--main-color-third)
-
-        &.name.error, &.email.error
-            border-bottom-color: $unme-red
+        &.name,&.company,&.phone,&.email
+            &.error
+                border-bottom-color: $unme-red
 
         &:focus
             +themeTransition
