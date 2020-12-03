@@ -3,21 +3,27 @@ import React, { useState, useEffect } from "react";
 import styles from "pages/about/index.module.sass";
 import PageContainer from "components/page-container";
 import Lottie from "lottie-react-web";
-import dot from "images/dot.json";
+import dotWhite from "images/about/dot-white.json";
+import dotBlack from "images/about/dot-black.json";
 import Tags from "components/tags";
-import wolf from "images/wolf.jpg";
-import elephant from "images/elephant.jpg";
-import dog from "images/dog.jpg";
-import jellyfish from "images/jellyfish.jpg";
+import wolf from "images/about/wolf.jpg";
+import elephant from "images/about/elephant.jpg";
+import dog from "images/about/dog.jpg";
+import octopus from "images/about/octopus.jpg";
+import lion from "images/about/lion.jpg";
+import jellyfish from "images/about/jellyfish.jpg";
 import project01 from "images/project01.jpg";
 import project02 from "images/project02.jpg";
 import Card from "components/card";
 import useResize from "utils/useResize";
+import { useSelector } from "react-redux";
+
 
 const Carousel = dynamic(() => import("components/carousel"), { ssr: false });
 
 const About = ({ projectsData }) => {
   const [lottieWidth, setLottieWidth] = useState("");
+  const state = useSelector((state) => state.appReducer);
 
   useResize(() => {
     setLottieWidth(window.innerWidth > 768 ? "50%" : "70%");
@@ -31,7 +37,7 @@ const About = ({ projectsData }) => {
     },
     {
       name: "Steve",
-      titles: "Hentai",
+      titles: "F2E",
       image: jellyfish,
     },
     {
@@ -47,12 +53,12 @@ const About = ({ projectsData }) => {
     {
       name: "Tong",
       titles: "Designer",
-      image: dog,
+      image: octopus,
     },
     {
       name: "Kevin",
       titles: "Designer",
-      image: elephant,
+      image: lion,
     },
   ];
 
@@ -81,7 +87,7 @@ const About = ({ projectsData }) => {
       <PageContainer exception={<Slider />}>
         <Lottie
           options={{
-            animationData: dot,
+            animationData: state.darkMode ? dotWhite : dotBlack,
           }}
           width={lottieWidth}
         />

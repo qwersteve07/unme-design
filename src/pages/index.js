@@ -5,6 +5,13 @@ import classnames from "classnames/bind";
 import Card from "components/card";
 import UseInterval from "utils/useInterval";
 import UseDeviceType from "utils/useDeviceType";
+import d1 from 'images/landing/1.png'
+import d2 from 'images/landing/2.png'
+import d3 from 'images/landing/3.png'
+import d4 from 'images/landing/4.png'
+import d5 from 'images/landing/5.png'
+import { useSelector } from "react-redux";
+
 const cx = classnames.bind(styles);
 
 const Heading = () => {
@@ -71,33 +78,40 @@ const Intro = () => {
 const Service = () => {
   const deviceType = UseDeviceType();
   const [currentService, setCurrentService] = useState("zero");
+  const state = useSelector((state) => state.appReducer);
+
   const dimensionContent = [
     {
       id: "zero",
+      image: d1,
       title: "零維度 | 理解",
       desc:
         "透過使用者經驗的專業背景聊聊品牌接觸點所遇見的問題並釐清規劃的方向，輕鬆的聊聊外也讓你更理解我們。",
     },
     {
       id: "one",
+      image: d2,
       title: "一維度 | 拆解",
       desc:
         "探討品牌與市場間的關係，透過實際的演練與我們跨領域結合的定位系統重新出發，同步進行品牌的Mi(理念定位)與Analysis（分析定位）掌握時程精準性，解決關鍵問題。",
     },
     {
       id: "two",
+      image: d3,
       title: "二維度 | 組合",
       desc:
         "根據分析的結果，進行品牌內外部的接觸點規劃。將品牌策略、時間軸方向、預期目標、對象受眾（TA）、觸點表現等等，定義品牌樣貌提高接觸點的設計精準性。",
     },
     {
       id: "three",
+      image: d4,
       title: "三維度 | 執行",
       desc:
         "品牌空間不是說說故事這麼簡單，UnMe透過經驗研發的坪效演算、情緒分析、行為設計、使用者經驗等，串連線上與線下的一致性，創造獨特的空間設計來產收沈浸式體驗的真實價值。",
     },
     {
       id: "four",
+      image: d5,
       title: "四維度 | 落實",
       desc:
         "我們有著拆解不同需求的空間設計能力。從百貨、餐飲、錄音室、健身房、辦公室等，分別配合不同的工程團隊落實裝潢需求，經由實際的掌握陪同夥伴解決經營問題。",
@@ -159,6 +173,11 @@ const Service = () => {
   ];
 
   const ServiceContainer = () => {
+    console.log(state)
+    const imageClass = cx({
+      image: true,
+      invert: !state.darkMode
+    })
     if (deviceType === "mobile") {
       return (
         <>
@@ -172,6 +191,8 @@ const Service = () => {
               step: true,
               active: content.id === currentService,
             });
+
+          
             return (
               <div className={styles["step-block"]} key={item.id}>
                 <div
@@ -183,7 +204,7 @@ const Service = () => {
                   {item.value}
                 </div>
                 <div className={stepClass}>
-                  <div className={styles.animation}></div>
+                <div className={imageClass}><img src={content.image} alt="image"/></div>
                   <div className={styles.text}>
                     <div className={styles.title}>{content.title}</div>
                     <div className={styles.desc}>{content.desc}</div>
@@ -205,7 +226,7 @@ const Service = () => {
             });
             return (
               <div className={contentClass} key={content.id}>
-                <div className={styles.animation}></div>
+                <div className={imageClass}><img src={content.image} alt="image"/></div>
                 <div className={styles.text}>
                   <div className={styles.title}>{content.title}</div>
                   <div className={styles.desc}>{content.desc}</div>
