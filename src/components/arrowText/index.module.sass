@@ -1,0 +1,41 @@
+@import styles/variables
+@import styles/extends
+
+.container
+    cursor: pointer
+    display: flex
+    padding: 10px 0
+    color: var(--sub-color-second)
+
+    +globalTransition
+    +hover
+        +globalTransition
+
+        text-shadow: 0 0 15px var(--sub-color-third)
+    &.color-reverse
+        color: var(--main-color)
+        +hover
+            text-shadow: 0 0 15px var(--main-color-third)
+        .arrow
+             background: var(--main-color-second)
+             &::before
+                 border-top-color: var(--main-color-second)
+
+.arrow
+    width: 130px
+    height: 1px
+    background: var(--sub-color-second)
+    transition: ease all 0.2s 0.2s
+    margin: 15px 0 0 10px
+    position: relative
+
+    &::before
+        content: ""
+        position: absolute
+        height: 10px
+        width: 10px
+        border-top: 1px solid var(--sub-color-second)
+        top: -6px
+        right: 3px
+        transform: rotate(45deg)
+        transition: ease all 0.4s

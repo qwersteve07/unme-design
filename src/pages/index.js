@@ -5,12 +5,14 @@ import classnames from "classnames/bind";
 import Card from "components/card";
 import UseInterval from "utils/useInterval";
 import UseDeviceType from "utils/useDeviceType";
-import d1 from 'images/landing/1.png'
-import d2 from 'images/landing/2.png'
-import d3 from 'images/landing/3.png'
-import d4 from 'images/landing/4.png'
-import d5 from 'images/landing/5.png'
+import d1 from "images/landing/1.png";
+import d2 from "images/landing/2.png";
+import d3 from "images/landing/3.png";
+import d4 from "images/landing/4.png";
+import d5 from "images/landing/5.png";
 import { useSelector } from "react-redux";
+import ArrowText from "components/arrowText";
+import Link from "next/link";
 
 const cx = classnames.bind(styles);
 
@@ -35,7 +37,7 @@ const Heading = () => {
       });
       setActive(false);
     }, 1000);
-  }, 3000);
+  }, 2000);
 
   let inComingIndex = currentIndex + 1 > 4 ? 0 : currentIndex + 1;
 
@@ -173,11 +175,10 @@ const Service = () => {
   ];
 
   const ServiceContainer = () => {
-    console.log(state)
     const imageClass = cx({
       image: true,
-      invert: !state.darkMode
-    })
+      invert: !state.darkMode,
+    });
     if (deviceType === "mobile") {
       return (
         <>
@@ -192,7 +193,6 @@ const Service = () => {
               active: content.id === currentService,
             });
 
-          
             return (
               <div className={styles["step-block"]} key={item.id}>
                 <div
@@ -204,7 +204,9 @@ const Service = () => {
                   {item.value}
                 </div>
                 <div className={stepClass}>
-                <div className={imageClass}><img src={content.image} alt="image"/></div>
+                  <div className={imageClass}>
+                    <img src={content.image} alt="image" />
+                  </div>
                   <div className={styles.text}>
                     <div className={styles.title}>{content.title}</div>
                     <div className={styles.desc}>{content.desc}</div>
@@ -226,7 +228,9 @@ const Service = () => {
             });
             return (
               <div className={contentClass} key={content.id}>
-                <div className={imageClass}><img src={content.image} alt="image"/></div>
+                <div className={imageClass}>
+                  <img src={content.image} alt="image" />
+                </div>
                 <div className={styles.text}>
                   <div className={styles.title}>{content.title}</div>
                   <div className={styles.desc}>{content.desc}</div>
@@ -260,40 +264,48 @@ const Service = () => {
   return (
     <section className={styles.service}>
       <div className={styles.container}>{ServiceContainer()}</div>
-      <div className={styles.learn}>了解服務流程</div>
+      <div className={styles.learn}>
+        <ArrowText text="了解服務流程" />
+      </div>
     </section>
   );
 };
 
 const Projects = () => {
+  const state = useSelector((state) => state.appReducer);
+
   const projectsData = [
     {
+      id: "the-misanthrope-society",
       image: "/projects/the-misanthrope-society/the-misanthrope-society13.jpg",
-      name: "厭世會社",
+      name: "厭世會社咖啡餐酒館",
+      tags: "#Interior design 室內設計 #3rdDimension｜3維設計",
+      define: "商業空間設計 ｜ 餐飲空間設計",
+      description:
+        "設計與社會結構的關係，其實是深根蒂固的。厭世會社，是一間以憂鬱患者為出發的社會企業，老闆本身所經歷的憂鬱病史，促使他建立這個地方，提供病友們喘息的空間，甚至創辦病友的交流圈，協助他們翻轉心態，重新面對人權。",
+    },
+    {
+      id: "yogibo-xinyi",
+      image: "/projects/yogibo-xinyi/yogibo-xinyi01.jpg",
+      name: "YOGIBO 信義店",
+      tags: "#Interior design 室內設計 #3rdDimension｜3維設計",
+      define: "懶骨頭沙發品牌 ｜ 百貨專櫃設計",
+      description:
+        "我們協助Yogibo進入品牌空間的第二個階段：影響力。過往執行的Yogibo台茂、新竹、桃園、台南、台中的多點專櫃長期規劃後，我們利用在不同點為上的佈局與工程規劃，開始鎖定在消費者行為與多彩產品下的專櫃風格創造，來創造專屬「悠式生活」的品牌空間。",
+    },
+    {
+      id: "up-sports",
+      image: "/projects/the-misanthrope-society/the-misanthrope-society13.jpg",
+      name: "UP SPORTS",
       tags: "#Interior Design  #商空設計",
       define: "懶骨頭沙發品牌｜百貨專櫃設計",
       description:
         "我們利用在不同點為上的佈局與工程規劃，開始鎖定在消費者行為與多彩產品下的專櫃風格創造，來創造專屬「悠式生活」的品牌空間。",
     },
     {
+      id: "grilled-sandwishes",
       image: "/projects/the-misanthrope-society/the-misanthrope-society13.jpg",
-      name: "厭世會社",
-      tags: "#Interior Design  #商空設計",
-      define: "懶骨頭沙發品牌｜百貨專櫃設計",
-      description:
-        "我們利用在不同點為上的佈局與工程規劃，開始鎖定在消費者行為與多彩產品下的專櫃風格創造，來創造專屬「悠式生活」的品牌空間。",
-    },
-    {
-      image: "/projects/the-misanthrope-society/the-misanthrope-society13.jpg",
-      name: "厭世會社",
-      tags: "#Interior Design  #商空設計",
-      define: "懶骨頭沙發品牌｜百貨專櫃設計",
-      description:
-        "我們利用在不同點為上的佈局與工程規劃，開始鎖定在消費者行為與多彩產品下的專櫃風格創造，來創造專屬「悠式生活」的品牌空間。",
-    },
-    {
-      image: "/projects/the-misanthrope-society/the-misanthrope-society13.jpg",
-      name: "厭世會社",
+      name: "格里歐三明治",
       tags: "#Interior Design  #商空設計",
       define: "懶骨頭沙發品牌｜百貨專櫃設計",
       description:
@@ -308,12 +320,18 @@ const Projects = () => {
           <img src="/projects/voicetube/voicetube08.jpg" />
         </div>
         <div className={styles.info}>
-          <div className={styles.name}>放品牌空間案例VOICETUBE</div>
-          <div className={styles.tags}>#Interior Design #辦公室設計</div>
-          <div className={styles.desc}>
-            Voicetube是整理不同語言的資訊，再讓人們透過手機、電腦、平板來學習，創造世界的連結關係。這樣的模式，讓我們想到著名的皮克斯動畫「腦筋急轉彎」裡的大腦世界，協助我們創造一個專屬於Voicetube的獨特風格。
+          <div className={styles.name}>VOICETUBE</div>
+          <div className={styles.tags}>
+            #Space branding design 品牌空間設計 #3rdDimension｜3維設計
           </div>
-          <div className={styles.more}>VIEW MORE</div>
+          <div className={styles.desc}>
+            Voicetube透過整理不同語言的資訊，再讓人們透過手機、電腦、平板來學習，創造世界的連結關係。有趣的是，在動畫裡頭的世界與Voicetube的品牌色調，不約而同的都已帶點科技感的紫色為主要空間場景，成為默契般的風格方向，協助我們創造一個專屬於Voicetube的獨特風格。
+          </div>
+          <div className={styles.more}>
+            <Link href="/projects/voicetube">
+              <ArrowText text="VIEW MORE" colorReverse={true} />
+            </Link>
+          </div>
         </div>
       </div>
       <div className={styles.bottom}>
@@ -322,11 +340,17 @@ const Projects = () => {
             const Info = () => {
               return (
                 <>
-                  <div className={styles.name}>{data.name}</div>
+                  <Link href={`/projects/${data.id}`}>
+                    <div className={styles.name}>{data.name}</div>
+                  </Link>
                   <div className={styles.tags}>{data.tags}</div>
                   <div className={styles.define}>{data.define}</div>
                   <div className={styles.desc}>{data.description}</div>
-                  {/* <More/> */}
+                  <div className={styles.more}>
+                    <Link href={`/projects/${data.id}`}>
+                      <ArrowText text="VIEW MORE" colorReverse={true} />
+                    </Link>
+                  </div>
                 </>
               );
             };
@@ -344,6 +368,11 @@ const Projects = () => {
               />
             );
           })}
+        </div>
+        <div className={styles.learn}>
+          <Link href="/projects">
+            <ArrowText text="MORE PROJECTS" />
+          </Link>
         </div>
       </div>
     </div>

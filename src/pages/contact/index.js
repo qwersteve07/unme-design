@@ -5,7 +5,7 @@ import { useSelector } from "react-redux";
 import validator from "validator";
 import PageContainer from "components/page-container";
 import emailjs from "emailjs-com";
-import Arrow from "components/arrow";
+import ArrowText from "components/arrowText";
 
 const Contact = () => {
   const cx = classnames.bind(styles);
@@ -273,12 +273,7 @@ const Contact = () => {
           <div className={styles.bottom}>
             <span className={errorMessageClass}>{errorMessage}</span>
             <span className={successMessageClass}>{successMessage}</span>
-            <Arrow
-              dark={state.darkMode}
-              hover={true}
-              text="Send"
-              onClick={sendMail}
-            />
+            <ArrowText text="Send" onClick={sendMail} />
           </div>
         </form>
       </main>
