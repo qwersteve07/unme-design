@@ -53,9 +53,11 @@ const Nav = () => {
         active: router.pathname.replace("/", "") === nav,
       });
       if (nav === "home" && window.innerWidth > 767) return;
+
+      let navText = nav === "home" ? "" : nav;
       return (
         <li key={nav} className={liClass}>
-          <Link href={`/${nav}`} as={`/${nav}`}>
+          <Link href={`/${navText}`} as={`/${navText}`}>
             <a>{nav}</a>
           </Link>
         </li>

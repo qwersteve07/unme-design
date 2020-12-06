@@ -75,7 +75,8 @@ const Carousel = ({ items }) => {
 
   //   touch method
   const touchStart = (e) => {
-    setPointStart([e.touches[0].clientX, e.touched[0].clientY]);
+    console.log(e.touched);
+    setPointStart([e.touches[0].clientX, e.touches[0].clientY]);
   };
   const touchMove = (e) => {
     // 移動距離(touch)
