@@ -11,53 +11,54 @@ import { SET_FILTER, SET_SUB_FILTER } from "redux/reducer/projects";
 import matter from "gray-matter";
 import { PROJECT_CONTENT_PATH } from "config/config";
 import UseDeviceType from "utils/useDeviceType";
+const cx = classnames.bind(styles);
+
+const Filter = ({ currentFilter, data, onSelect }) => {
+  const deviceType = UseDeviceType();
+
+  if (deviceType === "mobile") {
+    return (
+      <select
+        className={styles["select-filter"]}
+        value={currentFilter}
+        onChange={(e) => {
+          onSelect(e.target.value);
+        }}
+      >
+        {data.map((filter) => {
+          return (
+            <option value={filter.id} key={filter.id}>
+              {filter.nameEn} | {filter.nameCn}
+            </option>
+          );
+        })}
+      </select>
+    );
+  }
+  return data.map((filter) => {
+    const filterClass = cx({
+      filter: true,
+      active: currentFilter === filter.id,
+    });
+
+    return (
+      <div
+        className={filterClass}
+        key={filter.id}
+        onClick={() => onSelect(filter.id)}
+      >
+        {filter.nameEn}
+        <div className={styles.nameCn}>{filter.nameCn}</div>
+      </div>
+    );
+  });
+};
 
 const Projects = ({ projectsData, moreData }) => {
-  const cx = classnames.bind(styles);
   const state = useSelector((state) => state.projectsReducer);
   const dispatch = useDispatch();
   const setFilter = (id) => dispatch({ type: SET_FILTER, payload: id });
   const setSubFilter = (id) => dispatch({ type: SET_SUB_FILTER, payload: id });
-  const deviceType = UseDeviceType();
-
-  const Filter = ({ currentFilter, data, onSelect }) => {
-    if (deviceType === "mobile") {
-      return (
-        <select
-          className={styles["select-filter"]}
-          value={currentFilter}
-          onChange={(e) => {
-            onSelect(e.target.value);
-          }}
-        >
-          {data.map((filter) => {
-            return (
-              <option value={filter.id} key={filter.id}>
-                {filter.nameEn} | {filter.nameCn}
-              </option>
-            );
-          })}
-        </select>
-      );
-    }
-    return data.map((filter) => {
-      const filterClass = cx({
-        filter: true,
-        active: currentFilter === filter.id,
-      });
-
-      return (
-        <div
-          className={filterClass}
-          key={filter.id}
-          onClick={() => onSelect(filter.id)}
-        >
-          {filter.nameEn}
-          <div className={styles.nameCn}>{filter.nameCn}</div>
-        </div>
-      );
-    });
-  };
 
   const MainFilter = () => {
     return (
