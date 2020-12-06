@@ -1,10 +1,10 @@
 ---
 titleEn:
 titleCn: 跪著聽音樂有限公司
-tags: ["Interior design 室內設計", "3rdDimension｜3維設計"]
+tags: ["interior", "3d"]
 define: 音樂製作公司 ｜ 錄音室設計
 description: "錄音室規劃設計，一直是空間設計中特別獨立的區塊。因為在錄製過程中，需要考量音頻震動的高低起伏後利用不同的工法與材質逐一削弱，並抵銷聲音的回音或是雜音上被收錄的問題，而延伸出許多包含浮動地板、特殊表面材質的施作方式。"
-thumbnail: "/projects/stand up/stand up01.jpg"
+thumbnail: "/projects/may-i-stand-up/may-i-stand-up01.webp"
 contain: 空間設計 | 工程施作 | 風格定位 | 隔音工程 ｜ 環境氛圍規劃
 ---
 
@@ -24,16 +24,16 @@ contain: 空間設計 | 工程施作 | 風格定位 | 隔音工程 ｜ 環境
 
 <section>
 
-<img alt="may-i-stand-up02" data-src="/projects/may-i-stand-up/may-i-stand-up02.jpg" />
-<img alt="may-i-stand-up03" data-src="/projects/may-i-stand-up/may-i-stand-up03.jpg" />
-<img alt="may-i-stand-up04" data-src="/projects/may-i-stand-up/may-i-stand-up04.jpg" />
-<img alt="may-i-stand-up05" data-src="/projects/may-i-stand-up/may-i-stand-up05.jpg" />
-<img alt="may-i-stand-up06" data-src="/projects/may-i-stand-up/may-i-stand-up06.jpg" />
-<img alt="may-i-stand-up07" data-src="/projects/may-i-stand-up/may-i-stand-up07.jpg" />
-<img alt="may-i-stand-up02" data-src="/projects/may-i-stand-up/may-i-stand-up08.jpg" />
-<img alt="may-i-stand-up04" data-src="/projects/may-i-stand-up/may-i-stand-up09.jpg" />
-<img alt="may-i-stand-up05" data-src="/projects/may-i-stand-up/may-i-stand-up10.jpg" />
-<img alt="may-i-stand-up06" data-src="/projects/may-i-stand-up/may-i-stand-up11.jpg" />
-<img alt="may-i-stand-up07" data-src="/projects/may-i-stand-up/may-i-stand-up12.jpg" />
+<img alt="may-i-stand-up02" data-src="/projects/may-i-stand-up/may-i-stand-up02.webp" />
+<img alt="may-i-stand-up03" data-src="/projects/may-i-stand-up/may-i-stand-up03.webp" />
+<img alt="may-i-stand-up04" data-src="/projects/may-i-stand-up/may-i-stand-up04.webp" />
+<img alt="may-i-stand-up05" data-src="/projects/may-i-stand-up/may-i-stand-up05.webp" />
+<img alt="may-i-stand-up06" data-src="/projects/may-i-stand-up/may-i-stand-up06.webp" />
+<img alt="may-i-stand-up07" data-src="/projects/may-i-stand-up/may-i-stand-up07.webp" />
+<img alt="may-i-stand-up02" data-src="/projects/may-i-stand-up/may-i-stand-up08.webp" />
+<img alt="may-i-stand-up04" data-src="/projects/may-i-stand-up/may-i-stand-up09.webp" />
+<img alt="may-i-stand-up05" data-src="/projects/may-i-stand-up/may-i-stand-up10.webp" />
+<img alt="may-i-stand-up06" data-src="/projects/may-i-stand-up/may-i-stand-up11.webp" />
+<img alt="may-i-stand-up07" data-src="/projects/may-i-stand-up/may-i-stand-up12.webp" />
 
 </section>

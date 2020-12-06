@@ -1,10 +1,10 @@
 ---
 titleEn:
 titleCn: 厭世會社咖啡餐酒館
-tags: ["Interior design 室內設計", "3rdDimension｜3維設計"]
+tags: ["interior", "3d"]
 define: 商業空間設計 ｜ 餐飲空間設計
 description: "設計與社會結構的關係，其實是深根蒂固的。厭世會社，是一間以憂鬱患者為出發的社會企業，老闆本身所經歷的憂鬱病史，促使他建立這個地方，提供病友們喘息的空間，甚至創辦病友的交流圈，協助他們翻轉心態，重新面對人權。"
-thumbnail: "/projects/tms/tms01.jpg"
+thumbnail: "/projects/the-misanthrope-society/the-misanthrope-society01.webp"
 contain: 品牌分析 ｜ 品牌視覺連結 ｜ 企業風格訂製 ｜ 3D圖面繪製 ｜ 施工規劃 ｜ 材質設計 ｜ 氛圍營造
 ---
 
@@ -32,30 +32,30 @@ contain: 品牌分析 ｜ 品牌視覺連結 ｜ 企業風格訂製 ｜ 3D圖面
 
 <section>
 
-<img alt="the-misanthrope-society01" data-src="/projects/the-misanthrope-society/the-misanthrope-society01.jpg" />
-<img alt="the-misanthrope-society02" data-src="/projects/the-misanthrope-society/the-misanthrope-society02.jpg" />
-<img alt="the-misanthrope-society03" data-src="/projects/the-misanthrope-society/the-misanthrope-society03.jpg" />
-<img alt="the-misanthrope-society04" data-src="/projects/the-misanthrope-society/the-misanthrope-society04.jpg" />
-<img alt="the-misanthrope-society05" data-src="/projects/the-misanthrope-society/the-misanthrope-society05.jpg" />
-<img alt="the-misanthrope-society06" data-src="/projects/the-misanthrope-society/the-misanthrope-society06.jpg" />
-<img alt="the-misanthrope-society07" data-src="/projects/the-misanthrope-society/the-misanthrope-society07.jpg" />
-<img alt="the-misanthrope-society08" data-src="/projects/the-misanthrope-society/the-misanthrope-society08.jpg" />
-<img alt="the-misanthrope-society09" data-src="/projects/the-misanthrope-society/the-misanthrope-society09.jpg" />
-<img alt="the-misanthrope-society10" data-src="/projects/the-misanthrope-society/the-misanthrope-society10.jpg" />
-<img alt="the-misanthrope-society11" data-src="/projects/the-misanthrope-society/the-misanthrope-society11.jpg" />
-<img alt="the-misanthrope-society12" data-src="/projects/the-misanthrope-society/the-misanthrope-society12.jpg" />
-<img alt="the-misanthrope-society13" data-src="/projects/the-misanthrope-society/the-misanthrope-society13.jpg" />
-<img alt="the-misanthrope-society14" data-src="/projects/the-misanthrope-society/the-misanthrope-society14.jpg" />
-<img alt="the-misanthrope-society15" data-src="/projects/the-misanthrope-society/the-misanthrope-society15.jpg" />
-<img alt="the-misanthrope-society16" data-src="/projects/the-misanthrope-society/the-misanthrope-society16.jpg" />
-<img alt="the-misanthrope-society17" data-src="/projects/the-misanthrope-society/the-misanthrope-society17.jpg" />
-<img alt="the-misanthrope-society18" data-src="/projects/the-misanthrope-society/the-misanthrope-society18.jpg" />
-<img alt="the-misanthrope-society19" data-src="/projects/the-misanthrope-society/the-misanthrope-society19.jpg" />
-<img alt="the-misanthrope-society20" data-src="/projects/the-misanthrope-society/the-misanthrope-society20.jpg" />
-<img alt="the-misanthrope-society21" data-src="/projects/the-misanthrope-society/the-misanthrope-society21.jpg" />
-<img alt="the-misanthrope-society22" data-src="/projects/the-misanthrope-society/the-misanthrope-society22.jpg" />
-<img alt="the-misanthrope-society23" data-src="/projects/the-misanthrope-society/the-misanthrope-society23.jpg" />
-<img alt="the-misanthrope-society24" data-src="/projects/the-misanthrope-society/the-misanthrope-society24.jpg" />
-<img alt="the-misanthrope-society25" data-src="/projects/the-misanthrope-society/the-misanthrope-society25.jpg" />
+<img alt="the-misanthrope-society01" data-src="/projects/the-misanthrope-society/the-misanthrope-society01.webp" />
+<img alt="the-misanthrope-society02" data-src="/projects/the-misanthrope-society/the-misanthrope-society02.webp" />
+<img alt="the-misanthrope-society03" data-src="/projects/the-misanthrope-society/the-misanthrope-society03.webp" />
+<img alt="the-misanthrope-society04" data-src="/projects/the-misanthrope-society/the-misanthrope-society04.webp" />
+<img alt="the-misanthrope-society05" data-src="/projects/the-misanthrope-society/the-misanthrope-society05.webp" />
+<img alt="the-misanthrope-society06" data-src="/projects/the-misanthrope-society/the-misanthrope-society06.webp" />
+<img alt="the-misanthrope-society07" data-src="/projects/the-misanthrope-society/the-misanthrope-society07.webp" />
+<img alt="the-misanthrope-society08" data-src="/projects/the-misanthrope-society/the-misanthrope-society08.webp" />
+<img alt="the-misanthrope-society09" data-src="/projects/the-misanthrope-society/the-misanthrope-society09.webp" />
+<img alt="the-misanthrope-society10" data-src="/projects/the-misanthrope-society/the-misanthrope-society10.webp" />
+<img alt="the-misanthrope-society11" data-src="/projects/the-misanthrope-society/the-misanthrope-society11.webp" />
+<img alt="the-misanthrope-society12" data-src="/projects/the-misanthrope-society/the-misanthrope-society12.webp" />
+<img alt="the-misanthrope-society13" data-src="/projects/the-misanthrope-society/the-misanthrope-society13.webp" />
+<img alt="the-misanthrope-society14" data-src="/projects/the-misanthrope-society/the-misanthrope-society14.webp" />
+<img alt="the-misanthrope-society15" data-src="/projects/the-misanthrope-society/the-misanthrope-society15.webp" />
+<img alt="the-misanthrope-society16" data-src="/projects/the-misanthrope-society/the-misanthrope-society16.webp" />
+<img alt="the-misanthrope-society17" data-src="/projects/the-misanthrope-society/the-misanthrope-society17.webp" />
+<img alt="the-misanthrope-society18" data-src="/projects/the-misanthrope-society/the-misanthrope-society18.webp" />
+<img alt="the-misanthrope-society19" data-src="/projects/the-misanthrope-society/the-misanthrope-society19.webp" />
+<img alt="the-misanthrope-society20" data-src="/projects/the-misanthrope-society/the-misanthrope-society20.webp" />
+<img alt="the-misanthrope-society21" data-src="/projects/the-misanthrope-society/the-misanthrope-society21.webp" />
+<img alt="the-misanthrope-society22" data-src="/projects/the-misanthrope-society/the-misanthrope-society22.webp" />
+<img alt="the-misanthrope-society23" data-src="/projects/the-misanthrope-society/the-misanthrope-society23.webp" />
+<img alt="the-misanthrope-society24" data-src="/projects/the-misanthrope-society/the-misanthrope-society24.webp" />
+<img alt="the-misanthrope-society25" data-src="/projects/the-misanthrope-society/the-misanthrope-society25.webp" />
 
 </section>

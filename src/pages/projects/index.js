@@ -10,6 +10,7 @@ import PageContainer from "components/page-container";
 import { SET_FILTER, SET_SUB_FILTER } from "redux/reducer/projects";
 import matter from "gray-matter";
 import { PROJECT_CONTENT_PATH } from "config/config";
+import UseDeviceType from "utils/useDeviceType";
 
 const Projects = ({ projectsData, moreData }) => {
   const cx = classnames.bind(styles);
@@ -17,112 +18,144 @@ const Projects = ({ projectsData, moreData }) => {
   const dispatch = useDispatch();
   const setFilter = (id) => dispatch({ type: SET_FILTER, payload: id });
   const setSubFilter = (id) => dispatch({ type: SET_SUB_FILTER, payload: id });
+  const deviceType = UseDeviceType();
 
-  const Filter = () => {
+  const Filter = ({ currentFilter, data, onSelect }) => {
+    if (deviceType === "mobile") {
+      return (
+        <select
+          className={styles["select-filter"]}
+          value={currentFilter}
+          onChange={(e) => {
+            onSelect(e.target.value);
+          }}
+        >
+          {data.map((filter) => {
+            return (
+              <option value={filter.id} key={filter.id}>
+                {filter.nameEn} | {filter.nameCn}
+              </option>
+            );
+          })}
+        </select>
+      );
+    }
+    return data.map((filter) => {
+      const filterClass = cx({
+        filter: true,
+        active: currentFilter === filter.id,
+      });
+
+      return (
+        <div
+          className={filterClass}
+          key={filter.id}
+          onClick={() => onSelect(filter.id)}
+        >
+          {filter.nameEn}
+          <div className={styles.nameCn}>{filter.nameCn}</div>
+        </div>
+      );
+    });
+  };
+
+  const MainFilter = () => {
     return (
       <div className={styles["filter-container"]}>
-        {state.filters.map((filter) => {
-          const filterClass = cx({
-            filter: true,
-            active: state.currentFilter === filter.id,
-          });
-
-          return (
-            <div
-              className={filterClass}
-              key={filter.id}
-              onClick={() => setFilter(filter.id)}
-            >
-              {filter.name}
-            </div>
-          );
-        })}
+        <Filter
+          data={state.filters}
+          onSelect={setFilter}
+          currentFilter={state.currentFilter}
+        />
       </div>
     );
   };
 
   const SubFilter = () => {
     return (
-      <ul className={styles["sub-filter-container"]}>
-        {state.subFilters.map((filter) => {
-          const subFilterClass = cx({
-            "sub-filter": true,
-            active: state.currentSubFilter === filter.id,
-          });
-          return (
-            <div
-              className={subFilterClass}
-              key={filter.id}
-              onClick={() => setSubFilter(filter.id)}
-            >
-              {filter.name}
-            </div>
-          );
-        })}
-      </ul>
+      <div className={`${styles["filter-container"]} ${styles.sub}`}>
+        <Filter
+          data={state.subFilters}
+          onSelect={setSubFilter}
+          currentFilter={state.currentSubFilter}
+        />
+      </div>
     );
+  };
+
+  const ProjectMap = () => {
+    let filteredProjectData = projectsData.filter((data) => {
+      let { tags } = data.frontMatter;
+      const isFilteredByMain =
+        state.currentFilter === "all" || state.currentFilter === tags[0];
+      const isFilteredBySub =
+        state.currentSubFilter === "all" || state.currentSubFilter === tags[1];
+      return isFilteredByMain && isFilteredBySub;
+    });
+
+    if (filteredProjectData.length === 0)
+      return <div className={styles.empty}>專案進行中，敬請期待</div>;
+
+    return filteredProjectData.map((data, key) => {
+      const {
+        frontMatter: { titleEn, titleCn, tags, thumbnail, define, description },
+        id,
+      } = data;
+
+      console.log(titleEn);
+
+      const itemClass = cx({
+        item: true,
+        invert: key % 2 !== 0,
+      });
+
+      const Title = () => {
+        if ((titleEn && !titleCn) || (!titleEn && titleCn))
+          return <div className={styles.title}>{titleEn || titleCn}</div>;
+        return (
+          <div className={styles.title}>
+            {titleEn}
+            <br />
+            <div className={styles.cn}>{titleCn}</div>
+          </div>
+        );
+      };
+
+      return (
+        <div className={itemClass} key={id}>
+          <div className={styles.info}>
+            <Title />
+            <div className={styles.tags}>
+              <Tags data={tags} />
+            </div>
+            <button>
+              <Link href={`/projects/[id]`} as={`/projects/${id}`}>
+                <a>VIEW PROJECT</a>
+              </Link>
+            </button>
+          </div>
+          <div className={styles.image}>
+            <Link href={`/projects/[id]`} as={`/projects/${id}`}>
+              <div className={styles.thumbnail}>
+                <img src={thumbnail} alt="thumbnail" />
+              </div>
+            </Link>
+            <div className={styles.intro}>
+              <div className={styles.define}>{define}</div>
+              <div className={styles.desc}>{description}</div>
+            </div>
+          </div>
+        </div>
+      );
+    });
   };
 
   return (
     <PageContainer exception={<More data={moreData} />}>
-      {/* <Filter /> */}
-      {/* <SubFilter /> */}
+      {MainFilter()}
+      {SubFilter()}
       <div className={styles.projects}>
-        {projectsData.map(
-          (
-            {
-              frontMatter: {
-                titleEn,
-                titleCn,
-                tags,
-                thumbnail,
-                define,
-                description,
-              },
-              id,
-            },
-            key
-          ) => {
-            const itemClass = cx({
-              item: true,
-              invert: key % 2 !== 0,
-            });
-
-            const Title = () => {
-              if ((titleEn && !titleCn) || (!titleEn && titleCn))
-                return <div className={styles.title}>{titleEn || titleCn}</div>;
-              return (
-                <div className={styles.title}>
-                  {titleEn}
-                  <br />
-                  <div className={styles.cn}>{titleCn}</div>
-                </div>
-              );
-            };
-            return (
-              <div className={itemClass} key={id}>
-                <div className={styles.info}>
-                  <Title />
-                  <Tags data={tags} />
-                  <button>
-                    <Link href={`/projects/[id]`} as={`/projects/${id}`}>
-                      <a>VIEW PROJECT</a>
-                    </Link>
-                  </button>
-                </div>
-                <div className={styles.image}>
-                  <div className={styles.thumbnail}>
-                    <img src={thumbnail} alt="thumbnail" />
-                  </div>
-                  <div className={styles.intro}>
-                    <div className={styles.define}>{define}</div>
-                    <div className={styles.desc}>{description}</div>
-                  </div>
-                </div>
-              </div>
-            );
-          }
-        )}
+        <ProjectMap />
       </div>
     </PageContainer>
   );

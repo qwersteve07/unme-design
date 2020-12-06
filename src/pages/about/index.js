@@ -1,5 +1,5 @@
 import dynamic from "next/dynamic";
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import styles from "pages/about/index.module.sass";
 import PageContainer from "components/page-container";
 import Lottie from "lottie-react-web";
@@ -17,16 +17,16 @@ import project02 from "images/project02.jpg";
 import Card from "components/card";
 import useResize from "utils/useResize";
 import { useSelector } from "react-redux";
-
+import Link from "next/link";
 
 const Carousel = dynamic(() => import("components/carousel"), { ssr: false });
 
-const About = ({ projectsData }) => {
+const About = () => {
   const [lottieWidth, setLottieWidth] = useState("");
   const state = useSelector((state) => state.appReducer);
 
   useResize(() => {
-    setLottieWidth(window.innerWidth > 768 ? "50%" : "70%");
+    setLottieWidth(window.innerWidth > 767 ? "50%" : "70%");
   });
 
   const memberData = [
@@ -62,20 +62,55 @@ const About = ({ projectsData }) => {
     },
   ];
 
+  const projectsData = [
+    {
+      id: "voicetube",
+      image: "/projects/voicetube/voicetube08.webp",
+      tags: ["space-branding", "3d"],
+      name: "VOICETUBE",
+    },
+    {
+      id: "yogibo-xinyi",
+      image: "/projects/yogibo-xinyi/yogibo-xinyi01.webp",
+      tags: ["interior", "3d"],
+      name: "YOGIBO 信義店",
+    },
+    {
+      id: "the-misanthrope-society",
+      image: "/projects/the-misanthrope-society/the-misanthrope-society13.webp",
+      tags: ["interior", "3d"],
+      name: "厭世會社咖啡餐酒館",
+    },
+    {
+      id: "grilled-sendwish",
+      image: "/projects/grilled-sendwish/grilled-sendwish01.webp",
+      tags: ["cis", "2d"],
+      name: "格里歐三明治",
+    },
+    {
+      id: "up",
+      image: "/projects/up/up01.webp",
+      tags: ["cis", "2d"],
+      name: "UP SPORTS",
+    },
+  ];
+
   const Slider = () => {
     return (
       <div className={styles.slider}>
         <div className={styles["title"]}>Projects</div>
         <Carousel
-          items={projectsData.map(({ image, tags, name }, key) => {
+          items={projectsData.map(({ id, image, tags, name }) => {
             return (
-              <div className={styles.item} key={key}>
-                <div className={styles.image}>
-                  <img src={image} alt="project" />
+              <Link href={`projects/${id}`} key={id}>
+                <div className={styles.item}>
+                  <div className={styles.image}>
+                    <img src={image} alt="project" />
+                  </div>
+                  <Tags data={tags} />
+                  <div className={styles.name}>{name}</div>
                 </div>
-                <Tags data={tags} />
-                <div className={styles.name}>{name}</div>
-              </div>
+              </Link>
             );
           })}
         />
@@ -141,48 +176,5 @@ const About = ({ projectsData }) => {
     </>
   );
 };
-
-export async function getStaticProps() {
-  const projectsData = await [
-    {
-      image: project01,
-      tags: ["Interior Design", "商空設計"],
-      name: "跪著聽音樂有限公司",
-    },
-    {
-      image: project02,
-      tags: ["CIS Design", "Logo Design"],
-      name: "GLAM IN BREEZE",
-    },
-    {
-      image: project01,
-      tags: ["Interior Design", "商空設計"],
-      name: "跪著聽音樂有限公司",
-    },
-    {
-      image: project02,
-      tags: ["CIS Design", "Logo Design"],
-      name: "GLAM IN BREEZE",
-    },
-    {
-      image: project01,
-      tags: ["Interior Design", "商空設計"],
-      name: "跪著聽音樂有限公司",
-    },
-    {
-      image: project02,
-      tags: ["CIS Design", "Logo Design"],
-      name: "GLAM IN BREEZE",
-    },
-  ];
-
-  // By returning { props: posts }, the Blog component
-  // will receive `posts` as a prop at build time
-  return {
-    props: {
-      projectsData,
-    },
-  };
-}
 
 export default About;

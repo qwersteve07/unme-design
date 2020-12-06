@@ -10,9 +10,11 @@ import d2 from "images/landing/2.png";
 import d3 from "images/landing/3.png";
 import d4 from "images/landing/4.png";
 import d5 from "images/landing/5.png";
+import Tags from "components/tags";
 import { useSelector } from "react-redux";
 import ArrowText from "components/arrowText";
 import Link from "next/link";
+import More from "components/more";
 
 const cx = classnames.bind(styles);
 
@@ -248,7 +250,7 @@ const Service = () => {
             return (
               <li
                 key={item.id}
-                onClick={() => {
+                onMouseOver={() => {
                   setCurrentService(item.id);
                 }}
                 className={itemClass}
@@ -265,49 +267,49 @@ const Service = () => {
     <section className={styles.service}>
       <div className={styles.container}>{ServiceContainer()}</div>
       <div className={styles.learn}>
-        <ArrowText text="了解服務流程" />
+        <Link href="/service">
+          <ArrowText text="了解服務流程" />
+        </Link>
       </div>
     </section>
   );
 };
 
 const Projects = () => {
-  const state = useSelector((state) => state.appReducer);
-
   const projectsData = [
     {
       id: "the-misanthrope-society",
-      image: "/projects/the-misanthrope-society/the-misanthrope-society13.jpg",
+      image: "/projects/the-misanthrope-society/the-misanthrope-society13.webp",
       name: "厭世會社咖啡餐酒館",
-      tags: "#Interior design 室內設計 #3rdDimension｜3維設計",
-      define: "商業空間設計 ｜ 餐飲空間設計",
+      tags: ["interior", "3d"],
+      define: "商業空間設計 | 餐飲空間設計",
       description:
         "設計與社會結構的關係，其實是深根蒂固的。厭世會社，是一間以憂鬱患者為出發的社會企業，老闆本身所經歷的憂鬱病史，促使他建立這個地方，提供病友們喘息的空間，甚至創辦病友的交流圈，協助他們翻轉心態，重新面對人權。",
     },
     {
       id: "yogibo-xinyi",
-      image: "/projects/yogibo-xinyi/yogibo-xinyi01.jpg",
+      image: "/projects/yogibo-xinyi/yogibo-xinyi01.webp",
       name: "YOGIBO 信義店",
-      tags: "#Interior design 室內設計 #3rdDimension｜3維設計",
-      define: "懶骨頭沙發品牌 ｜ 百貨專櫃設計",
+      tags: ["interior", "3d"],
+      define: "懶骨頭沙發品牌 | 百貨專櫃設計",
       description:
         "我們協助Yogibo進入品牌空間的第二個階段：影響力。過往執行的Yogibo台茂、新竹、桃園、台南、台中的多點專櫃長期規劃後，我們利用在不同點為上的佈局與工程規劃，開始鎖定在消費者行為與多彩產品下的專櫃風格創造，來創造專屬「悠式生活」的品牌空間。",
     },
     {
       id: "up-sports",
-      image: "/projects/the-misanthrope-society/the-misanthrope-society13.jpg",
+      image: "/projects/up/up01.webp",
       name: "UP SPORTS",
-      tags: "#Interior Design  #商空設計",
-      define: "懶骨頭沙發品牌｜百貨專櫃設計",
+      tags: ["cis", "2d"],
+      define: "健身沙拉品牌 | 品牌設計",
       description:
         "我們利用在不同點為上的佈局與工程規劃，開始鎖定在消費者行為與多彩產品下的專櫃風格創造，來創造專屬「悠式生活」的品牌空間。",
     },
     {
-      id: "grilled-sandwishes",
-      image: "/projects/the-misanthrope-society/the-misanthrope-society13.jpg",
+      id: "grilled-sandwish",
+      image: "/projects/grilled-sendwish/grilled-sendwish01.webp",
       name: "格里歐三明治",
-      tags: "#Interior Design  #商空設計",
-      define: "懶骨頭沙發品牌｜百貨專櫃設計",
+      tags: ["cis", "2d"],
+      define: "早餐品牌 | 品牌設計",
       description:
         "我們利用在不同點為上的佈局與工程規劃，開始鎖定在消費者行為與多彩產品下的專櫃風格創造，來創造專屬「悠式生活」的品牌空間。",
     },
@@ -317,12 +319,12 @@ const Projects = () => {
       <div className={styles.title}>PROJECTS</div>
       <div className={styles.top}>
         <div className={styles.image}>
-          <img src="/projects/voicetube/voicetube08.jpg" />
+          <img src="/projects/voicetube/voicetube08.webp" />
         </div>
         <div className={styles.info}>
           <div className={styles.name}>VOICETUBE</div>
           <div className={styles.tags}>
-            #Space branding design 品牌空間設計 #3rdDimension｜3維設計
+            <Tags data={["space-branding", "3d"]} />
           </div>
           <div className={styles.desc}>
             Voicetube透過整理不同語言的資訊，再讓人們透過手機、電腦、平板來學習，創造世界的連結關係。有趣的是，在動畫裡頭的世界與Voicetube的品牌色調，不約而同的都已帶點科技感的紫色為主要空間場景，成為默契般的風格方向，協助我們創造一個專屬於Voicetube的獨特風格。
@@ -343,7 +345,9 @@ const Projects = () => {
                   <Link href={`/projects/${data.id}`}>
                     <div className={styles.name}>{data.name}</div>
                   </Link>
-                  <div className={styles.tags}>{data.tags}</div>
+                  <div className={styles.tags}>
+                    <Tags data={data.tags} />
+                  </div>
                   <div className={styles.define}>{data.define}</div>
                   <div className={styles.desc}>{data.description}</div>
                   <div className={styles.more}>
@@ -380,8 +384,25 @@ const Projects = () => {
 };
 
 const Root = () => {
+  const moreData = [
+    {
+      id: "service",
+      title: "Our Service",
+      desc: "深入了解0-4維度的設計規劃，以及專案服務的流程",
+      path: "/service",
+    },
+    {
+      id: "contact",
+      title: "Contact Us",
+      desc:
+        "歡迎分享更多關於你的事情，讓我們與你一同探索出企業的獨特性，陪伴品牌一同成長。",
+      path: "/contact",
+      text: "contact",
+    },
+  ];
+
   return (
-    <PageContainer>
+    <PageContainer exception={<More data={moreData} />}>
       <Heading />
       <Intro />
       <Service />

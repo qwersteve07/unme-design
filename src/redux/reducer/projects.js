@@ -9,44 +9,63 @@ const initialState = {
   filters: [
     {
       id: "all",
-      name: "All Project 全部",
-    },
-    {
-      id: "brand Domain",
-      name: "Brand Domain Design 品牌空間設計",
-    },
-    {
-      id: "interior",
-      name: "Interior Deisgn 空間設計",
+      nameEn: "All Projects",
+      nameCn: "全部",
     },
     {
       id: "cis",
-      name: "CIS Design 品牌設計",
+      nameEn: "CIS Design",
+      nameCn: "品牌設計",
+    },
+    {
+      id: "interior",
+      nameEn: "Interior Deisgn",
+      nameCn: "室內設計",
+    },
+    {
+      id: "literature",
+      nameEn: "Product Literature Design",
+      nameCn: "文宣設計",
+    },
+    {
+      id: "space-branding",
+      nameEn: "Space Branding Design",
+      nameCn: "品牌空間設計",
     },
   ],
   subFilters: [
     {
       id: "all",
-      name: "全部",
+      nameEn: "All",
+      nameCn: "全部",
     },
     {
-      id: "commercial",
-      name: "商空設計",
+      id: "0d",
+      nameEn: "0 Dimension",
+      nameCn: "品牌理念定位",
     },
     {
-      id: "showcase",
-      name: "專櫃設計",
+      id: "1d",
+      nameEn: "1st Dimension",
+      nameCn: "環境定位分析",
     },
     {
-      id: "restaurant",
-      name: "餐廳設計",
+      id: "2d",
+      nameEn: "2nd Dimension",
+      nameCn: "2維設計",
     },
     {
-      id: "office",
-      name: "辦公室設計",
+      id: "3d",
+      nameEn: "3rd Dimension",
+      nameCn: "3維設計",
+    },
+    {
+      id: "4d",
+      nameEn: "4th Dimension",
+      nameCn: "維度設計",
     },
   ],
-  currentFilter: "brand Domain",
+  currentFilter: "all",
   currentSubFilter: "all",
 };
 
