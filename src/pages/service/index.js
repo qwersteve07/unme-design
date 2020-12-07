@@ -115,7 +115,6 @@ const Service = () => {
 
   useEffect(() => {
     const handleScroll = () => {
-      console.log(window.scrollY);
       if (window.innerWidth > 767) {
         if (window.scrollY > 50 && !animation1) {
           setAnimation1(true);

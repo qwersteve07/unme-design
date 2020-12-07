@@ -103,8 +103,6 @@ const Projects = ({ projectsData, moreData }) => {
         id,
       } = data;
 
-      console.log(titleEn);
-
       const itemClass = cx({
         item: true,
         invert: key % 2 !== 0,

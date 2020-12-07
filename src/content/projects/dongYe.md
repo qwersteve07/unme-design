@@ -1,5 +1,5 @@
 ---
-titleEn: DONG YE
+titleEn:
 titleCn: 東燁數位行銷
 tags: ["cis", "2d"]
 define: 行銷公司企業形象設計 ｜ 品牌識別設計

@@ -297,7 +297,7 @@ const Projects = () => {
     },
     {
       id: "up-sports",
-      image: "/projects/up/up01.webp",
+      image: "/projects/up-sports/up-sports01.webp",
       name: "UP SPORTS",
       tags: ["cis", "2d"],
       define: "健身沙拉品牌 | 品牌設計",
@@ -305,8 +305,8 @@ const Projects = () => {
         "我們利用在不同點為上的佈局與工程規劃，開始鎖定在消費者行為與多彩產品下的專櫃風格創造，來創造專屬「悠式生活」的品牌空間。",
     },
     {
-      id: "grilled-sandwish",
-      image: "/projects/grilled-sendwish/grilled-sendwish01.webp",
+      id: "grilled-sendwish",
+      image: "/projects/grilled-sendwish/grilled-sendwish08.webp",
       name: "格里歐三明治",
       tags: ["cis", "2d"],
       define: "早餐品牌 | 品牌設計",
