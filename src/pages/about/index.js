@@ -89,7 +89,7 @@ const About = () => {
     },
     {
       id: "up",
-      image: "/projects/up/up01.webp",
+      image: "/projects/up-sports/up-sports01.webp",
       tags: ["cis", "2d"],
       name: "UP SPORTS",
     },

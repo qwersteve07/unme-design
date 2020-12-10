@@ -8,7 +8,9 @@
 
     .word
         font-size: 9vw
-        font-family: Crimson Text
+
+        +fontCrimsonText
+
         -webkit-text-fill-color: transparent
         -webkit-text-stroke-width: 1px
         -webkit-text-stroke-color: var(--sub-color-third)
@@ -40,7 +42,9 @@
     h1
         font-size: 40px
         line-height: 2
-        font-family: Crimson Text
+
+        +fontCrimsonText
+
         letter-spacing: 3px
         margin: 0
 
@@ -96,7 +100,8 @@
         flex: 1 0 40%
 
     .item
-        font-family: Crimson Text
+        +fontCrimsonText
+
         font-weight: normal
         transform: skewX(-10deg)
         padding: 27px 6px
@@ -153,10 +158,11 @@
         left: 100px
         color: $grey-warm
         font-size: 100px
-        font-family: HindGuntur-Bold
-        letter-spacing: 20px
         z-index: 1
+        letter-spacing: 20px
+        font-weight: bold
 
+        +fontHindGuntur
         +themeTransition
 
     .top

@@ -1,5 +1,9 @@
-const withImages = require("next-images");
-const compose = require("./next.compose");
-// const withMDX = require("@next/mdx")();
+const withPlugins = require("next-compose-plugins");
+const optimizedImages = require("next-optimized-images");
 
-module.exports = compose([[withImages]]);
+module.exports = withPlugins([
+  [optimizedImages],
+  {
+    trailingSlash: true,
+  },
+]);

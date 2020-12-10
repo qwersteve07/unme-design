@@ -2,6 +2,7 @@
   "name": "unmedesign",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://temp.unmedesign.co",
   "scripts": {
     "dev": "next dev",
     "build": "next build && next export",
@@ -17,7 +18,9 @@
     "gray-matter": "^4.0.2",
     "lottie-react-web": "^2.2.2",
     "next": "9.5.1",
+    "next-compose-plugins": "^2.2.1",
     "next-images": "^1.6.0",
+    "next-optimized-images": "^2.6.2",
     "node-sass": "^4.14.1",
     "react": "16.13.1",
     "react-dom": "16.13.1",
