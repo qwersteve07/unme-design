@@ -54,6 +54,8 @@ UP 運動吃沙拉與我們見面的第一天，就是場革命的開始。
 
 比起完美的呈現，原來 up 的理念是建立在幫助運動員產生突破與堅持下去的身心狀態。
 
+<img alt="up-sports04" data-src="/projects/up-sports/up-sports04.webp" />
+
 在多次的聚焦與創辦訪談後，我們發現 UP 從來就不是運動生涯裡的主角，而是不可或缺的輔助者，所有的設計面都往著崇高、爆發、獲勝的面向規劃。
 
 但那未必真正的適合 up 運動的品牌轉型
@@ -62,32 +64,33 @@ UP 運動吃沙拉與我們見面的第一天，就是場革命的開始。
 
 <section>
 
-## 1.品牌不見得是電視劇裡那位高大上的主角
+## ① 品牌不見得是電視劇裡那位高大上的主角
 
-_UP 運動吃沙拉 → UP SPORTS_
+**UP 運動吃沙拉 → UP SPORTS**
 
 讓品牌回歸初心，首先我們著手降低原先的鋒芒感。up 的品牌標誌是以「陪伴者」的定位做出發，透過隱藏的無限符號堆疊成向上的品牌視覺。
 
 比起閃亮的故事或標誌，up sports 更有著穩定提供補給的感受，協助每個運動的人，一起成為更好的自己。
 
 <img alt="up-sports02" data-src="/projects/up-sports/up-sports05.webp" />
-
-## 2.品牌不見得是電視劇裡那位高大上的主角
-
 <img alt="up-sports06" data-src="/projects/up-sports/up-sports06.webp" />
 <img alt="up-sports07" data-src="/projects/up-sports/up-sports07.webp" />
 
-在 rebrand 的過程裡，我們將品牌的衝擊感降低，隨著產品的多元化設計出直觀、簡單、但含有深厚含義的標誌規劃，並加深其在每個產品面上的應用向，透過情境打造 up sports 的品牌感受
+## ② 品牌重塑的內斂與洗煉
 
-## 3.品牌形象的獨特記憶點
+<img alt="up-sports08" data-src="/projects/up-sports/up-sports08.webp" />
+
+在 rebrand 的過程裡，我們將品牌的衝擊感降低，隨著產品的多元化設計出直觀、簡單、但含有深厚含義的標誌規劃，並加深其在每個產品面上的應用向，透過情境打造 up sports 的品牌感受。
+
+## ③ 品牌形象的獨特記憶點
 
 透過理解每個品牌形象的階段性的任務，過往以沙拉還有字體的直觀式結合，已經成功讓 up sports 茁壯成長。伴隨著品牌下個階段的來臨，我們透過看起來好吃、有活力、有營養感受的桃紅作為品牌的主軸色，並藉此差異化市場的視覺感受。
 
 讓 up sports 那種內斂的情感表現出更加平易近人與維持熱情的感受。成為運動生活中，那些在疲憊之餘唾手可得的能量，陪伴每個人成長、前進、向上成為更好的自己。
 
-<img alt="up-sports08" data-src="/projects/up-sports/up-sports08.webp" />
 <img alt="up-sports09" data-src="/projects/up-sports/up-sports09.webp" />
 <img alt="up-sports10" data-src="/projects/up-sports/up-sports10.webp" />
 <img alt="up-sports11" data-src="/projects/up-sports/up-sports11.webp" />
+<img alt="up-sports12" data-src="/projects/up-sports/up-sports12.webp" />
 
 </section>

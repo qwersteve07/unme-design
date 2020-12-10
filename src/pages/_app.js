@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import Head from "next/head";
+import { DefaultSeo } from "next-seo";
 import { useRouter } from "next/router";
 import localDataService from "service/local-data-service";
 import { Provider } from "react-redux";
@@ -75,20 +75,39 @@ const App = ({ Component, pageProps }) => {
 
   return (
     <>
-      <Head>
-        <meta charSet="utf-8" />
-        <meta
-          name="viewport"
-          content="width=device-width,initial-scale=1, viewport-fit=cover"
-        />
-        <meta
-          name="description"
-          content="Web site created using create-react-app"
-        />
-        <meta name="color-scheme" content="light" />
-        <title>UNME DESIGN 非我設計</title>
-        <script src="https://smtpjs.com/v3/smtp.js" />
-      </Head>
+      <DefaultSeo
+        additionalMetaTags={[
+          {
+            name: "viewport",
+            property:
+              "width=device-width,initial-scale=1, viewport-fit=cover,user-scalable=no",
+          },
+          {
+            name: "charset",
+            property: "utf08",
+          },
+          {
+            name: "color-scheme",
+            property: "light",
+          },
+        ]}
+        title="UNME DESIGN 非我設計"
+        description="UnMe Design是一間品牌空間設計公司，利用多種設計領域與經營面，量身訂製企業的獨特形象，並以夥伴的身份陪同品牌成長，達成品牌旅程的一致規劃。UnMe同時執行品牌識別設計、企業形象、活動視覺、辦公室設計、專櫃設計、商空設計、品牌顧問 。讓我們一起趟上品牌的建構旅程！"
+        openGraph={{
+          url: "https://unmedesign.co",
+          title: "UNME DESIGN",
+          description:
+            "UnMe Design是一間品牌空間設計公司，利用多種設計領域與經營面，量身訂製企業的獨特形象，並以夥伴的身份陪同品牌成長，達成品牌旅程的一致規劃。UnMe同時執行品牌識別設計、企業形象、活動視覺、辦公室設計、專櫃設計、商空設計、品牌顧問 。讓我們一起趟上品牌的建構旅程！",
+          locale: "zh_TW",
+          type: "website",
+          images: [
+            {
+              // url: "https://www.example.ie/og-image-02.jpg",
+            },
+          ],
+          site_name: "UNME DESIGN",
+        }}
+      />
       <Provider store={store}>
         <Splash active={splash} />
         <Component {...pageProps} />

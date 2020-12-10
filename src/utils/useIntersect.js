@@ -8,7 +8,7 @@ const UseIntersect = (fn) => {
     if (watcher.current) watcher.current.disconnect();
 
     watcher.current = new IntersectionObserver(fn, {
-      threshold: window.innerWidth > 767 ? 0.8 : 0.3,
+      threshold: 0,
     });
     element.forEach((ele) => {
       watcher.current.observe(ele);

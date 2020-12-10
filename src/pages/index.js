@@ -319,7 +319,7 @@ const Projects = () => {
       <div className={styles.title}>PROJECTS</div>
       <div className={styles.top}>
         <div className={styles.image}>
-          <img src="/projects/voicetube/voicetube08.webp" />
+          <img alt="voicetube" src="/projects/voicetube/voicetube08.webp" />
         </div>
         <div className={styles.info}>
           <div className={styles.name}>VOICETUBE</div>
