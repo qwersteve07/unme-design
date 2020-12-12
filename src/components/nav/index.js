@@ -48,14 +48,21 @@ const Nav = () => {
 
   const NavList = () => {
     return navs.map((nav) => {
+      let navText = nav === "home" ? "" : nav;
       const liClass = cx({
-        active: router.pathname.replace("/", "") === nav,
+        active: router.pathname.replace("/", "") === navText,
       });
       if (nav === "home" && window.innerWidth > 767) return;
 
-      let navText = nav === "home" ? "" : nav;
       return (
-        <li key={nav} className={liClass}>
+        <li
+          key={nav}
+          className={liClass}
+          onClick={() => {
+            if (router.pathname.replace("/", "") === navText)
+              setMenuOpen(false);
+          }}
+        >
           <Link href={`/${navText}`} as={`/${navText}`}>
             <a>{nav}</a>
           </Link>
@@ -127,10 +134,14 @@ const Nav = () => {
           <img src={logo} alt="logo" />
         </Link>
       </div>
-      <ul className={menuClass}>
+      <ul className={menuClass} onClick={() => setMenuOpen(false)}>
         <NavList />
       </ul>
-      <div className={styles.hamburger} onClick={setNav} />
+      <div className={styles.hamburger} onClick={setNav}>
+        <div />
+        <div />
+        <div />
+      </div>
     </nav>
   );
 };

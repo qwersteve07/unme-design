@@ -10,7 +10,7 @@ class MyDocument extends Document {
     return (
       <Html lang="zh-Hant-TW">
         <Head>
-          <script src="https://smtpjs.com/v3/smtp.js" />
+          <script src="https://smtpjs.com/v3/smtp.js" async />
         </Head>
         <body>
           <Main />

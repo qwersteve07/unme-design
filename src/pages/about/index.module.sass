@@ -35,17 +35,22 @@
     width: calc((100% - 255px) / 4)
     margin-right: 85px
     margin-bottom: 50px
-    font-family: CrimsonText-SemiBold
 
     &:nth-of-type(4n)
         margin-right: 0
 
     .name
-        font-size: 20px
+        font-size: 22px
         margin-bottom: 8px
+
+        +fontCrimsonText
+
+        font-weight: bold
 
     .titles
         color: $grey-warm
+
+        +fontHindGuntur
 
 .slider
     margin-bottom: 120px
@@ -134,7 +139,7 @@
     .slider
         &:before
             width: 55vw
-            height: calc((100vw - 50px) * 0.6 + 112px)
+            height: calc((100vw - 50px) * 0.6 + 104px)
 
         .title
             padding: 35px 25px

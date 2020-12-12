@@ -1,23 +1,21 @@
-import dynamic from "next/dynamic";
 import React, { useState } from "react";
-import styles from "pages/about/index.module.sass";
-import PageContainer from "components/page-container";
+import { useSelector } from "react-redux";
+import dynamic from "next/dynamic";
+import Link from "next/link";
 import Lottie from "lottie-react-web";
+import PageContainer from "components/page-container";
+import Tags from "components/tags";
+import Card from "components/card";
 import dotWhite from "images/about/dot-white.json";
 import dotBlack from "images/about/dot-black.json";
-import Tags from "components/tags";
-import wolf from "images/about/wolf.jpg";
-import elephant from "images/about/elephant.jpg";
+import styles from "pages/about/index.module.sass";
+import alpha from "images/about/alpha.jpg";
+import nina from "images/about/nina.jpg";
+import tong from "images/about/tong.jpg";
+import kevin from "images/about/kevin.jpg";
 import dog from "images/about/dog.jpg";
-import octopus from "images/about/octopus.jpg";
-import lion from "images/about/lion.jpg";
 import jellyfish from "images/about/jellyfish.jpg";
-import project01 from "images/project01.jpg";
-import project02 from "images/project02.jpg";
-import Card from "components/card";
 import useResize from "utils/useResize";
-import { useSelector } from "react-redux";
-import Link from "next/link";
 
 const Carousel = dynamic(() => import("components/carousel"), { ssr: false });
 
@@ -33,7 +31,23 @@ const About = () => {
     {
       name: "Alpha",
       titles: "Founder",
-      image: wolf,
+      image: alpha,
+    },
+
+    {
+      name: "Nina",
+      titles: "Designer",
+      image: nina,
+    },
+    {
+      name: "Tong",
+      titles: "Designer",
+      image: tong,
+    },
+    {
+      name: "Kevin",
+      titles: "Designer",
+      image: kevin,
     },
     {
       name: "Steve",
@@ -41,24 +55,9 @@ const About = () => {
       image: jellyfish,
     },
     {
-      name: "vicky",
+      name: "Vicky",
       titles: "Marketing",
       image: dog,
-    },
-    {
-      name: "Nina",
-      titles: "Designer",
-      image: elephant,
-    },
-    {
-      name: "Tong",
-      titles: "Designer",
-      image: octopus,
-    },
-    {
-      name: "Kevin",
-      titles: "Designer",
-      image: lion,
     },
   ];
 
@@ -83,7 +82,7 @@ const About = () => {
     },
     {
       id: "grilled-sendwish",
-      image: "/projects/grilled-sendwish/grilled-sendwish01.webp",
+      image: "/projects/grilled-sendwish/grilled-sendwish08.webp",
       tags: ["cis", "2d"],
       name: "格里歐三明治",
     },
@@ -161,8 +160,8 @@ const About = () => {
             return (
               <Card
                 className={styles.member}
-                imageHeight="120%"
-                lineHeight="230px"
+                imageHeight="145%"
+                lineHeight="250px"
                 key={data.name}
                 data={{
                   image: data.image,

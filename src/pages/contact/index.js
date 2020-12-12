@@ -16,7 +16,6 @@ const Contact = () => {
   const [elseContact, setElseContact] = useState("");
   const [startDate, setStartDate] = useState("");
   const [endDate, setEndDate] = useState("");
-  const state = useSelector((state) => state.appReducer);
 
   const [caseType, setCaseType] = useState("domain-design");
   const [comment, setComment] = useState("");

@@ -20,6 +20,7 @@ const Footer = () => {
             rel="noreferrer noopener"
           >
             <i className="fab fa-facebook-f" />
+            <span>facebook</span>
           </a>
           <a
             href="https://www.instagram.com/unme_design/"
@@ -27,6 +28,7 @@ const Footer = () => {
             rel="noreferrer noopener"
           >
             <i className="fab fa-instagram" />
+            <span>instagram</span>
           </a>
         </div>
       </address>

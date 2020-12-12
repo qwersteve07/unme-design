@@ -1,14 +1,14 @@
 import Link from "next/link";
 import React from "react";
-import fs from "fs";
 import { useSelector, useDispatch } from "react-redux";
+import { SET_FILTER, SET_SUB_FILTER } from "redux/reducer/projects";
 import classnames from "classnames/bind";
+import fs from "fs";
+import matter from "gray-matter";
 import styles from "pages/projects/index.module.sass";
 import Tags from "components/tags";
 import More from "components/more";
 import PageContainer from "components/page-container";
-import { SET_FILTER, SET_SUB_FILTER } from "redux/reducer/projects";
-import matter from "gray-matter";
 import { PROJECT_CONTENT_PATH } from "config/config";
 import UseDeviceType from "utils/useDeviceType";
 const cx = classnames.bind(styles);
@@ -54,11 +54,28 @@ const Filter = ({ currentFilter, data, onSelect }) => {
   });
 };
 
-const Projects = ({ projectsData, moreData }) => {
+const Projects = ({ projectsData }) => {
   const state = useSelector((state) => state.projectsReducer);
   const dispatch = useDispatch();
   const setFilter = (id) => dispatch({ type: SET_FILTER, payload: id });
   const setSubFilter = (id) => dispatch({ type: SET_SUB_FILTER, payload: id });
+
+  const moreData = [
+    {
+      id: "service",
+      title: "Our Service",
+      desc: "深入了解0-4維度的設計規劃，以及專案服務的流程",
+      path: "/service",
+    },
+    {
+      id: "contact",
+      title: "Contact Us",
+      desc:
+        "歡迎分享更多關於你的事情，讓我們與你一同探索出企業的獨特性，陪伴品牌一同成長。",
+      path: "/contact",
+      text: "contact",
+    },
+  ];
 
   const MainFilter = () => {
     return (
@@ -175,27 +192,9 @@ export async function getStaticProps() {
     };
   });
 
-  const moreData = [
-    {
-      id: "service",
-      title: "Our Service",
-      desc: "深入了解0-4維度的設計規劃，以及專案服務的流程",
-      path: "/service",
-    },
-    {
-      id: "contact",
-      title: "Contact Us",
-      desc:
-        "歡迎分享更多關於你的事情，讓我們與你一同探索出企業的獨特性，陪伴品牌一同成長。",
-      path: "/contact",
-      text: "contact",
-    },
-  ];
-
   return {
     props: {
       projectsData,
-      moreData,
     },
   };
 }

@@ -79,7 +79,7 @@ const App = ({ Component, pageProps }) => {
         additionalMetaTags={[
           {
             name: "viewport",
-            property:
+            content:
               "width=device-width,initial-scale=1, viewport-fit=cover,user-scalable=no",
           },
           {
@@ -88,7 +88,7 @@ const App = ({ Component, pageProps }) => {
           },
           {
             name: "color-scheme",
-            property: "light",
+            content: "dark",
           },
         ]}
         title="UNME DESIGN 非我設計"
@@ -102,7 +102,7 @@ const App = ({ Component, pageProps }) => {
           type: "website",
           images: [
             {
-              // url: "https://www.example.ie/og-image-02.jpg",
+              url: "/og-image.jpg",
             },
           ],
           site_name: "UNME DESIGN",

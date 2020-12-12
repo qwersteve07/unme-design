@@ -6,12 +6,12 @@
     display: flex
     align-items: center
     justify-content: space-between
-    
     height: 150px
     width: 100%
     position: fixed
     z-index: 11
     background: var(--main-color)
+
     +fontCrimsonText
     +globalSidePadding
     +themeTransition
@@ -40,18 +40,21 @@
 .menu
     display: flex
     justify-content: space-between
+
     li
         padding: 10px
         margin: 0 22px
+
         &.active
             a
                 color: var(--sub-color)
+
                 &:before
                     opacity: 1
                     transform: translateY(0)
+
                 +hover
                     color: var(--sub-color)
-
 
     a
         padding: 8px
@@ -86,20 +89,26 @@
     display: flex
     justify-content: center
     cursor: pointer
+
     &.dark-mode
         filter: invert(0)
 
 .toggler
     position: absolute
-    right: 38px
-    top: calc(50% - 14px)
-    height: 20px
-    width: 20px
-    background-image: url("../../images/sun.png")
-    background-size: cover
+    top: calc(50% - 22px)
+    right: 25px
+    padding: 12px
+    cursor: pointer
 
-    &.dark-mode
+    .icon
+        background-image: url("../../images/sun.png")
+        background-size: cover
+        height: 20px
+        width: 20px
+
+    &.dark-mode .icon
         background-image: url("../../images/moon.png")
+
 .hamburger
     display: none
 
@@ -137,16 +146,19 @@
         flex-direction: column
         justify-content: center
         align-items: center
+
         +safeAreaPaddingBottom
 
         &.open
             pointer-events: inherit
             opacity: 1
             transition: 0.4s ease all
+
             @supports (backdrop-filter: blur(15px))
-                backdrop-filter: blur(15px);
+                backdrop-filter: blur(15px)
+
                 &::before
-                    content: ''
+                    content: ""
                     position: absolute
                     top: 0
                     left: 0
@@ -154,42 +166,40 @@
                     opacity: 0.1
                     width: 100%
                     height: 100%
-            @supports not(backdrop-filter: blur(15px))
+
+            @supports not (backdrop-filter: blur(15px))
                 &::before
-                    content: ''
+                    content: ""
                     position: absolute
                     top: 0
                     left: 0
                     background: var(--main-color)
-                    filter: blur(10px);
+                    filter: blur(10px)
                     width: 100%
                     height: 100%
+
         li
             font-size: 20px
             padding: 20px 0
-                
+
     .logo
         width: 80px
 
     .toggler
-        top: calc(50% - 10px)
-        right: 80px
+        top: calc(50% - 22px)
+        right: 68px
 
     .hamburger
-        display: inherit
-        position: absolute
-        top: 22px
-        right: 33px
+        display: flex
+        flex-direction: column
+        justify-content: space-between
         width: 20px
-        height: 15px
-        border-top: 1px solid var(--sub-color)
-        border-bottom: 1px solid var(--sub-color)
+        height: 16px
+        padding: 14px 12px
+        box-sizing: content-box
+        transform: translateX(5px)
 
-        &:before
-            content: ""
-            position: absolute
-            top: 6px
-            width: 20px
+        & > div
+            width: 100%
             height: 1px
             background: var(--sub-color)
-            left: 0

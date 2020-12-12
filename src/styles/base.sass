@@ -33,6 +33,12 @@ body
         --sub-color-second: #{$black-less}
         --sub-color-third: #{$grey-dark}
 
+        select
+            background-image: url("../images/icon-arrow-b.png")
+
+        input[type="date"]
+            background-image: url("../images/icon-cal-b.png")
+
     +mobileStyle
         font-size: 14px
 
@@ -68,3 +74,18 @@ fieldset
     padding: 0
     border: 0
     margin: 0
+
+select, input[type="date"]
+    background-size: 15px
+    background-repeat: no-repeat
+    background-position: 99% 10px
+
+select
+    background-image: url("../images/icon-arrow-w.png")
+
+input[type="date"]
+    background-image: url("../images/icon-cal-w.png")
+
+input, select, textarea
+    background-color: transparent
+    appearance: none

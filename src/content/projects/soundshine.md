@@ -4,7 +4,7 @@ titleCn: 軒言文創
 tags: ["space-branding", "3d"]
 define: 企業形象整體規劃 ｜ 品牌空間設計
 description: "運用空間設計、品牌設計、品牌顧問的能力，一次性規劃新創公司初期的每個「品牌接觸點」，讓TA的情緒張力產生共鳴，藉此分享企業該有的品牌願景，是我們一直想呈現的設計整合方式。"
-thumbnail: "/projects/soundshine/soundshine01.jpg"
+thumbnail: "/projects/soundshine/soundshine01.webp"
 contain: 空間尋點 ｜ 辦公空間設計 ｜ 施工規劃 ｜ 軟件搭配 ｜ 品牌標誌設計 ｜ 形象系統規範 ｜ 氛圍規劃視覺設計 ｜ 企業延伸物設計 ｜ 形象整合
 ---
 
@@ -28,27 +28,25 @@ contain: 空間尋點 ｜ 辦公空間設計 ｜ 施工規劃 ｜ 軟件搭配 �
 
 <section>
 
-<img alt="soundShine02" data-src="/projects/soundshine/soundshine02.jpg" />
-<img alt="soundShine03" data-src="/projects/soundshine/soundshine03.jpg" />
-<img alt="soundShine04" data-src="/projects/soundshine/soundshine04.jpg" />
-<img alt="soundShine05" data-src="/projects/soundshine/soundshine05.jpg" />
-<img alt="soundShine06" data-src="/projects/soundshine/soundshine06.jpg" />
-<img alt="soundShine07" data-src="/projects/soundshine/soundshine07.jpg" />
-<img alt="soundShine08" data-src="/projects/soundshine/soundshine08.jpg" />
-<img alt="soundShine09" data-src="/projects/soundshine/soundshine09.jpg" />
-<img alt="soundShine10" data-src="/projects/soundshine/soundshine10.jpg" />
-<img alt="soundShine11" data-src="/projects/soundshine/soundshine11.jpg" />
-<img alt="soundShine12" data-src="/projects/soundshine/soundshine12.jpg" />
-<img alt="soundShine13" data-src="/projects/soundshine/soundshine13.jpg" />
-<img alt="soundShine14" data-src="/projects/soundshine/soundshine14.jpg" />
-<img alt="soundShine15" data-src="/projects/soundshine/soundshine15.jpg" />
-<img alt="soundShine16" data-src="/projects/soundshine/soundshine16.jpg" />
-<img alt="soundShine17" data-src="/projects/soundshine/soundshine17.jpg" />
-<img alt="soundShine18" data-src="/projects/soundshine/soundshine18.jpg" />
-<img alt="soundShine19" data-src="/projects/soundshine/soundshine19.jpg" />
-<img alt="soundShine20" data-src="/projects/soundshine/soundshine20.jpg" />
-<img alt="soundShine21" data-src="/projects/soundshine/soundshine21.jpg" />
-<img alt="soundShine22" data-src="/projects/soundshine/soundshine22.jpg" />
-<img alt="soundShine23" data-src="/projects/soundshine/soundshine23.jpg" />
+<img alt="soundShine02" data-src="/projects/soundshine/soundshine02.webp" />
+<img alt="soundShine03" data-src="/projects/soundshine/soundshine03.webp" />
+<img alt="soundShine04" data-src="/projects/soundshine/soundshine04.webp" />
+<img alt="soundShine05" data-src="/projects/soundshine/soundshine05.webp" />
+<img alt="soundShine06" data-src="/projects/soundshine/soundshine06.webp" />
+<img alt="soundShine07" data-src="/projects/soundshine/soundshine07.webp" />
+<img alt="soundShine08" data-src="/projects/soundshine/soundshine08.webp" />
+<img alt="soundShine09" data-src="/projects/soundshine/soundshine09.webp" />
+<img alt="soundShine10" data-src="/projects/soundshine/soundshine10.webp" />
+<img alt="soundShine11" data-src="/projects/soundshine/soundshine11.webp" />
+<img alt="soundShine12" data-src="/projects/soundshine/soundshine12.webp" />
+<img alt="soundShine13" data-src="/projects/soundshine/soundshine13.webp" />
+<img alt="soundShine14" data-src="/projects/soundshine/soundshine14.webp" />
+<img alt="soundShine15" data-src="/projects/soundshine/soundshine15.webp" />
+<img alt="soundShine16" data-src="/projects/soundshine/soundshine16.webp" />
+<img alt="soundShine17" data-src="/projects/soundshine/soundshine17.webp" />
+<img alt="soundShine18" data-src="/projects/soundshine/soundshine18.webp" />
+<img alt="soundShine19" data-src="/projects/soundshine/soundshine19.webp" />
+<img alt="soundShine20" data-src="/projects/soundshine/soundshine20.webp" />
+<img alt="soundShine21" data-src="/projects/soundshine/soundshine21.webp" />
 
 </section>
