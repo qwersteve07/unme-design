@@ -24,6 +24,7 @@ const Contact = () => {
   const [phoneInputError, setPhoneInputError] = useState(false);
   const [errorMessage, setErrorMessage] = useState("");
   const [successMessage, setSuccessMessage] = useState("");
+  const [loading, setLoading] = useState(false);
 
   const caseData = [
     {
@@ -82,6 +83,7 @@ const Contact = () => {
     };
 
     if (!preCheck()) return;
+    setLoading(true);
     setErrorMessage("");
     e.preventDefault();
     let params = {
@@ -108,11 +110,13 @@ const Contact = () => {
         setSuccessMessage(
           "我們已收到您的需求，請耐心等候，我們將儘速與您聯繫！"
         );
+        setLoading(false);
       })
       .catch((error) => {
         console.log(error);
         setSuccessMessage("");
         setErrorMessage("發送需求時遇到錯誤，請重新發送，謝謝");
+        setLoading(false);
       });
   };
 
@@ -271,7 +275,7 @@ const Contact = () => {
           <div className={styles.bottom}>
             <span className={errorMessageClass}>{errorMessage}</span>
             <span className={successMessageClass}>{successMessage}</span>
-            <ArrowText text="Send" onClick={sendMail} />
+            <ArrowText text="Send" onClick={sendMail} loading={loading} />
           </div>
         </form>
       </main>
