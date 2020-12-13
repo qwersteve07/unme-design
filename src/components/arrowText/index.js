@@ -4,19 +4,19 @@ import styles from "components/arrowText/index.module.sass";
 import classnames from "classnames/bind";
 const cx = classnames.bind(styles);
 
-const ArrowText = ({ text, onClick, colorReverse }) => {
-  const containerClass = cx({
-    container: true,
-    "color-reverse": colorReverse,
-  });
-  return (
-    <>
-      <div className={containerClass} onClick={onClick}>
+const ArrowText = React.forwardRef(
+  ({ text, onClick, colorReverse, href }, ref) => {
+    const containerClass = cx({
+      container: true,
+      "color-reverse": colorReverse,
+    });
+    return (
+      <a className={containerClass} href={href} onClick={onClick} ref={ref}>
         <span>{text}</span>
         <div className={styles.arrow} />
-      </div>
-    </>
-  );
-};
+      </a>
+    );
+  }
+);
 
 export default ArrowText;

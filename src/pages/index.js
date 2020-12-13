@@ -1,8 +1,13 @@
 import React, { useState } from "react";
+import { useSelector } from "react-redux";
+import Link from "next/link";
 import styles from "pages/index.module.sass";
 import PageContainer from "components/page-container";
 import classnames from "classnames/bind";
 import Card from "components/card";
+import Tags from "components/tags";
+import More from "components/more";
+import ArrowText from "components/arrowText";
 import UseInterval from "utils/useInterval";
 import UseDeviceType from "utils/useDeviceType";
 import d1 from "images/landing/1.png";
@@ -10,11 +15,6 @@ import d2 from "images/landing/2.png";
 import d3 from "images/landing/3.png";
 import d4 from "images/landing/4.png";
 import d5 from "images/landing/5.png";
-import Tags from "components/tags";
-import { useSelector } from "react-redux";
-import ArrowText from "components/arrowText";
-import Link from "next/link";
-import More from "components/more";
 
 const cx = classnames.bind(styles);
 
@@ -267,7 +267,7 @@ const Service = () => {
     <section className={styles.service}>
       <div className={styles.container}>{ServiceContainer()}</div>
       <div className={styles.learn}>
-        <Link href="/service">
+        <Link href="/service" passHref>
           <ArrowText text="了解服務流程" />
         </Link>
       </div>
@@ -279,7 +279,7 @@ const Projects = () => {
   const projectsData = [
     {
       id: "the-misanthrope-society",
-      image: "/projects/the-misanthrope-society/the-misanthrope-society13.webp",
+      image: "/projects/the-misanthrope-society/the-misanthrope-society14.webp",
       name: "厭世會社咖啡餐酒館",
       tags: ["interior", "3d"],
       define: "商業空間設計 | 餐飲空間設計",
@@ -306,7 +306,7 @@ const Projects = () => {
     },
     {
       id: "grilled-sendwish",
-      image: "/projects/grilled-sendwish/grilled-sendwish08.webp",
+      image: "/projects/grilled-sendwish/grilled-sendwish07.webp",
       name: "格里歐三明治",
       tags: ["cis", "2d"],
       define: "早餐品牌 | 品牌設計",
@@ -365,6 +365,7 @@ const Projects = () => {
                 imageHeight="65%"
                 lineHeight="250px"
                 key={data.name}
+                linkOnImage={`/projects/${data.id}`}
                 data={{
                   image: data.image,
                   info: <Info />,

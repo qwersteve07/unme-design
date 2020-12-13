@@ -2,7 +2,7 @@ import React, { useState, useEffect, useCallback } from "react";
 import styles from "components/carousel/index.module.sass";
 import UseDeviceType from "utils/useDeviceType";
 import Arrow from "components/arrow";
-import { useSelector } from "react-redux";
+import localDataService from "service/local-data-service";
 
 const Carousel = ({ items }) => {
   const deviceType = UseDeviceType();
@@ -14,7 +14,7 @@ const Carousel = ({ items }) => {
   const [isMoving, setIsMoving] = useState(false);
   const [dragImage, setDragImage] = useState(null);
   const [itemWidth, setItemWidth] = useState(0);
-  const state = useSelector((state) => state.appReducer);
+  let isDarkMode = localDataService.getTheme() === "dark";
 
   useEffect(() => {
     const img = new Image();
@@ -175,18 +175,13 @@ const Carousel = ({ items }) => {
     <div className={styles.carousel}>
       <div className={styles.arrows}>
         <Arrow
-          dark={state.darkMode}
+          dark={isDarkMode}
           hover={true}
           text="prev"
           onClick={slidePrev}
           reverse={true}
         />
-        <Arrow
-          dark={state.darkMode}
-          hover={true}
-          text="next"
-          onClick={slideNext}
-        />
+        <Arrow dark={isDarkMode} hover={true} text="next" onClick={slideNext} />
       </div>
 
       <div className={styles.container}>

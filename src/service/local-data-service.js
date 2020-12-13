@@ -2,7 +2,7 @@ const KEY_THEME = "KEY_THEME";
 
 class LocalDataService {
   setTheme = (value) => {
-    localStorage.setItem(KEY_THEME, value);
+    return localStorage.setItem(KEY_THEME, value);
   };
 
   getTheme = () => {

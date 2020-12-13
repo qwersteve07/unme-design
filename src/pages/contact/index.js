@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import styles from "pages/contact/index.module.sass";
 import classnames from "classnames/bind";
-import { useSelector } from "react-redux";
 import validator from "validator";
 import PageContainer from "components/page-container";
 import emailjs from "emailjs-com";

@@ -1,7 +1,11 @@
 <IfModule mod_rewrite.c>
 
 RewriteEngine on 
-RewriteCond %{REQUEST_FILENAME}\.html -f
-RewriteRule ^(.*)$ $1.html [NC,L]
+Redirect 301 /厭世會社 /projects/the-misanthrope-society
+Redirect 301 /business-learing-club /projects/blc
+Redirect 301 /dimension-roast-vi-design /projects/dimension-roasters
+Redirect 301 /東燁數位行銷 /projects/dongYe
+Redirect 301 /glam-in-breeze /projects/glam-in-breeze
+Redirect 301 /invictus-logo-design/ /projects/invictus
   
 </IfModule>

@@ -4,7 +4,7 @@ titleCn:
 tags: ["cis", "2d"]
 define: 咖啡烘培 ｜ 品牌識別設計
 description: "她們說：要帶著這些豆子取旅行，沈穩、低調地與大自然為伍的感覺聊著聊著，開始想要水的感覺，接著要有煙，他們總是穿著全黑的服裝穿梭在咖啡廳裡，偶爾在自然中。"
-thumbnail: "/projects/dimension-roast/dimension-roast01.webp"
+thumbnail: "/projects/dimension-roasters/dimension-roast01.webp"
 contain: 品牌標誌設計 | 品牌理念溝通 | 相關延伸物設計 | 品牌識別相關諮詢 ｜ 視覺分析
 ---
 
@@ -22,11 +22,11 @@ contain: 品牌標誌設計 | 品牌理念溝通 | 相關延伸物設計 |�
 
 <section>
 
-<img alt="dimension-roast02" data-src="/projects/dimension-roast/dimension-roast02.webp" />
-<img alt="dimension-roast03" data-src="/projects/dimension-roast/dimension-roast03.webp" />
-<img alt="dimension-roast04" data-src="/projects/dimension-roast/dimension-roast04.webp" />
-<img alt="dimension-roast05" data-src="/projects/dimension-roast/dimension-roast05.webp" />
-<img alt="dimension-roast06" data-src="/projects/dimension-roast/dimension-roast06.webp" />
-<img alt="dimension-roast07" data-src="/projects/dimension-roast/dimension-roast07.webp" />
+<img alt="dimension-roast02" data-src="/projects/dimension-roasters/dimension-roast02.webp" />
+<img alt="dimension-roast03" data-src="/projects/dimension-roasters/dimension-roast03.webp" />
+<img alt="dimension-roast04" data-src="/projects/dimension-roasters/dimension-roast04.webp" />
+<img alt="dimension-roast05" data-src="/projects/dimension-roasters/dimension-roast05.webp" />
+<img alt="dimension-roast06" data-src="/projects/dimension-roasters/dimension-roast06.webp" />
+<img alt="dimension-roast07" data-src="/projects/dimension-roasters/dimension-roast07.webp" />
 
 </section>

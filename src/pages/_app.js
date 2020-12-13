@@ -1,9 +1,10 @@
 import React, { useEffect, useState } from "react";
 import { DefaultSeo } from "next-seo";
 import { useRouter } from "next/router";
-import localDataService from "service/local-data-service";
-import { Provider } from "react-redux";
+import { useDispatch, Provider } from "react-redux";
 import { useStore } from "redux/store";
+import { SET_DARK_MODE } from "redux/reducer/app";
+import localDataService from "service/local-data-service";
 import emailjs from "emailjs-com";
 import Splash from "components/splash";
 import smoothscroll from "smoothscroll-polyfill";
@@ -19,8 +20,9 @@ import "@fortawesome/fontawesome-free/js/brands";
 // for splash page
 import "components/splash/splash.sass";
 
-const App = ({ Component, pageProps }) => {
-  const store = useStore(pageProps.initialState);
+const Content = ({ Component, pageProps }) => {
+  const dispatch = useDispatch();
+
   const [splash, setSplash] = useState(false);
   const router = useRouter();
 
@@ -35,6 +37,8 @@ const App = ({ Component, pageProps }) => {
     const preferDarkScheme = window.matchMedia("(prefers-color-scheme: light)");
     if (localTheme === "light" || preferDarkScheme.matches) {
       document.body.classList.add("light");
+      dispatch({ type: SET_DARK_MODE, payload: false });
+      localDataService.setTheme("light");
     }
   }, []);
 
@@ -73,6 +77,26 @@ const App = ({ Component, pageProps }) => {
     };
   }, []);
 
+  useEffect(() => {
+    import("react-facebook-pixel")
+      .then((module) => module.default)
+      .then((ReactPixel) => {
+        ReactPixel.init(321885658693175);
+        ReactPixel.pageView();
+      });
+  }, []);
+
+  return (
+    <>
+      <Splash active={splash} />
+      <Component {...pageProps} />
+    </>
+  );
+};
+
+const App = (props) => {
+  const store = useStore(props.pageProps.initialState);
+
   return (
     <>
       <DefaultSeo
@@ -102,15 +126,16 @@ const App = ({ Component, pageProps }) => {
           type: "website",
           images: [
             {
-              url: "/og-image.jpg",
+              url: "https://unmedesign.co/og-image.jpg",
+              width: 1200,
+              height: 627,
             },
           ],
           site_name: "UNME DESIGN",
         }}
       />
       <Provider store={store}>
-        <Splash active={splash} />
-        <Component {...pageProps} />
+        <Content {...props} />
       </Provider>
     </>
   );

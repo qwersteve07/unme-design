@@ -76,13 +76,13 @@ const About = () => {
     },
     {
       id: "the-misanthrope-society",
-      image: "/projects/the-misanthrope-society/the-misanthrope-society13.webp",
+      image: "/projects/the-misanthrope-society/the-misanthrope-society15.webp",
       tags: ["interior", "3d"],
       name: "厭世會社咖啡餐酒館",
     },
     {
       id: "grilled-sendwish",
-      image: "/projects/grilled-sendwish/grilled-sendwish08.webp",
+      image: "/projects/grilled-sendwish/grilled-sendwish10.webp",
       tags: ["cis", "2d"],
       name: "格里歐三明治",
     },
