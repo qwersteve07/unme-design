@@ -1,11 +1,20 @@
 <IfModule mod_rewrite.c>
 
 RewriteEngine on 
-Redirect 301 /厭世會社 /projects/the-misanthrope-society
 Redirect 301 /business-learing-club /projects/blc
 Redirect 301 /dimension-roast-vi-design /projects/dimension-roasters
 Redirect 301 /東燁數位行銷 /projects/dongYe
-Redirect 301 /glam-in-breeze /projects/glam-in-breeze
+Redirect 301 /glam-in-breeze /projects/glam-in-breeze   
 Redirect 301 /invictus-logo-design/ /projects/invictus
-  
+Redirect 301 /跪著聽音樂有限公司 /projects/may-i-stand-up
+Redirect 301 /三毛寵物旅館 /projects/some-more
+Redirect 301 /軒言文創 /projects/soundshine
+Redirect 301 /spade-rebranding-design /projects/spade
+Redirect 301 /薩泰爾娛樂 /projects/str-network
+Redirect 301 /亞太商務加速器 /projects/tesa
+Redirect 301 /厭世會社 /projects/the-misanthrope-society
+Redirect 301 /voicetube /projects/voicetube
+Redirect 301 /ximen-hotel /projects/ximen-airline-hotel
+Redirect 301 /yogibo-信義店 /projects/yogibo-xinyi
+Redirect 301 /yogibo-台茂店 /projects/yogibo-taimall
 </IfModule>
