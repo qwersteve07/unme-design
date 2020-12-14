@@ -6,6 +6,7 @@ define: 運動補給品牌｜形象重塑規劃設計
 description: "UP運動吃沙拉，伴隨產品的進化迎來向上突破的改變。"
 thumbnail: "/projects/up-sports/up-sports01.webp"
 contain: 品牌理念 ｜ 品牌重塑 ｜ 標誌設計 ｜ 品牌策略 ｜ 品牌顧問 ｜ 品牌形象規劃 ｜ 相關延伸物設計
+priority: 10
 ---
 
 <section>　

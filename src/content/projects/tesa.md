@@ -6,6 +6,7 @@ define: 電商企業形象設計 ｜ 品牌識別設計
 description: "創業者都希望飛往自己所設想的宇宙中，然而找到啟動時所需要的巨大能量，是非常重要的。在這樣的過程中，TESA所扮演的是跨國際電商教育品牌。"
 thumbnail: "/projects/tesa/tesa01.webp"
 contain: 理念規劃 ｜ 品牌標誌設計 | 品牌理念溝通 |  相關延伸物設計 | 品牌識別相關諮詢
+priority: 6
 ---
 
 <section>

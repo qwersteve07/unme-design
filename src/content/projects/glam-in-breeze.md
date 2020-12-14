@@ -6,6 +6,7 @@ define: 邦妮 Bree | Fashion Bloger Logo Design
 description: "個人品牌進入一個活出自己的狀態，相較於過往的明星、藝人經過包裝與人物設定來定位。更多人喜歡看見真實的一面，並陪同這個品牌一同成長，而這往往也是個人品牌規劃時的最終設計方向。"
 thumbnail: "/projects/glam-in-breeze/glam-in-breeze01.webp"
 contain:  個人品牌 | 品牌標誌設計 | 品牌理念溝通 | 品牌識別相關諮詢 ｜ 視覺分析
+priority: 7
 ---
 
 <section>　

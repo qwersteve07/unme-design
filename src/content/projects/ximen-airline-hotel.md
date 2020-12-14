@@ -6,6 +6,7 @@ define: 商務旅館 ｜ 品牌形象規劃設計
 description: "商務旅館的價值，不一定在於要金碧輝煌的高等級享受，而是在忙碌的過程中得以喘氣，被記憶，不用擔心繁瑣的安排。"
 thumbnail: "/projects/ximen-airline-hotel/ximen-airline-hotel01.webp"
 contain: 理念規劃 ｜ 品牌標誌設計 | 品牌理念溝通 | 相關延伸物設計 | 品牌識別相關諮詢
+priority: 4
 ---
 
 <section>　

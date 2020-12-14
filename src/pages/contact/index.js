@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useRef, useEffect } from "react";
 import styles from "pages/contact/index.module.sass";
 import classnames from "classnames/bind";
 import validator from "validator";
@@ -25,6 +25,7 @@ const Contact = () => {
   const [errorMessage, setErrorMessage] = useState("");
   const [successMessage, setSuccessMessage] = useState("");
   const [loading, setLoading] = useState(false);
+  const formRef = useRef("");
 
   const caseData = [
     {
@@ -104,6 +105,8 @@ const Contact = () => {
     let serviceId = "unme";
     let templateId = "template_408xf4h";
     let userID = "user_4mY5wOOGGrgwMptW1b5zE";
+    formRef.current.submit();
+
     emailjs
       .send(serviceId, templateId, params, userID)
       .then((response) => {
@@ -150,6 +153,8 @@ const Contact = () => {
     show: successMessage,
   });
 
+  var submitted = false;
+
   return (
     <PageContainer>
       <main className={styles.contact}>
@@ -157,11 +162,28 @@ const Contact = () => {
         <p className={styles.desc}>
           聯繫非我設計的維度動物們，運用設計堆疊出品牌的獨特樣貌！
         </p>
-        <form className={styles.form}>
+        <iframe
+          name="hidden_iframe"
+          id="hidden_iframe"
+          style={{ display: "none" }}
+          onLoad={() => {
+            if (submitted) {
+              window.location = "https://unmedesign.co/contact";
+            }
+          }}
+        ></iframe>
+        <form
+          ref={formRef}
+          target="hidden_iframe"
+          onSubmit={() => (submitted = true)}
+          className={styles.form}
+          action="https://docs.google.com/forms/u/1/d/e/1FAIpQLSfbbX9gOAUw-Pi9gdvmGdlHJOC0tpgOoBXSY_IiybmfYUOrxg/formResponse"
+        >
           <fieldset>
             <label htmlFor="name">稱呼</label>
             <input
               className={nameInputClass}
+              name="entry.2024220184"
               id="name"
               type="text"
               value={name}
@@ -176,6 +198,7 @@ const Contact = () => {
             <label htmlFor="company">公司</label>
             <input
               className={companyInputClass}
+              name="entry.1238814983"
               id="company"
               type="text"
               value={company}
@@ -190,6 +213,7 @@ const Contact = () => {
             <label htmlFor="phone">電話</label>
             <input
               className={phoneInputClass}
+              name="entry.241278693"
               id="phone"
               type="tel"
               value={phone}
@@ -204,6 +228,7 @@ const Contact = () => {
             <label htmlFor="email">信箱</label>
             <input
               className={emailInputClass}
+              name="entry.1164214091"
               id="email"
               type="email"
               inputMode="email"
@@ -218,6 +243,7 @@ const Contact = () => {
           <fieldset>
             <label htmlFor="else">其他聯絡方式</label>
             <input
+              name="entry.147204552"
               id="else"
               type="text"
               value={elseContact}
@@ -227,6 +253,7 @@ const Contact = () => {
           </fieldset>
           <fieldset className={styles.select}>
             <label htmlFor="caseType">案件類型</label>
+            <input type="hidden" name="entry.2089799217" value={caseType} />
             <select id="caseType" onChange={(e) => setCaseType(e.target.value)}>
               {caseData.map((groupData) => {
                 return (
@@ -246,6 +273,7 @@ const Contact = () => {
           <fieldset>
             <label htmlFor="start_date">預計開案日期</label>
             <input
+              name="entry.1231405433"
               id="start_date"
               type="date"
               value={startDate}
@@ -255,6 +283,7 @@ const Contact = () => {
           <fieldset>
             <label htmlFor="end_date">預計完成日期</label>
             <input
+              name="entry.624545444"
               id="end_date"
               type="date"
               value={endDate}
@@ -264,6 +293,7 @@ const Contact = () => {
           <fieldset>
             <label htmlFor="comment">關於我們即將來臨的合作...</label>
             <textarea
+              name="entry.19613843"
               id="comment"
               rows="5"
               width="360"

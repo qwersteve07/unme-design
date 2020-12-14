@@ -6,6 +6,7 @@ define: 茶飲品牌重塑 ｜ 品牌識別設計
 description: "過去往往造就一個人的現在，品牌也是。真實的品牌重塑，並非將整體的形象與氛圍做極具的調整，而是將過往的積累，與企業本身的新目標做一個聚焦"
 thumbnail: "/projects/spade/spade05.webp"
 contain: 品牌溝通 ｜ 重塑定位 ｜ 相關延伸物設計 ｜ Logo應用度修整 ｜ 空間視覺媒合
+priority: 7
 ---
 
 <section>　

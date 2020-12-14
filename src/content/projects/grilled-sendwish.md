@@ -6,6 +6,7 @@ define: 餐飲品牌 ｜ 形象重塑規劃設計
 description: "在格里歐民權店開幕前夕，這間藏身國父紀念館的起士三明治，找上UnMe設計師們討論如何Rebrand品牌形象，在未來發展成連鎖三明治品牌的餐飲形象。"
 thumbnail: "/projects/grilled-sendwish/grilled-sendwish07.webp"
 contain: 品牌理念 ｜ 品牌重塑 ｜ 標誌設計 ｜ 品牌策略 ｜ 品牌顧問 ｜ 品牌形象規劃 ｜ 相關延伸物設計
+priority: 10
 ---
 
 <section>　

@@ -47,7 +47,7 @@ const Filter = ({ currentFilter, data, onSelect }) => {
         key={filter.id}
         onClick={() => onSelect(filter.id)}
       >
-        {filter.nameEn}
+        <div className={styles.nameEn}>{filter.nameEn}</div>
         <div className={styles.nameCn}>{filter.nameCn}</div>
       </div>
     );
@@ -102,7 +102,10 @@ const Projects = ({ projectsData }) => {
   };
 
   const ProjectMap = () => {
-    let filteredProjectData = projectsData.filter((data) => {
+    let sortData = projectsData.sort((a, b) => {
+      return b.frontMatter.priority - a.frontMatter.priority;
+    });
+    let filteredProjectData = sortData.filter((data) => {
       let { tags } = data.frontMatter;
       const isFilteredByMain =
         state.currentFilter === "all" || state.currentFilter === tags[0];
@@ -184,7 +187,7 @@ export async function getStaticProps() {
       .readFileSync(`${PROJECT_CONTENT_PATH}/${filename}`)
       .toString();
 
-    const { data } = matter(markdownWithMetadata);
+    let { data } = matter(markdownWithMetadata);
 
     return {
       id: filename.replace(".md", ""),

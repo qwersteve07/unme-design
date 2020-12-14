@@ -6,6 +6,7 @@ define: 企業形象整體規劃 ｜ 品牌空間設計
 description: "運用空間設計、品牌設計、品牌顧問的能力，一次性規劃新創公司初期的每個「品牌接觸點」，讓TA的情緒張力產生共鳴，藉此分享企業該有的品牌願景，是我們一直想呈現的設計整合方式。"
 thumbnail: "/projects/soundshine/soundshine01.webp"
 contain: 空間尋點 ｜ 辦公空間設計 ｜ 施工規劃 ｜ 軟件搭配 ｜ 品牌標誌設計 ｜ 形象系統規範 ｜ 氛圍規劃視覺設計 ｜ 企業延伸物設計 ｜ 形象整合
+priority: 10
 ---
 
 <section>

@@ -6,6 +6,7 @@ define: 商空設計 | 辦公室設計
 description: "在與薩泰爾的合作規劃中，一直延續到博恩的的二三喜劇俱樂部，是我們真實認識脫口秀的一個過程。在規劃期間理解到他們熬夜想腳本，並反覆練習的過程，因此將空間的舒適度以及居家感提到最高。"
 thumbnail: "/projects/str-network/str-network01.webp"
 contain: 設計規劃｜品牌視覺連結｜企業風格訂製｜招牌規劃設計｜施工規劃｜氛圍營造
+priority: 6
 ---
 
 <section>
