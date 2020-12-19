@@ -13,18 +13,24 @@ import alpha from "images/about/alpha.jpg";
 import nina from "images/about/nina.jpg";
 import tong from "images/about/tong.jpg";
 import kevin from "images/about/kevin.jpg";
+import alphaAnimal from "images/about/alpha-animal.jpg";
+import ninaAnimal from "images/about/nina-animal.jpg";
+import tongAnimal from "images/about/tong-animal.jpg";
+import kevinAnimal from "images/about/kevin-animal.jpg";
 import dog from "images/about/dog.jpg";
 import jellyfish from "images/about/jellyfish.jpg";
 import useResize from "utils/useResize";
+import classnames from "classnames/bind";
 
 const Carousel = dynamic(() => import("components/carousel"), { ssr: false });
 
 const About = () => {
+  const cx = classnames.bind(styles);
   const [lottieWidth, setLottieWidth] = useState("");
   const state = useSelector((state) => state.appReducer);
 
   useResize(() => {
-    setLottieWidth(window.innerWidth > 767 ? "50%" : "70%");
+    setLottieWidth(window.innerWidth > 768 ? "50%" : "70%");
   });
 
   const memberData = [
@@ -32,32 +38,98 @@ const About = () => {
       name: "Alpha",
       titles: "Founder",
       image: alpha,
+      imageAnimal: alphaAnimal,
+      ability: (
+        <>
+          UI
+          <br />
+          UX
+          <br />
+          Brand Design
+          <br />
+          Interior Design
+          <br />
+          Analysis
+          <br />
+          Design Thinking
+        </>
+      ),
     },
 
     {
       name: "Nina",
       titles: "Designer",
       image: nina,
+      imageAnimal: ninaAnimal,
+      ability: (
+        <>
+          UI
+          <br />
+          Brand Design
+          <br />
+          Web Design
+          <br />
+          Analysis
+        </>
+      ),
     },
     {
       name: "Tong",
       titles: "Designer",
       image: tong,
+      imageAnimal: tongAnimal,
+      ability: (
+        <>
+          UX
+          <br />
+          Analysis
+          <br />
+          Design Thinking
+        </>
+      ),
     },
     {
       name: "Kevin",
       titles: "Designer",
       image: kevin,
+      imageAnimal: kevinAnimal,
+      ability: (
+        <>
+          Interior Deisgn
+          <br />
+          Analysis
+          <br />
+          Design Thinking
+        </>
+      ),
     },
     {
       name: "Steve",
       titles: "F2E",
       image: jellyfish,
+      ability: (
+        <>
+          UI
+          <br />
+          Brand Design
+          <br />
+          Interior Design
+          <br />
+          Web Design
+        </>
+      ),
     },
     {
       name: "Vicky",
       titles: "Marketing",
       image: dog,
+      ability: (
+        <>
+          Analysis
+          <br />
+          Marketing
+        </>
+      ),
     },
   ];
 
@@ -104,7 +176,7 @@ const About = () => {
               <Link href={`projects/${id}`} key={id}>
                 <div className={styles.item}>
                   <div className={styles.image}>
-                    <img src={image} alt="project" />
+                    <img data-src={image} alt="project" className="lazyload" />
                   </div>
                   <Tags data={tags} />
                   <div className={styles.name}>{name}</div>
@@ -157,16 +229,36 @@ const About = () => {
                 </>
               );
             };
+
+            const imageClass = cx({
+              image: true,
+              flip: true,
+            });
             return (
               <Card
                 className={styles.member}
-                imageHeight="145%"
                 lineHeight="250px"
                 key={data.name}
-                data={{
-                  image: data.image,
-                  info: <Info />,
-                }}
+                info={<Info />}
+                image={
+                  <div className={styles.image} style={{ paddingTop: "145%" }}>
+                    <div className={styles.front}>
+                      <img
+                        data-src={data.image}
+                        alt="photo"
+                        className="lazyload"
+                      />
+                    </div>
+                    <div className={styles.back}>
+                      <img
+                        data-src={data.imageAnimal || data.image}
+                        alt="photo"
+                        className="lazyload"
+                      />
+                      <div className={styles.ability}>{data.ability}</div>
+                    </div>
+                  </div>
+                }
               />
             );
           })}

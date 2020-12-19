@@ -19,8 +19,8 @@ priority: 3
 
 <section>
 
-<img alt="invictus02" data-src="/projects/invictus/invictus02.webp" />
-<img alt="invictus03" data-src="/projects/invictus/invictus03.webp" />
-<img alt="invictus04" data-src="/projects/invictus/invictus04.webp" />
+<img alt="invictus02" data-src="/projects/invictus/invictus02.webp" className="lazyload" />
+<img alt="invictus03" data-src="/projects/invictus/invictus03.webp" className="lazyload" />
+<img alt="invictus04" data-src="/projects/invictus/invictus04.webp" className="lazyload" />
 
 </section>

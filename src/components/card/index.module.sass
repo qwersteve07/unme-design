@@ -19,6 +19,20 @@
     +cropImage
 
     display: block
+    img
+        backface-visibility: hidden
+        transition: 0.8s ease all
+    &.flip
+        img:last-of-type
+            transform: rotateY(180deg);
+            opacity: 0
+        &:hover
+            img:first-of-type
+                transform: rotateY(180deg);
+                opacity: 0
+            img:last-of-type
+                transform: rotateY(0);
+                opacity: 1
 
 .info
     padding: 35px 0 35px 60px

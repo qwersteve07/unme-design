@@ -52,7 +52,7 @@ const Nav = () => {
       const liClass = cx({
         active: router.pathname.replace("/", "") === navText,
       });
-      if (nav === "home" && window.innerWidth > 767) return;
+      if (nav === "home" && window.innerWidth > 768) return;
 
       return (
         <li
@@ -74,7 +74,7 @@ const Nav = () => {
   // fixed top style
   useEffect(() => {
     setNavs(() =>
-      window.innerWidth > 767
+      window.innerWidth > 768
         ? ["projects", "service", "about", "contact"]
         : ["home", "projects", "service", "about", "contact"]
     );

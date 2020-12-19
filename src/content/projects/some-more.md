@@ -23,10 +23,10 @@ priority: 4
 
 <section>
 
-<img alt="some-more02" data-src="/projects/some-more/some-more02.webp" />
-<img alt="some-more03" data-src="/projects/some-more/some-more03.webp" />
-<img alt="some-more04" data-src="/projects/some-more/some-more04.webp" />
-<img alt="some-more05" data-src="/projects/some-more/some-more05.webp" />
-<img alt="some-more06" data-src="/projects/some-more/some-more06.webp" />
+<img alt="some-more02" data-src="/projects/some-more/some-more02.webp" className="lazyload" />
+<img alt="some-more03" data-src="/projects/some-more/some-more03.webp" className="lazyload" />
+<img alt="some-more04" data-src="/projects/some-more/some-more04.webp" className="lazyload" />
+<img alt="some-more05" data-src="/projects/some-more/some-more05.webp" className="lazyload" />
+<img alt="some-more06" data-src="/projects/some-more/some-more06.webp" className="lazyload" />
 
 </section>

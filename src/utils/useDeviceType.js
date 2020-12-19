@@ -5,9 +5,9 @@ const UseDeviceType = () => {
 
   useEffect(() => {
     const handleResize = () => {
-      if (window.innerWidth > 1023) {
+      if (window.innerWidth > 1024) {
         setDeviceType("desktop");
-      } else if (window.innerWidth > 767) {
+      } else if (window.innerWidth > 768) {
         setDeviceType("pad");
       } else {
         setDeviceType("mobile");

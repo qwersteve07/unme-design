@@ -25,18 +25,18 @@ priority: 8
 
 <section>
 
-<img alt="yogibo-taimall02" data-src="/projects/yogibo-taimall/yogibo-taimall02.webp"/>
-<img alt="yogibo-taimall03" data-src="/projects/yogibo-taimall/yogibo-taimall03.webp"/>
-<img alt="yogibo-taimall04" data-src="/projects/yogibo-taimall/yogibo-taimall04.webp"/>
-<img alt="yogibo-taimall05" data-src="/projects/yogibo-taimall/yogibo-taimall05.webp"/>
-<img alt="yogibo-taimall06" data-src="/projects/yogibo-taimall/yogibo-taimall06.webp"/>
-<img alt="yogibo-taimall07" data-src="/projects/yogibo-taimall/yogibo-taimall07.webp"/>
-<img alt="yogibo-taimall08" data-src="/projects/yogibo-taimall/yogibo-taimall08.webp"/>
-<img alt="yogibo-taimall09" data-src="/projects/yogibo-taimall/yogibo-taimall09.webp"/>
-<img alt="yogibo-taimall10" data-src="/projects/yogibo-taimall/yogibo-taimall10.webp"/>
-<img alt="yogibo-taimall11" data-src="/projects/yogibo-taimall/yogibo-taimall11.webp"/>
-<img alt="yogibo-taimall12" data-src="/projects/yogibo-taimall/yogibo-taimall12.webp"/>
-<img alt="yogibo-taimall13" data-src="/projects/yogibo-taimall/yogibo-taimall13.webp"/>
-<img alt="yogibo-taimall14" data-src="/projects/yogibo-taimall/yogibo-taimall14.webp"/>
+<img alt="yogibo-taimall02" data-src="/projects/yogibo-taimall/yogibo-taimall02.webp" className="lazyload" />
+<img alt="yogibo-taimall03" data-src="/projects/yogibo-taimall/yogibo-taimall03.webp" className="lazyload" />
+<img alt="yogibo-taimall04" data-src="/projects/yogibo-taimall/yogibo-taimall04.webp" className="lazyload" />
+<img alt="yogibo-taimall05" data-src="/projects/yogibo-taimall/yogibo-taimall05.webp" className="lazyload" />
+<img alt="yogibo-taimall06" data-src="/projects/yogibo-taimall/yogibo-taimall06.webp" className="lazyload" />
+<img alt="yogibo-taimall07" data-src="/projects/yogibo-taimall/yogibo-taimall07.webp" className="lazyload" />
+<img alt="yogibo-taimall08" data-src="/projects/yogibo-taimall/yogibo-taimall08.webp" className="lazyload" />
+<img alt="yogibo-taimall09" data-src="/projects/yogibo-taimall/yogibo-taimall09.webp" className="lazyload" />
+<img alt="yogibo-taimall10" data-src="/projects/yogibo-taimall/yogibo-taimall10.webp" className="lazyload" />
+<img alt="yogibo-taimall11" data-src="/projects/yogibo-taimall/yogibo-taimall11.webp" className="lazyload" />
+<img alt="yogibo-taimall12" data-src="/projects/yogibo-taimall/yogibo-taimall12.webp" className="lazyload" />
+<img alt="yogibo-taimall13" data-src="/projects/yogibo-taimall/yogibo-taimall13.webp" className="lazyload" />
+<img alt="yogibo-taimall14" data-src="/projects/yogibo-taimall/yogibo-taimall14.webp" className="lazyload" />
 
 </section>

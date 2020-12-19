@@ -33,30 +33,30 @@ priority: 8
 
 <section>
 
-<img alt="the-misanthrope-society01" data-src="/projects/the-misanthrope-society/the-misanthrope-society01.webp" />
-<img alt="the-misanthrope-society02" data-src="/projects/the-misanthrope-society/the-misanthrope-society02.webp" />
-<img alt="the-misanthrope-society03" data-src="/projects/the-misanthrope-society/the-misanthrope-society03.webp" />
-<img alt="the-misanthrope-society04" data-src="/projects/the-misanthrope-society/the-misanthrope-society04.webp" />
-<img alt="the-misanthrope-society05" data-src="/projects/the-misanthrope-society/the-misanthrope-society05.webp" />
-<img alt="the-misanthrope-society06" data-src="/projects/the-misanthrope-society/the-misanthrope-society06.webp" />
-<img alt="the-misanthrope-society07" data-src="/projects/the-misanthrope-society/the-misanthrope-society07.webp" />
-<img alt="the-misanthrope-society08" data-src="/projects/the-misanthrope-society/the-misanthrope-society08.webp" />
-<img alt="the-misanthrope-society09" data-src="/projects/the-misanthrope-society/the-misanthrope-society09.webp" />
-<img alt="the-misanthrope-society10" data-src="/projects/the-misanthrope-society/the-misanthrope-society10.webp" />
-<img alt="the-misanthrope-society11" data-src="/projects/the-misanthrope-society/the-misanthrope-society11.webp" />
-<img alt="the-misanthrope-society12" data-src="/projects/the-misanthrope-society/the-misanthrope-society12.webp" />
-<img alt="the-misanthrope-society13" data-src="/projects/the-misanthrope-society/the-misanthrope-society13.webp" />
-<img alt="the-misanthrope-society14" data-src="/projects/the-misanthrope-society/the-misanthrope-society14.webp" />
-<img alt="the-misanthrope-society15" data-src="/projects/the-misanthrope-society/the-misanthrope-society15.webp" />
-<img alt="the-misanthrope-society16" data-src="/projects/the-misanthrope-society/the-misanthrope-society16.webp" />
-<img alt="the-misanthrope-society17" data-src="/projects/the-misanthrope-society/the-misanthrope-society17.webp" />
-<img alt="the-misanthrope-society18" data-src="/projects/the-misanthrope-society/the-misanthrope-society18.webp" />
-<img alt="the-misanthrope-society19" data-src="/projects/the-misanthrope-society/the-misanthrope-society19.webp" />
-<img alt="the-misanthrope-society20" data-src="/projects/the-misanthrope-society/the-misanthrope-society20.webp" />
-<img alt="the-misanthrope-society21" data-src="/projects/the-misanthrope-society/the-misanthrope-society21.webp" />
-<img alt="the-misanthrope-society22" data-src="/projects/the-misanthrope-society/the-misanthrope-society22.webp" />
-<img alt="the-misanthrope-society23" data-src="/projects/the-misanthrope-society/the-misanthrope-society23.webp" />
-<img alt="the-misanthrope-society24" data-src="/projects/the-misanthrope-society/the-misanthrope-society24.webp" />
-<img alt="the-misanthrope-society25" data-src="/projects/the-misanthrope-society/the-misanthrope-society25.webp" />
+<img alt="the-misanthrope-society01" data-src="/projects/the-misanthrope-society/the-misanthrope-society01.webp" className="lazyload" />
+<img alt="the-misanthrope-society02" data-src="/projects/the-misanthrope-society/the-misanthrope-society02.webp" className="lazyload" />
+<img alt="the-misanthrope-society03" data-src="/projects/the-misanthrope-society/the-misanthrope-society03.webp" className="lazyload" />
+<img alt="the-misanthrope-society04" data-src="/projects/the-misanthrope-society/the-misanthrope-society04.webp" className="lazyload" />
+<img alt="the-misanthrope-society05" data-src="/projects/the-misanthrope-society/the-misanthrope-society05.webp" className="lazyload" />
+<img alt="the-misanthrope-society06" data-src="/projects/the-misanthrope-society/the-misanthrope-society06.webp" className="lazyload" />
+<img alt="the-misanthrope-society07" data-src="/projects/the-misanthrope-society/the-misanthrope-society07.webp" className="lazyload" />
+<img alt="the-misanthrope-society08" data-src="/projects/the-misanthrope-society/the-misanthrope-society08.webp" className="lazyload" />
+<img alt="the-misanthrope-society09" data-src="/projects/the-misanthrope-society/the-misanthrope-society09.webp" className="lazyload" />
+<img alt="the-misanthrope-society10" data-src="/projects/the-misanthrope-society/the-misanthrope-society10.webp" className="lazyload" />
+<img alt="the-misanthrope-society11" data-src="/projects/the-misanthrope-society/the-misanthrope-society11.webp" className="lazyload" />
+<img alt="the-misanthrope-society12" data-src="/projects/the-misanthrope-society/the-misanthrope-society12.webp" className="lazyload" />
+<img alt="the-misanthrope-society13" data-src="/projects/the-misanthrope-society/the-misanthrope-society13.webp" className="lazyload" />
+<img alt="the-misanthrope-society14" data-src="/projects/the-misanthrope-society/the-misanthrope-society14.webp" className="lazyload" />
+<img alt="the-misanthrope-society15" data-src="/projects/the-misanthrope-society/the-misanthrope-society15.webp" className="lazyload" />
+<img alt="the-misanthrope-society16" data-src="/projects/the-misanthrope-society/the-misanthrope-society16.webp" className="lazyload" />
+<img alt="the-misanthrope-society17" data-src="/projects/the-misanthrope-society/the-misanthrope-society17.webp" className="lazyload" />
+<img alt="the-misanthrope-society18" data-src="/projects/the-misanthrope-society/the-misanthrope-society18.webp" className="lazyload" />
+<img alt="the-misanthrope-society19" data-src="/projects/the-misanthrope-society/the-misanthrope-society19.webp" className="lazyload" />
+<img alt="the-misanthrope-society20" data-src="/projects/the-misanthrope-society/the-misanthrope-society20.webp" className="lazyload" />
+<img alt="the-misanthrope-society21" data-src="/projects/the-misanthrope-society/the-misanthrope-society21.webp" className="lazyload" />
+<img alt="the-misanthrope-society22" data-src="/projects/the-misanthrope-society/the-misanthrope-society22.webp" className="lazyload" />
+<img alt="the-misanthrope-society23" data-src="/projects/the-misanthrope-society/the-misanthrope-society23.webp" className="lazyload" />
+<img alt="the-misanthrope-society24" data-src="/projects/the-misanthrope-society/the-misanthrope-society24.webp" className="lazyload" />
+<img alt="the-misanthrope-society25" data-src="/projects/the-misanthrope-society/the-misanthrope-society25.webp" className="lazyload" />
 
 </section>

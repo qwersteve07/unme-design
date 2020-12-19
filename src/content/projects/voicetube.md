@@ -35,39 +35,39 @@ Brand Domain 不是把品牌融入空間而已，而是創造互動的可能性�
 
 <section>
 
-<img alt="voicetube06" data-src="/projects/voicetube/voicetube06.webp" />
-<img alt="voicetube07" data-src="/projects/voicetube/voicetube07.webp" />
-<img alt="voicetube08" data-src="/projects/voicetube/voicetube08.webp" />
-<img alt="voicetube09" data-src="/projects/voicetube/voicetube09.webp" />
-<img alt="voicetube10" data-src="/projects/voicetube/voicetube10.webp" />
-<img alt="voicetube11" data-src="/projects/voicetube/voicetube11.webp" />
-<img alt="voicetube12" data-src="/projects/voicetube/voicetube12.webp" />
-<img alt="voicetube13" data-src="/projects/voicetube/voicetube13.webp" />
-<img alt="voicetube14" data-src="/projects/voicetube/voicetube14.webp" />
-<img alt="voicetube15" data-src="/projects/voicetube/voicetube15.webp" />
-<img alt="voicetube16" data-src="/projects/voicetube/voicetube16.webp" />
-<img alt="voicetube17" data-src="/projects/voicetube/voicetube17.webp" />
-<img alt="voicetube18" data-src="/projects/voicetube/voicetube18.webp" />
-<img alt="voicetube19" data-src="/projects/voicetube/voicetube19.webp" />
-<img alt="voicetube20" data-src="/projects/voicetube/voicetube20.webp" />
-<img alt="voicetube21" data-src="/projects/voicetube/voicetube21.webp" />
-<img alt="voicetube22" data-src="/projects/voicetube/voicetube22.webp" />
-<img alt="voicetube23" data-src="/projects/voicetube/voicetube23.webp" />
-<img alt="voicetube24" data-src="/projects/voicetube/voicetube24.webp" />
-<img alt="voicetube25" data-src="/projects/voicetube/voicetube25.webp" />
-<img alt="voicetube26" data-src="/projects/voicetube/voicetube26.webp" />
-<img alt="voicetube27" data-src="/projects/voicetube/voicetube27.webp" />
-<img alt="voicetube28" data-src="/projects/voicetube/voicetube28.webp" />
-<img alt="voicetube29" data-src="/projects/voicetube/voicetube29.webp" />
-<img alt="voicetube30" data-src="/projects/voicetube/voicetube30.webp" />
-<img alt="voicetube31" data-src="/projects/voicetube/voicetube31.webp" />
-<img alt="voicetube32" data-src="/projects/voicetube/voicetube32.webp" />
-<img alt="voicetube33" data-src="/projects/voicetube/voicetube33.webp" />
-<img alt="voicetube34" data-src="/projects/voicetube/voicetube34.webp" />
-<img alt="voicetube35" data-src="/projects/voicetube/voicetube35.webp" />
-<img alt="voicetube36" data-src="/projects/voicetube/voicetube36.webp" />
-<img alt="voicetube37" data-src="/projects/voicetube/voicetube37.webp" />
-<img alt="voicetube38" data-src="/projects/voicetube/voicetube38.webp" />
-<img alt="voicetube39" data-src="/projects/voicetube/voicetube39.webp" />
+<img alt="voicetube06" data-src="/projects/voicetube/voicetube06.webp" className="lazyload" />
+<img alt="voicetube07" data-src="/projects/voicetube/voicetube07.webp" className="lazyload" />
+<img alt="voicetube08" data-src="/projects/voicetube/voicetube08.webp" className="lazyload" />
+<img alt="voicetube09" data-src="/projects/voicetube/voicetube09.webp" className="lazyload" />
+<img alt="voicetube10" data-src="/projects/voicetube/voicetube10.webp" className="lazyload" />
+<img alt="voicetube11" data-src="/projects/voicetube/voicetube11.webp" className="lazyload" />
+<img alt="voicetube12" data-src="/projects/voicetube/voicetube12.webp" className="lazyload" />
+<img alt="voicetube13" data-src="/projects/voicetube/voicetube13.webp" className="lazyload" />
+<img alt="voicetube14" data-src="/projects/voicetube/voicetube14.webp" className="lazyload" />
+<img alt="voicetube15" data-src="/projects/voicetube/voicetube15.webp" className="lazyload" />
+<img alt="voicetube16" data-src="/projects/voicetube/voicetube16.webp" className="lazyload" />
+<img alt="voicetube17" data-src="/projects/voicetube/voicetube17.webp" className="lazyload" />
+<img alt="voicetube18" data-src="/projects/voicetube/voicetube18.webp" className="lazyload" />
+<img alt="voicetube19" data-src="/projects/voicetube/voicetube19.webp" className="lazyload" />
+<img alt="voicetube20" data-src="/projects/voicetube/voicetube20.webp" className="lazyload" />
+<img alt="voicetube21" data-src="/projects/voicetube/voicetube21.webp" className="lazyload" />
+<img alt="voicetube22" data-src="/projects/voicetube/voicetube22.webp" className="lazyload" />
+<img alt="voicetube23" data-src="/projects/voicetube/voicetube23.webp" className="lazyload" />
+<img alt="voicetube24" data-src="/projects/voicetube/voicetube24.webp" className="lazyload" />
+<img alt="voicetube25" data-src="/projects/voicetube/voicetube25.webp" className="lazyload" />
+<img alt="voicetube26" data-src="/projects/voicetube/voicetube26.webp" className="lazyload" />
+<img alt="voicetube27" data-src="/projects/voicetube/voicetube27.webp" className="lazyload" />
+<img alt="voicetube28" data-src="/projects/voicetube/voicetube28.webp" className="lazyload" />
+<img alt="voicetube29" data-src="/projects/voicetube/voicetube29.webp" className="lazyload" />
+<img alt="voicetube30" data-src="/projects/voicetube/voicetube30.webp" className="lazyload" />
+<img alt="voicetube31" data-src="/projects/voicetube/voicetube31.webp" className="lazyload" />
+<img alt="voicetube32" data-src="/projects/voicetube/voicetube32.webp" className="lazyload" />
+<img alt="voicetube33" data-src="/projects/voicetube/voicetube33.webp" className="lazyload" />
+<img alt="voicetube34" data-src="/projects/voicetube/voicetube34.webp" className="lazyload" />
+<img alt="voicetube35" data-src="/projects/voicetube/voicetube35.webp" className="lazyload" />
+<img alt="voicetube36" data-src="/projects/voicetube/voicetube36.webp" className="lazyload" />
+<img alt="voicetube37" data-src="/projects/voicetube/voicetube37.webp" className="lazyload" />
+<img alt="voicetube38" data-src="/projects/voicetube/voicetube38.webp" className="lazyload" />
+<img alt="voicetube39" data-src="/projects/voicetube/voicetube39.webp" className="lazyload" />
 
 </section>

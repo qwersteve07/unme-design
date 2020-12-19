@@ -52,6 +52,45 @@
         color: $grey-warm
 
         +fontHindGuntur
+    
+    .image
+        +cropImage
+       
+        display: block
+        position: relative
+        .front,.back
+            position: absolute;
+            top: 0
+            left: 0
+            height: 100%
+            width: 100%
+            transition: 0.8s ease all
+        .back
+            transform: rotateY(180deg);
+            backface-visibility: hidden
+            transition: 0.8s ease all
+            img
+                width: 105%
+
+        .ability
+            height: 100%
+            width: 100%
+            display: flex
+            justify-content: center
+            align-items: center
+            position: absolute;
+            text-align: center;
+            line-height: 2;
+            background: rgba($black,0.4)
+            opacity: 0.8
+        &:hover
+            .front
+                transform: rotateY(180deg);
+                opacity: 0
+            .back
+                transform: rotateY(0);
+                opacity: 1
+
 
 .slider
     margin-bottom: 120px
@@ -99,6 +138,7 @@
         color: var(--sub-color)
 
         +themeTransition
+
 
 +padStyle
     .member

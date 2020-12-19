@@ -41,13 +41,13 @@ priority: 10
 
 <section>
 
-<img alt="blc02" data-src="/projects/blc/blc02.webp" />
-<img alt="blc03" data-src="/projects/blc/blc03.webp" />
-<img alt="blc04" data-src="/projects/blc/blc04.webp" />
-<img alt="blc05" data-src="/projects/blc/blc05.webp" />
-<img alt="blc06" data-src="/projects/blc/blc06.webp" />
-<img alt="blc07" data-src="/projects/blc/blc07.webp" />
-<img alt="blc08" data-src="/projects/blc/blc08.webp" />
-<img alt="blc09" data-src="/projects/blc/blc09.webp" />
+<img alt="blc02" data-src="/projects/blc/blc02.webp" className="lazyload" />
+<img alt="blc03" data-src="/projects/blc/blc03.webp" className="lazyload" />
+<img alt="blc04" data-src="/projects/blc/blc04.webp" className="lazyload" />
+<img alt="blc05" data-src="/projects/blc/blc05.webp" className="lazyload" />
+<img alt="blc06" data-src="/projects/blc/blc06.webp" className="lazyload" />
+<img alt="blc07" data-src="/projects/blc/blc07.webp" className="lazyload" />
+<img alt="blc08" data-src="/projects/blc/blc08.webp" className="lazyload" />
+<img alt="blc09" data-src="/projects/blc/blc09.webp" className="lazyload" />
 
 </section>

@@ -35,12 +35,12 @@ priority: 7
 
 <section>
 
-<img alt="spade06" data-src="/projects/spade/spade01.webp" />
-<img alt="spade02" data-src="/projects/spade/spade02.webp" />
-<img alt="spade03" data-src="/projects/spade/spade03.webp" />
-<img alt="spade04" data-src="/projects/spade/spade04.webp" />
-<img alt="spade05" data-src="/projects/spade/spade05.webp" />
-<img alt="spade05" data-src="/projects/spade/spade06.webp" />
-<img alt="spade07" data-src="/projects/spade/spade07.webp" />
+<img alt="spade06" data-src="/projects/spade/spade01.webp" className="lazyload" />
+<img alt="spade02" data-src="/projects/spade/spade02.webp" className="lazyload" />
+<img alt="spade03" data-src="/projects/spade/spade03.webp" className="lazyload" />
+<img alt="spade04" data-src="/projects/spade/spade04.webp" className="lazyload" />
+<img alt="spade05" data-src="/projects/spade/spade05.webp" className="lazyload" />
+<img alt="spade05" data-src="/projects/spade/spade06.webp" className="lazyload" />
+<img alt="spade07" data-src="/projects/spade/spade07.webp" className="lazyload" />
 
 </section>

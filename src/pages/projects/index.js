@@ -156,7 +156,11 @@ const Projects = ({ projectsData }) => {
           <div className={styles.image}>
             <Link href={`/projects/[id]`} as={`/projects/${id}`}>
               <div className={styles.thumbnail}>
-                <img src={thumbnail} alt="thumbnail" />
+                <img
+                  data-src={thumbnail}
+                  className="lazyload"
+                  alt="thumbnailimage"
+                />
               </div>
             </Link>
             <div className={styles.intro}>

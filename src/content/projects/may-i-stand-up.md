@@ -25,16 +25,16 @@ priority: 10
 
 <section>
 
-<img alt="may-i-stand-up02" data-src="/projects/may-i-stand-up/may-i-stand-up02.webp" />
-<img alt="may-i-stand-up03" data-src="/projects/may-i-stand-up/may-i-stand-up03.webp" />
-<img alt="may-i-stand-up04" data-src="/projects/may-i-stand-up/may-i-stand-up04.webp" />
-<img alt="may-i-stand-up05" data-src="/projects/may-i-stand-up/may-i-stand-up05.webp" />
-<img alt="may-i-stand-up06" data-src="/projects/may-i-stand-up/may-i-stand-up06.webp" />
-<img alt="may-i-stand-up07" data-src="/projects/may-i-stand-up/may-i-stand-up07.webp" />
-<img alt="may-i-stand-up02" data-src="/projects/may-i-stand-up/may-i-stand-up08.webp" />
-<img alt="may-i-stand-up04" data-src="/projects/may-i-stand-up/may-i-stand-up09.webp" />
-<img alt="may-i-stand-up05" data-src="/projects/may-i-stand-up/may-i-stand-up10.webp" />
-<img alt="may-i-stand-up06" data-src="/projects/may-i-stand-up/may-i-stand-up11.webp" />
-<img alt="may-i-stand-up07" data-src="/projects/may-i-stand-up/may-i-stand-up12.webp" />
+<img alt="may-i-stand-up02" data-src="/projects/may-i-stand-up/may-i-stand-up02.webp" className="lazyload" />
+<img alt="may-i-stand-up03" data-src="/projects/may-i-stand-up/may-i-stand-up03.webp" className="lazyload" />
+<img alt="may-i-stand-up04" data-src="/projects/may-i-stand-up/may-i-stand-up04.webp" className="lazyload" />
+<img alt="may-i-stand-up05" data-src="/projects/may-i-stand-up/may-i-stand-up05.webp" className="lazyload" />
+<img alt="may-i-stand-up06" data-src="/projects/may-i-stand-up/may-i-stand-up06.webp" className="lazyload" />
+<img alt="may-i-stand-up07" data-src="/projects/may-i-stand-up/may-i-stand-up07.webp" className="lazyload" />
+<img alt="may-i-stand-up02" data-src="/projects/may-i-stand-up/may-i-stand-up08.webp" className="lazyload" />
+<img alt="may-i-stand-up04" data-src="/projects/may-i-stand-up/may-i-stand-up09.webp" className="lazyload" />
+<img alt="may-i-stand-up05" data-src="/projects/may-i-stand-up/may-i-stand-up10.webp" className="lazyload" />
+<img alt="may-i-stand-up06" data-src="/projects/may-i-stand-up/may-i-stand-up11.webp" className="lazyload" />
+<img alt="may-i-stand-up07" data-src="/projects/may-i-stand-up/may-i-stand-up12.webp" className="lazyload" />
 
 </section>

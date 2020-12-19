@@ -1,13 +1,12 @@
 import React, { useEffect, useState } from "react";
 import { DefaultSeo } from "next-seo";
 import { useRouter } from "next/router";
-import { useDispatch, Provider } from "react-redux";
+import { Provider } from "react-redux";
 import { useStore } from "redux/store";
-import { SET_DARK_MODE } from "redux/reducer/app";
-import localDataService from "service/local-data-service";
 import emailjs from "emailjs-com";
 import Splash from "components/splash";
 import smoothscroll from "smoothscroll-polyfill";
+import "lazysizes";
 
 // add global css
 import "styles/normalize.css";
@@ -21,25 +20,12 @@ import "@fortawesome/fontawesome-free/js/brands";
 import "components/splash/splash.sass";
 
 const Content = ({ Component, pageProps }) => {
-  const dispatch = useDispatch();
-
   const [splash, setSplash] = useState(false);
   const router = useRouter();
 
   useEffect(() => {
     smoothscroll.polyfill();
     emailjs.init("unme");
-  }, []);
-
-  // set mode
-  useEffect(() => {
-    const localTheme = localDataService.getTheme();
-    const preferDarkScheme = window.matchMedia("(prefers-color-scheme: light)");
-    if (localTheme === "light" || preferDarkScheme.matches) {
-      document.body.classList.add("light");
-      dispatch({ type: SET_DARK_MODE, payload: false });
-      localDataService.setTheme("light");
-    }
   }, []);
 
   // set init css variable
@@ -60,17 +46,22 @@ const Content = ({ Component, pageProps }) => {
   useEffect(() => {
     const handleRouteChange = () => {
       setSplash(true);
-      window.scrollTo({
-        left: 0,
-        top: 0,
-      });
+      setTimeout(() => {
+        window.scrollTo({
+          left: 0,
+          top: 0,
+        });
+      }, 300);
     };
+
+    router.events.on("routeChangeStart", handleRouteChange);
 
     const handleRouteComplete = () => {
       setSplash(false);
     };
-    router.events.on("routeChangeStart", handleRouteChange);
+
     router.events.on("routeChangeComplete", handleRouteComplete);
+
     return () => {
       router.events.off("routeChangeStart", handleRouteChange);
       router.events.off("routeChangeComplete", handleRouteChange);
@@ -108,7 +99,7 @@ const App = (props) => {
           },
           {
             name: "charset",
-            property: "utf08",
+            property: "UTF-8",
           },
           {
             name: "color-scheme",

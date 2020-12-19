@@ -207,7 +207,11 @@ const Service = () => {
                 </div>
                 <div className={stepClass}>
                   <div className={imageClass}>
-                    <img src={content.image} alt="image" />
+                    <img
+                      data-src={content.image}
+                      className="lazyload"
+                      alt="image"
+                    />
                   </div>
                   <div className={styles.text}>
                     <div className={styles.title}>{content.title}</div>
@@ -231,7 +235,11 @@ const Service = () => {
             return (
               <div className={contentClass} key={content.id}>
                 <div className={imageClass}>
-                  <img src={content.image} alt="image" />
+                  <img
+                    data-src={content.image}
+                    className="lazyload"
+                    alt="image"
+                  />
                 </div>
                 <div className={styles.text}>
                   <div className={styles.title}>{content.title}</div>
@@ -318,7 +326,11 @@ const Projects = () => {
       <div className={styles.title}>PROJECTS</div>
       <div className={styles.top}>
         <div className={styles.image}>
-          <img alt="voicetube" src="/projects/voicetube/voicetube08.webp" />
+          <img
+            data-src="/projects/voicetube/voicetube08.webp"
+            className="lazyload"
+            alt="voicetube"
+          />
         </div>
         <div className={styles.info}>
           <div className={styles.name}>VOICETUBE</div>
@@ -361,14 +373,20 @@ const Projects = () => {
               <Card
                 className={styles.item}
                 reverse={true}
-                imageHeight="65%"
                 lineHeight="250px"
                 key={data.name}
-                linkOnImage={`/projects/${data.id}`}
-                data={{
-                  image: data.image,
-                  info: <Info />,
-                }}
+                image={
+                  <Link href={`/projects/${data.id}`}>
+                    <a className={styles.image} style={{ paddingTop: "65%" }}>
+                      <img
+                        data-src={data.image}
+                        className="lazyload"
+                        alt="photo"
+                      />
+                    </a>
+                  </Link>
+                }
+                info={<Info />}
               />
             );
           })}

@@ -16,6 +16,7 @@
     "classnames": "^2.2.6",
     "emailjs-com": "^2.6.3",
     "gray-matter": "^4.0.2",
+    "lazysizes": "^5.2.2",
     "lottie-react-web": "^2.2.2",
     "next": "9.5.1",
     "next-compose-plugins": "^2.2.1",

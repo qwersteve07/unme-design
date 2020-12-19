@@ -22,8 +22,8 @@ Bree，對時尚精品以及生活充滿熱忱的 28 歲醫生。
 
 <section>
 
-<img alt="glam-in-breeze02" data-src="/projects/glam-in-breeze/glam-in-breeze02.webp" />
-<img alt="glam-in-breeze03" data-src="/projects/glam-in-breeze/glam-in-breeze03.webp" />
-<img alt="glam-in-breeze04" data-src="/projects/glam-in-breeze/glam-in-breeze04.webp" />
+<img alt="glam-in-breeze02" data-src="/projects/glam-in-breeze/glam-in-breeze02.webp" className="lazyload" />
+<img alt="glam-in-breeze03" data-src="/projects/glam-in-breeze/glam-in-breeze03.webp" className="lazyload" />
+<img alt="glam-in-breeze04" data-src="/projects/glam-in-breeze/glam-in-breeze04.webp" className="lazyload" />
 
 </section>

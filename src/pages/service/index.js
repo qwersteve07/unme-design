@@ -115,7 +115,7 @@ const Service = () => {
 
   useEffect(() => {
     const handleScroll = () => {
-      if (window.innerWidth > 767) {
+      if (window.innerWidth > 768) {
         if (window.scrollY > 50 && !animation1) {
           setAnimation1(true);
         }
@@ -574,7 +574,7 @@ const Service = () => {
 
           <section className={styles.section}>
             <div className={styles.steps}>
-              {stepContent.map((step) => {
+              {stepContent.map((step, index) => {
                 const stepClass = cx({
                   step: true,
                   [step.id]: true,
@@ -591,6 +591,7 @@ const Service = () => {
                       setCurrentStepOpen(step.id);
                     }}
                   >
+                    <div className={styles.count}>{index + 1}.</div>
                     <div className={styles.title}>{step.title}</div>
                     <div className={styles.desc}>{step.desc}</div>
                   </div>

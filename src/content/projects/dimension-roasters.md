@@ -23,11 +23,11 @@ priority: 7
 
 <section>
 
-<img alt="dimension-roast02" data-src="/projects/dimension-roasters/dimension-roast02.webp" />
-<img alt="dimension-roast03" data-src="/projects/dimension-roasters/dimension-roast03.webp" />
-<img alt="dimension-roast04" data-src="/projects/dimension-roasters/dimension-roast04.webp" />
-<img alt="dimension-roast05" data-src="/projects/dimension-roasters/dimension-roast05.webp" />
-<img alt="dimension-roast06" data-src="/projects/dimension-roasters/dimension-roast06.webp" />
-<img alt="dimension-roast07" data-src="/projects/dimension-roasters/dimension-roast07.webp" />
+<img alt="dimension-roast02" data-src="/projects/dimension-roasters/dimension-roast02.webp" className="lazyload" />
+<img alt="dimension-roast03" data-src="/projects/dimension-roasters/dimension-roast03.webp" className="lazyload" />
+<img alt="dimension-roast04" data-src="/projects/dimension-roasters/dimension-roast04.webp" className="lazyload" />
+<img alt="dimension-roast05" data-src="/projects/dimension-roasters/dimension-roast05.webp" className="lazyload" />
+<img alt="dimension-roast06" data-src="/projects/dimension-roasters/dimension-roast06.webp" className="lazyload" />
+<img alt="dimension-roast07" data-src="/projects/dimension-roasters/dimension-roast07.webp" className="lazyload" />
 
 </section>

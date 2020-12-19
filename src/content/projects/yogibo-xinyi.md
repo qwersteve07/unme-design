@@ -49,18 +49,18 @@ priority: 8
 
 <section>
 
-<img alt="yogibo-xinyi02" data-src="/projects/yogibo-xinyi/yogibo-xinyi02.webp"/>
-<img alt="yogibo-xinyi03" data-src="/projects/yogibo-xinyi/yogibo-xinyi03.webp"/>
-<img alt="yogibo-xinyi04" data-src="/projects/yogibo-xinyi/yogibo-xinyi04.webp"/>
-<img alt="yogibo-xinyi05" data-src="/projects/yogibo-xinyi/yogibo-xinyi05.webp"/>
-<img alt="yogibo-xinyi06" data-src="/projects/yogibo-xinyi/yogibo-xinyi06.webp"/>
-<img alt="yogibo-xinyi07" data-src="/projects/yogibo-xinyi/yogibo-xinyi07.webp"/>
-<img alt="yogibo-xinyi08" data-src="/projects/yogibo-xinyi/yogibo-xinyi08.webp"/>
-<img alt="yogibo-xinyi09" data-src="/projects/yogibo-xinyi/yogibo-xinyi09.webp"/>
-<img alt="yogibo-xinyi10" data-src="/projects/yogibo-xinyi/yogibo-xinyi10.webp"/>
-<img alt="yogibo-xinyi11" data-src="/projects/yogibo-xinyi/yogibo-xinyi11.webp"/>
-<img alt="yogibo-xinyi12" data-src="/projects/yogibo-xinyi/yogibo-xinyi12.webp"/>
-<img alt="yogibo-xinyi13" data-src="/projects/yogibo-xinyi/yogibo-xinyi13.webp"/>
-<img alt="yogibo-xinyi14" data-src="/projects/yogibo-xinyi/yogibo-xinyi14.webp"/>
+<img alt="yogibo-xinyi02" data-src="/projects/yogibo-xinyi/yogibo-xinyi02.webp" className="lazyload" />
+<img alt="yogibo-xinyi03" data-src="/projects/yogibo-xinyi/yogibo-xinyi03.webp" className="lazyload" />
+<img alt="yogibo-xinyi04" data-src="/projects/yogibo-xinyi/yogibo-xinyi04.webp" className="lazyload" />
+<img alt="yogibo-xinyi05" data-src="/projects/yogibo-xinyi/yogibo-xinyi05.webp" className="lazyload" />
+<img alt="yogibo-xinyi06" data-src="/projects/yogibo-xinyi/yogibo-xinyi06.webp" className="lazyload" />
+<img alt="yogibo-xinyi07" data-src="/projects/yogibo-xinyi/yogibo-xinyi07.webp" className="lazyload" />
+<img alt="yogibo-xinyi08" data-src="/projects/yogibo-xinyi/yogibo-xinyi08.webp" className="lazyload" />
+<img alt="yogibo-xinyi09" data-src="/projects/yogibo-xinyi/yogibo-xinyi09.webp" className="lazyload" />
+<img alt="yogibo-xinyi10" data-src="/projects/yogibo-xinyi/yogibo-xinyi10.webp" className="lazyload" />
+<img alt="yogibo-xinyi11" data-src="/projects/yogibo-xinyi/yogibo-xinyi11.webp" className="lazyload" />
+<img alt="yogibo-xinyi12" data-src="/projects/yogibo-xinyi/yogibo-xinyi12.webp" className="lazyload" />
+<img alt="yogibo-xinyi13" data-src="/projects/yogibo-xinyi/yogibo-xinyi13.webp" className="lazyload" />
+<img alt="yogibo-xinyi14" data-src="/projects/yogibo-xinyi/yogibo-xinyi14.webp" className="lazyload" />
 
 </section>

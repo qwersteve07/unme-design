@@ -32,12 +32,12 @@ https://www.youtube.com/watch?v=vT0-IthLPdU
 
 <section>
 
-<img alt="str-network02" data-src="/projects/str-network/str-network02.webp" />
-<img alt="str-network03" data-src="/projects/str-network/str-network03.webp" />
-<img alt="str-network04" data-src="/projects/str-network/str-network04.webp" />
-<img alt="str-network05" data-src="/projects/str-network/str-network05.webp" />
-<img alt="str-network06" data-src="/projects/str-network/str-network06.webp" />
-<img alt="str-network07" data-src="/projects/str-network/str-network07.webp" />
-<img alt="str-network08" data-src="/projects/str-network/str-network08.webp" />
+<img alt="str-network02" data-src="/projects/str-network/str-network02.webp" className="lazyload" />
+<img alt="str-network03" data-src="/projects/str-network/str-network03.webp" className="lazyload" />
+<img alt="str-network04" data-src="/projects/str-network/str-network04.webp" className="lazyload" />
+<img alt="str-network05" data-src="/projects/str-network/str-network05.webp" className="lazyload" />
+<img alt="str-network06" data-src="/projects/str-network/str-network06.webp" className="lazyload" />
+<img alt="str-network07" data-src="/projects/str-network/str-network07.webp" className="lazyload" />
+<img alt="str-network08" data-src="/projects/str-network/str-network08.webp" className="lazyload" />
 
 </section>

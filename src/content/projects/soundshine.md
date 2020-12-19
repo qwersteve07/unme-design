@@ -29,25 +29,25 @@ priority: 10
 
 <section>
 
-<img alt="soundShine02" data-src="/projects/soundshine/soundshine02.webp" />
-<img alt="soundShine03" data-src="/projects/soundshine/soundshine03.webp" />
-<img alt="soundShine04" data-src="/projects/soundshine/soundshine04.webp" />
-<img alt="soundShine05" data-src="/projects/soundshine/soundshine05.webp" />
-<img alt="soundShine06" data-src="/projects/soundshine/soundshine06.webp" />
-<img alt="soundShine07" data-src="/projects/soundshine/soundshine07.webp" />
-<img alt="soundShine08" data-src="/projects/soundshine/soundshine08.webp" />
-<img alt="soundShine09" data-src="/projects/soundshine/soundshine09.webp" />
-<img alt="soundShine10" data-src="/projects/soundshine/soundshine10.webp" />
-<img alt="soundShine11" data-src="/projects/soundshine/soundshine11.webp" />
-<img alt="soundShine12" data-src="/projects/soundshine/soundshine12.webp" />
-<img alt="soundShine13" data-src="/projects/soundshine/soundshine13.webp" />
-<img alt="soundShine14" data-src="/projects/soundshine/soundshine14.webp" />
-<img alt="soundShine15" data-src="/projects/soundshine/soundshine15.webp" />
-<img alt="soundShine16" data-src="/projects/soundshine/soundshine16.webp" />
-<img alt="soundShine17" data-src="/projects/soundshine/soundshine17.webp" />
-<img alt="soundShine18" data-src="/projects/soundshine/soundshine18.webp" />
-<img alt="soundShine19" data-src="/projects/soundshine/soundshine19.webp" />
-<img alt="soundShine20" data-src="/projects/soundshine/soundshine20.webp" />
-<img alt="soundShine21" data-src="/projects/soundshine/soundshine21.webp" />
+<img alt="soundShine02" data-src="/projects/soundshine/soundshine02.webp" className="lazyload" />
+<img alt="soundShine03" data-src="/projects/soundshine/soundshine03.webp" className="lazyload" />
+<img alt="soundShine04" data-src="/projects/soundshine/soundshine04.webp" className="lazyload" />
+<img alt="soundShine05" data-src="/projects/soundshine/soundshine05.webp" className="lazyload" />
+<img alt="soundShine06" data-src="/projects/soundshine/soundshine06.webp" className="lazyload" />
+<img alt="soundShine07" data-src="/projects/soundshine/soundshine07.webp" className="lazyload" />
+<img alt="soundShine08" data-src="/projects/soundshine/soundshine08.webp" className="lazyload" />
+<img alt="soundShine09" data-src="/projects/soundshine/soundshine09.webp" className="lazyload" />
+<img alt="soundShine10" data-src="/projects/soundshine/soundshine10.webp" className="lazyload" />
+<img alt="soundShine11" data-src="/projects/soundshine/soundshine11.webp" className="lazyload" />
+<img alt="soundShine12" data-src="/projects/soundshine/soundshine12.webp" className="lazyload" />
+<img alt="soundShine13" data-src="/projects/soundshine/soundshine13.webp" className="lazyload" />
+<img alt="soundShine14" data-src="/projects/soundshine/soundshine14.webp" className="lazyload" />
+<img alt="soundShine15" data-src="/projects/soundshine/soundshine15.webp" className="lazyload" />
+<img alt="soundShine16" data-src="/projects/soundshine/soundshine16.webp" className="lazyload" />
+<img alt="soundShine17" data-src="/projects/soundshine/soundshine17.webp" className="lazyload" />
+<img alt="soundShine18" data-src="/projects/soundshine/soundshine18.webp" className="lazyload" />
+<img alt="soundShine19" data-src="/projects/soundshine/soundshine19.webp" className="lazyload" />
+<img alt="soundShine20" data-src="/projects/soundshine/soundshine20.webp" className="lazyload" />
+<img alt="soundShine21" data-src="/projects/soundshine/soundshine21.webp" className="lazyload" />
 
 </section>

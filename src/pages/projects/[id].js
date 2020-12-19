@@ -7,23 +7,23 @@ import { PROJECT_CONTENT_PATH } from "config/config";
 import matter from "gray-matter";
 import ReactMarkdown from "react-markdown/with-html";
 import PageContainer from "components/page-container";
-import UseIntersect from "utils/useIntersect";
+// import UseIntersect from "utils/useIntersect";
 
 const Post = ({ data, content }) => {
   const cx = classnames.bind(styles);
   const [init, setInit] = useState(false);
 
-  const onEnterView = (entries, observer) => {
-    entries.forEach((entry) => {
-      if (entry.isIntersecting) {
-        const img = entry.target;
-        img.setAttribute("src", img.dataset.src);
-        img.removeAttribute("data-src");
-        observer.unobserve(img);
-      }
-    });
-  };
-  const [setElement] = UseIntersect(onEnterView);
+  // const onEnterView = (entries, observer) => {
+  //   entries.forEach((entry) => {
+  //     if (entry.isIntersecting) {
+  //       const img = entry.target;
+  //       img.setAttribute("src", img.dataset.src);
+  //       img.removeAttribute("data-src");
+  //       observer.unobserve(img);
+  //     }
+  //   });
+  // };
+  // const [setElement] = UseIntersect(onEnterView);
 
   // load css effect
   useEffect(() => {
@@ -35,10 +35,10 @@ const Post = ({ data, content }) => {
   }, []);
 
   // image load
-  useEffect(() => {
-    const lazyImages = document.querySelectorAll("article img[data-src]");
-    setElement(lazyImages);
-  }, []);
+  // useEffect(() => {
+  //   const lazyImages = document.querySelectorAll("article img[data-src]");
+  //   setElement(lazyImages);
+  // }, []);
 
   const postClass = cx({
     post: true,
