@@ -5,8 +5,6 @@
     margin-bottom: 80px
     display: flex
     align-items: center
-    &.sub
-        margin-bottom: 200px
 
 .filter
     padding: 10px
@@ -45,50 +43,6 @@
             opacity: 1
 
 
-.sub-filter
-    padding: 8px
-    margin-right: 35px
-    transition: 0.3s ease all
-    cursor: pointer
-    position: relative
-    color: var(--sub-color)
-    border: 1px solid transparent
-    line-height: 1.5
-
-    &.active
-        color: var(--main-color)
-        transition: 0.3s ease all
-        background: var(--sub-color)
-
-    &:not(.active):hover
-        border: 1px solid var(--sub-color)
-
-        // color: $black-less
-
-        // background: $grey-light
-        transition: 0.3s ease all
-
-        .filter-sub
-            opacity: 1
-            transform: translateY(0)
-            transition: all ease 0.3s
-
-    .filter-sub
-        padding: 15px 0
-        color: var(--sub-color)
-        transition: all ease 0.3s
-        opacity: 0
-        transform: translateY(-15px)
-        position: absolute
-        top: 30px
-        left: 0
-
-    .sub
-        padding: 10px 0
-
-        &:hover
-            color: $unme-red
-
 .item
     display: flex
     align-items: center
@@ -122,18 +76,21 @@
     left: 120px
     width: 40%
     color: var(--sub-color)
-
+    .title-wrapper
+        display: flex
+        flex-direction: column
     .title
-        margin-bottom: 30px
+        line-height: 1.2
         letter-spacing: 7px
         text-shadow: 0 0 30px var(--main-color)
-        font-size: 70px
+        font-size: 60px
         +fontHindGuntur
-
-        .cn
-            font-size: 35px
+        &.en
+            font-size: 70px
+        &.cn
+            font-size: 40px
             letter-spacing: 4px
-
+            margin-bottom: 10px
     button
         margin-top: 100px
         font-size: 18px
@@ -186,6 +143,7 @@
 .post
     line-height: 2
     letter-spacing: 0.5px
+    padding: 0 10%
 
     &.init
         header

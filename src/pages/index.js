@@ -286,14 +286,14 @@ const Service = () => {
 const Projects = () => {
   const projectsData = [
     {
-      id: "the-misanthrope-society",
-      image: "/projects/the-misanthrope-society/the-misanthrope-society14.webp",
-      name: "厭世會社咖啡餐酒館",
-      tags: ["interior", "3d"],
-      define: "商業空間設計 | 餐飲空間設計",
-      description:
-        "設計與社會結構的關係，其實是深根蒂固的。厭世會社，是一間以憂鬱患者為出發的社會企業，老闆本身所經歷的憂鬱病史，促使他建立這個地方，提供病友們喘息的空間，甚至創辦病友的交流圈，協助他們翻轉心態，重新面對人權。",
+      id: "up-sports",
+      image: "/projects/up-sports/up-sports01.webp",
+      name: "UP SPORTS",
+      tags: ["cis", "2d"],
+      define: "健身沙拉品牌 | 品牌設計",
+      description: "UP運動吃沙拉，伴隨產品的進化迎來向上突破的改變。",
     },
+
     {
       id: "yogibo-xinyi",
       image: "/projects/yogibo-xinyi/yogibo-xinyi01.webp",
@@ -304,16 +304,17 @@ const Projects = () => {
         "我們協助Yogibo進入品牌空間的第二個階段：影響力。過往執行的Yogibo台茂、新竹、桃園、台南、台中的多點專櫃長期規劃後，我們利用在不同點為上的佈局與工程規劃，開始鎖定在消費者行為與多彩產品下的專櫃風格創造，來創造專屬「悠式生活」的品牌空間。",
     },
     {
-      id: "up-sports",
-      image: "/projects/up-sports/up-sports01.webp",
-      name: "UP SPORTS",
-      tags: ["cis", "2d"],
-      define: "健身沙拉品牌 | 品牌設計",
-      description: "UP運動吃沙拉，伴隨產品的進化迎來向上突破的改變。",
+      id: "the-misanthrope-society",
+      image: "/projects/the-misanthrope-society/the-misanthrope-society14.webp",
+      name: "厭世會社咖啡餐酒館",
+      tags: ["interior", "3d"],
+      define: "商業空間設計 | 餐飲空間設計",
+      description:
+        "設計與社會結構的關係，其實是深根蒂固的。厭世會社，是一間以憂鬱患者為出發的社會企業，老闆本身所經歷的憂鬱病史，促使他建立這個地方，提供病友們喘息的空間，甚至創辦病友的交流圈，協助他們翻轉心態，重新面對人權。",
     },
     {
       id: "grilled-sendwish",
-      image: "/projects/grilled-sendwish/grilled-sendwish07.webp",
+      image: "/projects/grilled-sendwish/grilled-sendwish01.webp",
       name: "格里歐三明治",
       tags: ["cis", "2d"],
       define: "早餐品牌 | 品牌設計",

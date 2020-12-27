@@ -6,7 +6,7 @@ define: 音樂製作公司 ｜ 錄音室設計
 description: "錄音室規劃設計，一直是空間設計中特別獨立的區塊。因為在錄製過程中，需要考量音頻震動的高低起伏後利用不同的工法與材質逐一削弱，並抵銷聲音的回音或是雜音上被收錄的問題，而延伸出許多包含浮動地板、特殊表面材質的施作方式。"
 thumbnail: "/projects/may-i-stand-up/may-i-stand-up01.webp"
 contain: 空間設計 | 工程施作 | 風格定位 | 隔音工程 ｜ 環境氛圍規劃
-priority: 10
+priority: 9
 ---
 
 <section>

@@ -27,8 +27,8 @@
         transition: all 0.8s ease
 
     &.fixed
-        height: 100px
-        padding: 35px 85px
+        height: 75px
+        padding: 0 85px
 
         +themeTransition
 
@@ -36,6 +36,13 @@
             background: var(--sub-color)
             opacity: 0.5
             transition: all 0.8s ease-in
+
+        .logo
+            height: 30px
+
+            & > img
+                transition: 0.4s all ease
+                transform: translateY(-56px)
 
 .menu
     display: flex
@@ -87,8 +94,22 @@
     width: 115px
     filter: invert(1)
     display: flex
-    justify-content: center
+    flex-direction: column
+    justify-content: flex-start
+    align-items: flex-start
     cursor: pointer
+    height: 40px
+    overflow: hidden
+
+    & > img
+        transition: 0.4s all ease
+
+        &:first-of-type
+            margin-bottom: 20px
+
+        &:last-of-type
+            height: 28px
+            width: auto
 
     &.dark-mode
         filter: invert(0)
@@ -133,6 +154,9 @@
         &.fixed
             height: 60px
             padding: 0 25px
+
+            .logo > img
+                transform: none
 
     .menu
         pointer-events: none
@@ -184,6 +208,14 @@
 
     .logo
         width: 80px
+        justify-content: center
+
+        & > img
+            &:first-of-type
+                margin: 0
+
+            &:last-of-type
+                display: none
 
     .toggler
         top: calc(50% - 22px)

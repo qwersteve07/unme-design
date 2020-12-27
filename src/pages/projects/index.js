@@ -58,7 +58,6 @@ const Projects = ({ projectsData }) => {
   const state = useSelector((state) => state.projectsReducer);
   const dispatch = useDispatch();
   const setFilter = (id) => dispatch({ type: SET_FILTER, payload: id });
-  const setSubFilter = (id) => dispatch({ type: SET_SUB_FILTER, payload: id });
 
   const moreData = [
     {
@@ -89,18 +88,6 @@ const Projects = ({ projectsData }) => {
     );
   };
 
-  const SubFilter = () => {
-    return (
-      <div className={`${styles["filter-container"]} ${styles.sub}`}>
-        <Filter
-          data={state.subFilters}
-          onSelect={setSubFilter}
-          currentFilter={state.currentSubFilter}
-        />
-      </div>
-    );
-  };
-
   const ProjectMap = () => {
     let sortData = projectsData.sort((a, b) => {
       return b.frontMatter.priority - a.frontMatter.priority;
@@ -109,9 +96,7 @@ const Projects = ({ projectsData }) => {
       let { tags } = data.frontMatter;
       const isFilteredByMain =
         state.currentFilter === "all" || state.currentFilter === tags[0];
-      const isFilteredBySub =
-        state.currentSubFilter === "all" || state.currentSubFilter === tags[1];
-      return isFilteredByMain && isFilteredBySub;
+      return isFilteredByMain;
     });
 
     if (filteredProjectData.length === 0)
@@ -129,13 +114,22 @@ const Projects = ({ projectsData }) => {
       });
 
       const Title = () => {
-        if ((titleEn && !titleCn) || (!titleEn && titleCn))
-          return <div className={styles.title}>{titleEn || titleCn}</div>;
+        const En = () => (
+          <div className={`${styles.title} ${styles.en}`}>{titleEn}</div>
+        );
+        const Cn = () => (
+          <div className={`${styles.title} ${styles.cn}`}>{titleCn}</div>
+        );
+        if (titleEn && !titleCn) {
+          return <En />;
+        }
+        if (!titleEn && titleCn) {
+          return <Cn />;
+        }
         return (
-          <div className={styles.title}>
-            {titleEn}
-            <br />
-            <div className={styles.cn}>{titleCn}</div>
+          <div className={styles["title-wrapper"]}>
+            <En />
+            <Cn />
           </div>
         );
       };
@@ -176,7 +170,6 @@ const Projects = ({ projectsData }) => {
   return (
     <PageContainer exception={<More data={moreData} />}>
       {MainFilter()}
-      {SubFilter()}
       <div className={styles.projects}>
         <ProjectMap />
       </div>

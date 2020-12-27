@@ -6,7 +6,7 @@ define: 懶骨頭沙發品牌 ｜ 百貨專櫃設計
 description: "一連經手Yogibo在台茂、新竹、桃園、台南、台中的多點專櫃長期規劃後，我們利用在不同點為上的佈局與工程規劃，開始鎖定在消費者行為與多彩產品下的專櫃風格創造，來創造專屬「悠式生活」的品牌空間。"
 thumbnail: "/projects/yogibo-taimall/yogibo-taimall01.webp"
 contain: 櫃位設計 | 視覺設計 | 風格定位 | 市場調查分析 ｜ 動線行為規劃 ｜ 產品陳列優化
-priority: 8
+priority: 10
 ---
 
 <section>

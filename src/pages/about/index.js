@@ -15,8 +15,8 @@ import tong from "images/about/tong.jpg";
 import kevin from "images/about/kevin.jpg";
 import alphaAnimal from "images/about/alpha-animal.jpg";
 import ninaAnimal from "images/about/nina-animal.jpg";
-import tongAnimal from "images/about/tong-animal.jpg";
-import kevinAnimal from "images/about/kevin-animal.jpg";
+import tongAnimal from "images/about/kevin-animal.jpg";
+import kevinAnimal from "images/about/tong-animal.jpg";
 import dog from "images/about/dog.jpg";
 import jellyfish from "images/about/jellyfish.jpg";
 import useResize from "utils/useResize";
@@ -154,7 +154,7 @@ const About = () => {
     },
     {
       id: "grilled-sendwish",
-      image: "/projects/grilled-sendwish/grilled-sendwish10.webp",
+      image: "/projects/grilled-sendwish/grilled-sendwish01.webp",
       tags: ["cis", "2d"],
       name: "格里歐三明治",
     },

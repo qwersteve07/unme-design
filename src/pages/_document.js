@@ -15,15 +15,14 @@ class MyDocument extends Document {
           {/* Global Site Tag (gtag.js) - Google Analytics */}
           <script
             async
-            src="https://www.googletagmanager.com/gtag/js?id=UA-41998053-2"
+            src="https://www.googletagmanager.com/gtag/js?id=UA-130589250-1"
           ></script>
           <script
             dangerouslySetInnerHTML={{
               __html: `
-            window.dataLayer = window.dataLayer || [];
-            function gtag(){dataLayer.push(arguments);}
-            gtag('js', new Date());
-            gtag('config', 'UA-41998053-2');
+              window.dataLayer = window.dataLayer || []; function gtag()
+              {dataLayer.push(arguments)}
+              gtag('js', new Date()); gtag('config', 'UA-130589250-1');
           `,
             }}
           />

@@ -9,7 +9,8 @@ import classnames from "classnames/bind";
 import { useSelector, useDispatch } from "react-redux";
 import Link from "next/link";
 import styles from "components/nav/index.module.sass";
-import logo from "images/logo.svg";
+import logoWithText from "images/logo.svg";
+import logo from "images/logo-only.svg";
 import localDataService from "service/local-data-service";
 import { SET_DARK_MODE } from "redux/reducer/app";
 
@@ -129,11 +130,12 @@ const Nav = () => {
       <div className={togglerClass} onClick={toggleTheme}>
         <div className={styles.icon} />
       </div>
-      <div className={logoClass}>
-        <Link href="/">
+      <Link href="/">
+        <div className={logoClass}>
+          <img src={logoWithText} alt="logo" />
           <img src={logo} alt="logo" />
-        </Link>
-      </div>
+        </div>
+      </Link>
       <ul className={menuClass} onClick={() => setMenuOpen(false)}>
         <NavList />
       </ul>

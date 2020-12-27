@@ -4,7 +4,7 @@ titleCn: 格里歐三明治
 tags: ["cis", "2d"]
 define: 餐飲品牌 ｜ 形象重塑規劃設計
 description: "在格里歐民權店開幕前夕，這間藏身國父紀念館的起士三明治，找上UnMe設計師們討論如何Rebrand品牌形象，在未來發展成連鎖三明治品牌的餐飲形象。"
-thumbnail: "/projects/grilled-sendwish/grilled-sendwish07.webp"
+thumbnail: "/projects/grilled-sendwish/grilled-sendwish01.webp"
 contain: 品牌理念 ｜ 品牌重塑 ｜ 標誌設計 ｜ 品牌策略 ｜ 品牌顧問 ｜ 品牌形象規劃 ｜ 相關延伸物設計
 priority: 10
 ---
@@ -23,7 +23,7 @@ priority: 10
 
 **格里歐的三明治 → 格里歐三明治**
 
-<img alt="grilled-sendwish02" data-src="/projects/grilled-sendwish/grilled-sendwish01.webp" className="lazyload" />
+<img alt="grilled-sendwish02" data-src="/projects/grilled-sendwish/grilled-sendwish02.webp" className="lazyload" />
 
 Grilled's SendWish，蘊含著非常多在施作三明治時的堅持。從堅持手製所有內餡、不用誇張的視覺圖像吸引消費者、計算到秒數的烤板時間，都是為求傳遞食品的美味與希望感。
 
@@ -39,7 +39,7 @@ Grilled's SendWish，蘊含著非常多在施作三明治時的堅持。從堅�
 
 雖然乍看之下格里歐三明治並沒有厚片吐司在視覺上的衝擊感，但在消費者的線上線下回饋中，口中的飽滿感受是等比例成長的。
 
-<img alt="grilled-sendwish02" data-src="/projects/grilled-sendwish/grilled-sendwish02.webp" className="lazyload" />
+<img alt="grilled-sendwish02" data-src="/projects/grilled-sendwish/grilled-sendwish03.webp" className="lazyload" />
 
 比起滿口的麵包，取而代之的是厚重起士與口口有料的三明治，也因此我們刻意地在 Logo 的線條、厚度、角度上讓其產生同樣的感受。並針對應用性將其強化。
 
@@ -53,7 +53,7 @@ Grilled's SendWish，蘊含著非常多在施作三明治時的堅持。從堅�
 
 Grilled SendWish 其實就是希望透過食物的方式，散播後產生一點小小的暖意，在菜單、宣傳等等的設計裡都蘊含著格里歐「產生暖度」的理念，不管是吃飽後身體暖起來的感受，還是一起與朋友用餐的感覺，都是品牌希望傳遞的情緒理念。
 
-<img alt="grilled-sendwish03" data-src="/projects/grilled-sendwish/grilled-sendwish03.webp" className="lazyload" />
+<img alt="grilled-sendwish03" data-src="/projects/grilled-sendwish/grilled-sendwish04.webp" className="lazyload" />
 
 透過「寄送」「食物」與「產生暖度的回憶」，我們整合出紙飛機＋山形吐司的品牌標誌，讓品牌與友情還有食物的記憶產生連結，回歸最貼近的樣貌。
 
@@ -65,7 +65,6 @@ Grilled SendWish 其實就是希望透過食物的方式，散播後產生一點
 
 「產生暖度吧」漸漸得成為格里歐的代名詞，因此我們藉由產生豐富的視覺與派對感，一連串制定出品牌的使用手冊、視覺應用系統，與格里歐三明治的品牌形象規劃。
 
-<img alt="grilled-sendwish04" data-src="/projects/grilled-sendwish/grilled-sendwish04.webp" className="lazyload" />
 <img alt="grilled-sendwish05" data-src="/projects/grilled-sendwish/grilled-sendwish05.webp" className="lazyload" />
 <img alt="grilled-sendwish06" data-src="/projects/grilled-sendwish/grilled-sendwish06.webp" className="lazyload" />
 <img alt="grilled-sendwish07" data-src="/projects/grilled-sendwish/grilled-sendwish07.webp" className="lazyload" />
@@ -74,5 +73,6 @@ Grilled SendWish 其實就是希望透過食物的方式，散播後產生一點
 <img alt="grilled-sendwish10" data-src="/projects/grilled-sendwish/grilled-sendwish10.webp" className="lazyload" />
 <img alt="grilled-sendwish11" data-src="/projects/grilled-sendwish/grilled-sendwish11.webp" className="lazyload" />
 <img alt="grilled-sendwish12" data-src="/projects/grilled-sendwish/grilled-sendwish12.webp" className="lazyload" />
+<img alt="grilled-sendwish12" data-src="/projects/grilled-sendwish/grilled-sendwish13.webp" className="lazyload" />
 
 </section>
