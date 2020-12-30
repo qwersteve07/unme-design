@@ -19,7 +19,7 @@ import "@fortawesome/fontawesome-free/js/brands";
 // for splash page
 import "components/splash/splash.sass";
 
-const Content = ({ Component, pageProps }) => {
+const Content = ({ Component, pageProps, ...props }) => {
   const [splash, setSplash] = useState(false);
   const router = useRouter();
 
@@ -46,20 +46,13 @@ const Content = ({ Component, pageProps }) => {
   useEffect(() => {
     const handleRouteChange = () => {
       setSplash(true);
-      setTimeout(() => {
-        window.scrollTo({
-          left: 0,
-          top: 0,
-        });
-      }, 300);
     };
-
-    router.events.on("routeChangeStart", handleRouteChange);
 
     const handleRouteComplete = () => {
       setSplash(false);
     };
 
+    router.events.on("routeChangeStart", handleRouteChange);
     router.events.on("routeChangeComplete", handleRouteComplete);
 
     return () => {
@@ -87,7 +80,6 @@ const Content = ({ Component, pageProps }) => {
 
 const App = (props) => {
   const store = useStore(props.pageProps.initialState);
-
   return (
     <>
       <DefaultSeo
@@ -132,7 +124,7 @@ const App = (props) => {
   );
 };
 
-App.getInitialProps = async () => {
+App.getInitialProps = async (context) => {
   await new Promise((resolve) => {
     setTimeout(resolve, 600);
   });

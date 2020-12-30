@@ -48,6 +48,5 @@ priority: 8
 <img alt="blc06" data-src="/projects/blc/blc06.webp" className="lazyload" />
 <img alt="blc07" data-src="/projects/blc/blc07.webp" className="lazyload" />
 <img alt="blc08" data-src="/projects/blc/blc08.webp" className="lazyload" />
-<img alt="blc09" data-src="/projects/blc/blc09.webp" className="lazyload" />
 
 </section>

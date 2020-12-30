@@ -30,7 +30,5 @@ priority: 4
 <img alt="ximen-airline-hotel04" data-src="/projects/ximen-airline-hotel/ximen-airline-hotel04.webp" className="lazyload" />
 <img alt="ximen-airline-hotel05" data-src="/projects/ximen-airline-hotel/ximen-airline-hotel05.webp" className="lazyload" />
 <img alt="ximen-airline-hotel06" data-src="/projects/ximen-airline-hotel/ximen-airline-hotel06.webp" className="lazyload" />
-<img alt="ximen-airline-hotel07" data-src="/projects/ximen-airline-hotel/ximen-airline-hotel07.webp" className="lazyload" />
-<img alt="ximen-airline-hotel08" data-src="/projects/ximen-airline-hotel/ximen-airline-hotel08.webp" className="lazyload" />
 
 </section>

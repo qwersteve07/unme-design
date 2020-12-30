@@ -30,6 +30,5 @@ priority: 7
 <img alt="dongYe04" data-src="/projects/dongYe/dongYe04.webp" className="lazyload" />
 <img alt="dongYe05" data-src="/projects/dongYe/dongYe05.webp" className="lazyload" />
 <img alt="dongYe06" data-src="/projects/dongYe/dongYe06.webp" className="lazyload" />
-<img alt="dongYe07" data-src="/projects/dongYe/dongYe07.webp" className="lazyload" />
 
 </section>

@@ -91,7 +91,7 @@ UP 運動吃沙拉與我們見面的第一天，就是場革命的開始。
 
 <img alt="up-sports09" data-src="/projects/up-sports/up-sports09.webp" className="lazyload" />
 <img alt="up-sports10" data-src="/projects/up-sports/up-sports10.webp" className="lazyload" />
-<img alt="up-sports11" data-src="/projects/up-sports/up-sports11.webp" className="lazyload" />
+<!-- <img alt="up-sports11" data-src="/projects/up-sports/up-sports11.webp" className="lazyload" /> -->
 <img alt="up-sports12" data-src="/projects/up-sports/up-sports12.webp" className="lazyload" />
 
 </section>

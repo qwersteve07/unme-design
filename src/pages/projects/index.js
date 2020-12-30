@@ -1,7 +1,8 @@
 import Link from "next/link";
-import React from "react";
+import { useRouter } from "next/router";
+import React, { useEffect } from "react";
 import { useSelector, useDispatch } from "react-redux";
-import { SET_FILTER, SET_SUB_FILTER } from "redux/reducer/projects";
+import { SET_FILTER } from "redux/reducer/projects";
 import classnames from "classnames/bind";
 import fs from "fs";
 import matter from "gray-matter";
@@ -57,7 +58,14 @@ const Filter = ({ currentFilter, data, onSelect }) => {
 const Projects = ({ projectsData }) => {
   const state = useSelector((state) => state.projectsReducer);
   const dispatch = useDispatch();
-  const setFilter = (id) => dispatch({ type: SET_FILTER, payload: id });
+  const router = useRouter();
+
+  useEffect(() => {
+    let subPath = router.asPath.split("/")[2] || "";
+    if (subPath) {
+      dispatch({ type: SET_FILTER, payload: subPath });
+    }
+  }, []);
 
   const moreData = [
     {
@@ -81,7 +89,12 @@ const Projects = ({ projectsData }) => {
       <div className={styles["filter-container"]}>
         <Filter
           data={state.filters}
-          onSelect={setFilter}
+          onSelect={(id) => {
+            router.push("/projects", `/projects/${id === "all" ? "" : id}`);
+            setTimeout(() => {
+              dispatch({ type: SET_FILTER, payload: id });
+            }, 400);
+          }}
           currentFilter={state.currentFilter}
         />
       </div>

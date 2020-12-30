@@ -29,7 +29,5 @@ priority: 6
 <img alt="tesa03" data-src="/projects/tesa/tesa03.webp" className="lazyload" />
 <img alt="tesa04" data-src="/projects/tesa/tesa04.webp" className="lazyload" />
 <img alt="tesa05" data-src="/projects/tesa/tesa05.webp" className="lazyload" />
-<img alt="tesa06" data-src="/projects/tesa/tesa06.webp" className="lazyload" />
-<img alt="tesa07" data-src="/projects/tesa/tesa07.webp" className="lazyload" />
 
 </section>
