@@ -43,7 +43,7 @@ const Service = () => {
         targets: "#step1 circle, #step1 path,#step1 line",
         strokeDashoffset: [anime.setDashoffset, 0],
         easing: "easeInOutSine",
-        duration: 1500,
+        duration: 700,
         delay: function (el, i) {
           return i * 250;
         },
@@ -59,7 +59,7 @@ const Service = () => {
         targets: "#step2 circle, #step2 path,#step2 line",
         strokeDashoffset: [anime.setDashoffset, 0],
         easing: "easeInOutSine",
-        duration: 1500,
+        duration: 700,
         delay: function (el, i) {
           return i * 250;
         },
@@ -74,7 +74,7 @@ const Service = () => {
         targets: "#step3 circle, #step3 path,#step3 line",
         strokeDashoffset: [anime.setDashoffset, 0],
         easing: "easeInOutSine",
-        duration: 1500,
+        duration: 700,
         delay: function (el, i) {
           return i * 250;
         },
@@ -89,7 +89,7 @@ const Service = () => {
         targets: "#step4 circle, #step4 path,#step4 line",
         strokeDashoffset: [anime.setDashoffset, 0],
         easing: "easeInOutSine",
-        duration: 1500,
+        duration: 700,
         delay: function (el, i) {
           return i * 250;
         },
@@ -104,7 +104,7 @@ const Service = () => {
         targets: "#step5 circle, #step5 path,#step5 line",
         strokeDashoffset: [anime.setDashoffset, 0],
         easing: "easeInOutSine",
-        duration: 1500,
+        duration: 700,
         delay: function (el, i) {
           return i * 250;
         },

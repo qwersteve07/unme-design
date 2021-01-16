@@ -4,7 +4,7 @@ titleCn: 商戰經理人讀書會
 tags: ["cis", "2d"]
 define: 企業形象規劃設計 ｜ 品牌識別設計
 description: "大腦所涵蓋的智識經驗，是最能夠輕易傳遞企業本身核心的方式。商戰經理人讀書會的品牌標示設計，為了讓企業標語「以書會友，跨界交流」顯得更直覺，並且更好的應用在各式的社群媒體、每季的活動規劃、企業文宣品中。"
-thumbnail: "/projects/blc/blc01.webp"
+thumbnail: "/projects/blc/blc01.jpg"
 contain: 品牌標誌設計 | 品牌理念溝通 | 相關延伸物設計 ｜ 視覺分析 ｜ 企業形象顧問 ｜ 教育訓練
 priority: 8
 ---
@@ -41,12 +41,12 @@ priority: 8
 
 <section>
 
-<img alt="blc02" data-src="/projects/blc/blc02.webp" className="lazyload" />
-<img alt="blc03" data-src="/projects/blc/blc03.webp" className="lazyload" />
-<img alt="blc04" data-src="/projects/blc/blc04.webp" className="lazyload" />
-<img alt="blc05" data-src="/projects/blc/blc05.webp" className="lazyload" />
-<img alt="blc06" data-src="/projects/blc/blc06.webp" className="lazyload" />
-<img alt="blc07" data-src="/projects/blc/blc07.webp" className="lazyload" />
-<img alt="blc08" data-src="/projects/blc/blc08.webp" className="lazyload" />
+<img alt="blc02" data-src="/projects/blc/blc02.jpg" className="lazyload" />
+<img alt="blc03" data-src="/projects/blc/blc03.jpg" className="lazyload" />
+<img alt="blc04" data-src="/projects/blc/blc04.jpg" className="lazyload" />
+<img alt="blc05" data-src="/projects/blc/blc05.jpg" className="lazyload" />
+<img alt="blc06" data-src="/projects/blc/blc06.jpg" className="lazyload" />
+<img alt="blc07" data-src="/projects/blc/blc07.jpg" className="lazyload" />
+<img alt="blc08" data-src="/projects/blc/blc08.jpg" className="lazyload" />
 
 </section>

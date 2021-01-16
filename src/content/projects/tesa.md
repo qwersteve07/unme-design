@@ -4,7 +4,7 @@ titleCn: 亞太商務加速器
 tags: ["cis", "2d"]
 define: 電商企業形象設計 ｜ 品牌識別設計
 description: "創業者都希望飛往自己所設想的宇宙中，然而找到啟動時所需要的巨大能量，是非常重要的。在這樣的過程中，TESA所扮演的是跨國際電商教育品牌。"
-thumbnail: "/projects/tesa/tesa01.webp"
+thumbnail: "/projects/tesa/tesa01.jpg"
 contain: 理念規劃 ｜ 品牌標誌設計 | 品牌理念溝通 |  相關延伸物設計 | 品牌識別相關諮詢
 priority: 6
 ---
@@ -25,9 +25,9 @@ priority: 6
 
 <section>
 
-<img alt="tesa02" data-src="/projects/tesa/tesa02.webp" className="lazyload" />
-<img alt="tesa03" data-src="/projects/tesa/tesa03.webp" className="lazyload" />
-<img alt="tesa04" data-src="/projects/tesa/tesa04.webp" className="lazyload" />
-<img alt="tesa05" data-src="/projects/tesa/tesa05.webp" className="lazyload" />
+<img alt="tesa02" data-src="/projects/tesa/tesa02.jpg" className="lazyload" />
+<img alt="tesa03" data-src="/projects/tesa/tesa03.jpg" className="lazyload" />
+<img alt="tesa04" data-src="/projects/tesa/tesa04.jpg" className="lazyload" />
+<img alt="tesa05" data-src="/projects/tesa/tesa05.jpg" className="lazyload" />
 
 </section>

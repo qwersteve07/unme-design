@@ -4,7 +4,7 @@ titleCn: 台茂店
 tags: ["interior", "3d"]
 define: 懶骨頭沙發品牌 ｜ 百貨專櫃設計
 description: "一連經手Yogibo在台茂、新竹、桃園、台南、台中的多點專櫃長期規劃後，我們利用在不同點為上的佈局與工程規劃，開始鎖定在消費者行為與多彩產品下的專櫃風格創造，來創造專屬「悠式生活」的品牌空間。"
-thumbnail: "/projects/yogibo-taimall/yogibo-taimall01.webp"
+thumbnail: "/projects/yogibo-taimall/yogibo-taimall01.jpg"
 contain: 櫃位設計 | 視覺設計 | 風格定位 | 市場調查分析 ｜ 動線行為規劃 ｜ 產品陳列優化
 priority: 10
 ---
@@ -25,18 +25,18 @@ priority: 10
 
 <section>
 
-<img alt="yogibo-taimall02" data-src="/projects/yogibo-taimall/yogibo-taimall02.webp" className="lazyload" />
-<img alt="yogibo-taimall03" data-src="/projects/yogibo-taimall/yogibo-taimall03.webp" className="lazyload" />
-<img alt="yogibo-taimall04" data-src="/projects/yogibo-taimall/yogibo-taimall04.webp" className="lazyload" />
-<img alt="yogibo-taimall05" data-src="/projects/yogibo-taimall/yogibo-taimall05.webp" className="lazyload" />
-<img alt="yogibo-taimall06" data-src="/projects/yogibo-taimall/yogibo-taimall06.webp" className="lazyload" />
-<img alt="yogibo-taimall07" data-src="/projects/yogibo-taimall/yogibo-taimall07.webp" className="lazyload" />
-<img alt="yogibo-taimall08" data-src="/projects/yogibo-taimall/yogibo-taimall08.webp" className="lazyload" />
-<img alt="yogibo-taimall09" data-src="/projects/yogibo-taimall/yogibo-taimall09.webp" className="lazyload" />
-<img alt="yogibo-taimall10" data-src="/projects/yogibo-taimall/yogibo-taimall10.webp" className="lazyload" />
-<img alt="yogibo-taimall11" data-src="/projects/yogibo-taimall/yogibo-taimall11.webp" className="lazyload" />
-<img alt="yogibo-taimall12" data-src="/projects/yogibo-taimall/yogibo-taimall12.webp" className="lazyload" />
-<img alt="yogibo-taimall13" data-src="/projects/yogibo-taimall/yogibo-taimall13.webp" className="lazyload" />
-<img alt="yogibo-taimall14" data-src="/projects/yogibo-taimall/yogibo-taimall14.webp" className="lazyload" />
+<img alt="yogibo-taimall02" data-src="/projects/yogibo-taimall/yogibo-taimall02.jpg" className="lazyload" />
+<img alt="yogibo-taimall03" data-src="/projects/yogibo-taimall/yogibo-taimall03.jpg" className="lazyload" />
+<img alt="yogibo-taimall04" data-src="/projects/yogibo-taimall/yogibo-taimall04.jpg" className="lazyload" />
+<img alt="yogibo-taimall05" data-src="/projects/yogibo-taimall/yogibo-taimall05.jpg" className="lazyload" />
+<img alt="yogibo-taimall06" data-src="/projects/yogibo-taimall/yogibo-taimall06.jpg" className="lazyload" />
+<img alt="yogibo-taimall07" data-src="/projects/yogibo-taimall/yogibo-taimall07.jpg" className="lazyload" />
+<img alt="yogibo-taimall08" data-src="/projects/yogibo-taimall/yogibo-taimall08.jpg" className="lazyload" />
+<img alt="yogibo-taimall09" data-src="/projects/yogibo-taimall/yogibo-taimall09.jpg" className="lazyload" />
+<img alt="yogibo-taimall10" data-src="/projects/yogibo-taimall/yogibo-taimall10.jpg" className="lazyload" />
+<img alt="yogibo-taimall11" data-src="/projects/yogibo-taimall/yogibo-taimall11.jpg" className="lazyload" />
+<img alt="yogibo-taimall12" data-src="/projects/yogibo-taimall/yogibo-taimall12.jpg" className="lazyload" />
+<img alt="yogibo-taimall13" data-src="/projects/yogibo-taimall/yogibo-taimall13.jpg" className="lazyload" />
+<img alt="yogibo-taimall14" data-src="/projects/yogibo-taimall/yogibo-taimall14.jpg" className="lazyload" />
 
 </section>

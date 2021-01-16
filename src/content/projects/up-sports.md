@@ -4,7 +4,7 @@ titleCn:
 tags: ["cis", "2d"]
 define: 運動補給品牌｜形象重塑規劃設計
 description: "UP運動吃沙拉，伴隨產品的進化迎來向上突破的改變。"
-thumbnail: "/projects/up-sports/up-sports01.webp"
+thumbnail: "/projects/up-sports/up-sports01.jpg"
 contain: 品牌理念 ｜ 品牌重塑 ｜ 標誌設計 ｜ 品牌策略 ｜ 品牌顧問 ｜ 品牌形象規劃 ｜ 相關延伸物設計
 priority: 10
 ---
@@ -23,7 +23,7 @@ UP 運動吃沙拉與我們見面的第一天，就是場革命的開始。
 
 品牌重塑有非常多種面，我們不難再大企業身上看見品牌標誌轉變顏色、線條的例子。這種轉變往往也切分成「產品」與「營運點」的轉型，也就是說這往往不是「設計層面」這麼簡單的事情。
 
-<img alt="up-sports02" data-src="/projects/up-sports/up-sports02.webp" className="lazyload" />
+<img alt="up-sports02" data-src="/projects/up-sports/up-sports02.jpg" className="lazyload" />
 
 2020 年的 UP 運動吃沙拉已經準備好迎接新的開始，從營養補給的沙拉到雞胸肉、牛肉等運動補給包，一路耀進入到全能量補給的產品策略，從蛋白粉、能量膠囊、能量棒等等產品面擴展，正式進入他們希望提供全方位運動補給的企業狀態。
 
@@ -39,7 +39,7 @@ UP 運動吃沙拉與我們見面的第一天，就是場革命的開始。
 
 但萬萬沒想到，這是個錯誤的開始
 
-<img alt="up-sports03" data-src="/projects/up-sports/up-sports03.webp" className="lazyload" />
+<img alt="up-sports03" data-src="/projects/up-sports/up-sports03.jpg" className="lazyload" />
 
 </section>
 
@@ -55,7 +55,7 @@ UP 運動吃沙拉與我們見面的第一天，就是場革命的開始。
 
 比起完美的呈現，原來 up 的理念是建立在幫助運動員產生突破與堅持下去的身心狀態。
 
-<img alt="up-sports04" data-src="/projects/up-sports/up-sports04.webp" className="lazyload" />
+<img alt="up-sports04" data-src="/projects/up-sports/up-sports04.jpg" className="lazyload" />
 
 在多次的聚焦與創辦訪談後，我們發現 UP 從來就不是運動生涯裡的主角，而是不可或缺的輔助者，所有的設計面都往著崇高、爆發、獲勝的面向規劃。
 
@@ -73,13 +73,13 @@ UP 運動吃沙拉與我們見面的第一天，就是場革命的開始。
 
 比起閃亮的故事或標誌，up sports 更有著穩定提供補給的感受，協助每個運動的人，一起成為更好的自己。
 
-<img alt="up-sports02" data-src="/projects/up-sports/up-sports05.webp" className="lazyload" />
-<img alt="up-sports06" data-src="/projects/up-sports/up-sports06.webp" className="lazyload" />
-<img alt="up-sports07" data-src="/projects/up-sports/up-sports07.webp" className="lazyload" />
+<img alt="up-sports02" data-src="/projects/up-sports/up-sports05.jpg" className="lazyload" />
+<img alt="up-sports06" data-src="/projects/up-sports/up-sports06.jpg" className="lazyload" />
+<img alt="up-sports07" data-src="/projects/up-sports/up-sports07.jpg" className="lazyload" />
 
 ## ② 品牌重塑的內斂與洗煉
 
-<img alt="up-sports08" data-src="/projects/up-sports/up-sports08.webp" className="lazyload" />
+<img alt="up-sports08" data-src="/projects/up-sports/up-sports08.jpg" className="lazyload" />
 
 在 rebrand 的過程裡，我們將品牌的衝擊感降低，隨著產品的多元化設計出直觀、簡單、但含有深厚含義的標誌規劃，並加深其在每個產品面上的應用向，透過情境打造 up sports 的品牌感受。
 
@@ -89,9 +89,9 @@ UP 運動吃沙拉與我們見面的第一天，就是場革命的開始。
 
 讓 up sports 那種內斂的情感表現出更加平易近人與維持熱情的感受。成為運動生活中，那些在疲憊之餘唾手可得的能量，陪伴每個人成長、前進、向上成為更好的自己。
 
-<img alt="up-sports09" data-src="/projects/up-sports/up-sports09.webp" className="lazyload" />
-<img alt="up-sports10" data-src="/projects/up-sports/up-sports10.webp" className="lazyload" />
-<!-- <img alt="up-sports11" data-src="/projects/up-sports/up-sports11.webp" className="lazyload" /> -->
-<img alt="up-sports12" data-src="/projects/up-sports/up-sports12.webp" className="lazyload" />
+<img alt="up-sports09" data-src="/projects/up-sports/up-sports09.jpg" className="lazyload" />
+<img alt="up-sports10" data-src="/projects/up-sports/up-sports10.jpg" className="lazyload" />
+<!-- <img alt="up-sports11" data-src="/projects/up-sports/up-sports11.jpg" className="lazyload" /> -->
+<img alt="up-sports12" data-src="/projects/up-sports/up-sports12.jpg" className="lazyload" />
 
 </section>

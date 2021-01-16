@@ -4,7 +4,7 @@ titleCn: 西門航站商旅
 tags: ["cis", "2d"]
 define: 商務旅館 ｜ 品牌形象規劃設計
 description: "商務旅館的價值，不一定在於要金碧輝煌的高等級享受，而是在忙碌的過程中得以喘氣，被記憶，不用擔心繁瑣的安排。"
-thumbnail: "/projects/ximen-airline-hotel/ximen-airline-hotel01.webp"
+thumbnail: "/projects/ximen-airline-hotel/ximen-airline-hotel01.jpg"
 contain: 理念規劃 ｜ 品牌標誌設計 | 品牌理念溝通 | 相關延伸物設計 | 品牌識別相關諮詢
 priority: 4
 ---
@@ -25,10 +25,10 @@ priority: 4
 
 <section>
 
-<img alt="ximen-airline-hotel02" data-src="/projects/ximen-airline-hotel/ximen-airline-hotel02.webp" className="lazyload" />
-<img alt="ximen-airline-hotel03" data-src="/projects/ximen-airline-hotel/ximen-airline-hotel03.webp" className="lazyload" />
-<img alt="ximen-airline-hotel04" data-src="/projects/ximen-airline-hotel/ximen-airline-hotel04.webp" className="lazyload" />
-<img alt="ximen-airline-hotel05" data-src="/projects/ximen-airline-hotel/ximen-airline-hotel05.webp" className="lazyload" />
-<img alt="ximen-airline-hotel06" data-src="/projects/ximen-airline-hotel/ximen-airline-hotel06.webp" className="lazyload" />
+<img alt="ximen-airline-hotel02" data-src="/projects/ximen-airline-hotel/ximen-airline-hotel02.jpg" className="lazyload" />
+<img alt="ximen-airline-hotel03" data-src="/projects/ximen-airline-hotel/ximen-airline-hotel03.jpg" className="lazyload" />
+<img alt="ximen-airline-hotel04" data-src="/projects/ximen-airline-hotel/ximen-airline-hotel04.jpg" className="lazyload" />
+<img alt="ximen-airline-hotel05" data-src="/projects/ximen-airline-hotel/ximen-airline-hotel05.jpg" className="lazyload" />
+<img alt="ximen-airline-hotel06" data-src="/projects/ximen-airline-hotel/ximen-airline-hotel06.jpg" className="lazyload" />
 
 </section>

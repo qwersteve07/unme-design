@@ -44,8 +44,11 @@ const Content = ({ Component, pageProps, ...props }) => {
   }, []);
 
   useEffect(() => {
-    const handleRouteChange = () => {
-      setSplash(true);
+    const handleRouteChange = (route) => {
+      let parseRoute = route.split("?");
+      if (!parseRoute[1]) {
+        setSplash(true);
+      }
     };
 
     const handleRouteComplete = () => {
@@ -124,7 +127,7 @@ const App = (props) => {
   );
 };
 
-App.getInitialProps = async (context) => {
+App.getInitialProps = async () => {
   await new Promise((resolve) => {
     setTimeout(resolve, 600);
   });

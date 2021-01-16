@@ -4,7 +4,7 @@ titleCn: 跪著聽音樂有限公司
 tags: ["interior", "3d"]
 define: 音樂製作公司 ｜ 錄音室設計
 description: "錄音室規劃設計，一直是空間設計中特別獨立的區塊。因為在錄製過程中，需要考量音頻震動的高低起伏後利用不同的工法與材質逐一削弱，並抵銷聲音的回音或是雜音上被收錄的問題，而延伸出許多包含浮動地板、特殊表面材質的施作方式。"
-thumbnail: "/projects/may-i-stand-up/may-i-stand-up01.webp"
+thumbnail: "/projects/may-i-stand-up/may-i-stand-up01.jpg"
 contain: 空間設計 | 工程施作 | 風格定位 | 隔音工程 ｜ 環境氛圍規劃
 priority: 9
 ---
@@ -25,16 +25,16 @@ priority: 9
 
 <section>
 
-<img alt="may-i-stand-up02" data-src="/projects/may-i-stand-up/may-i-stand-up02.webp" className="lazyload" />
-<img alt="may-i-stand-up03" data-src="/projects/may-i-stand-up/may-i-stand-up03.webp" className="lazyload" />
-<img alt="may-i-stand-up04" data-src="/projects/may-i-stand-up/may-i-stand-up04.webp" className="lazyload" />
-<img alt="may-i-stand-up05" data-src="/projects/may-i-stand-up/may-i-stand-up05.webp" className="lazyload" />
-<img alt="may-i-stand-up06" data-src="/projects/may-i-stand-up/may-i-stand-up06.webp" className="lazyload" />
-<img alt="may-i-stand-up07" data-src="/projects/may-i-stand-up/may-i-stand-up07.webp" className="lazyload" />
-<img alt="may-i-stand-up02" data-src="/projects/may-i-stand-up/may-i-stand-up08.webp" className="lazyload" />
-<img alt="may-i-stand-up04" data-src="/projects/may-i-stand-up/may-i-stand-up09.webp" className="lazyload" />
-<img alt="may-i-stand-up05" data-src="/projects/may-i-stand-up/may-i-stand-up10.webp" className="lazyload" />
-<img alt="may-i-stand-up06" data-src="/projects/may-i-stand-up/may-i-stand-up11.webp" className="lazyload" />
-<img alt="may-i-stand-up07" data-src="/projects/may-i-stand-up/may-i-stand-up12.webp" className="lazyload" />
+<img alt="may-i-stand-up02" data-src="/projects/may-i-stand-up/may-i-stand-up02.jpg" className="lazyload" />
+<img alt="may-i-stand-up03" data-src="/projects/may-i-stand-up/may-i-stand-up03.jpg" className="lazyload" />
+<img alt="may-i-stand-up04" data-src="/projects/may-i-stand-up/may-i-stand-up04.jpg" className="lazyload" />
+<img alt="may-i-stand-up05" data-src="/projects/may-i-stand-up/may-i-stand-up05.jpg" className="lazyload" />
+<img alt="may-i-stand-up06" data-src="/projects/may-i-stand-up/may-i-stand-up06.jpg" className="lazyload" />
+<img alt="may-i-stand-up07" data-src="/projects/may-i-stand-up/may-i-stand-up07.jpg" className="lazyload" />
+<img alt="may-i-stand-up02" data-src="/projects/may-i-stand-up/may-i-stand-up08.jpg" className="lazyload" />
+<img alt="may-i-stand-up04" data-src="/projects/may-i-stand-up/may-i-stand-up09.jpg" className="lazyload" />
+<img alt="may-i-stand-up05" data-src="/projects/may-i-stand-up/may-i-stand-up10.jpg" className="lazyload" />
+<img alt="may-i-stand-up06" data-src="/projects/may-i-stand-up/may-i-stand-up11.jpg" className="lazyload" />
+<img alt="may-i-stand-up07" data-src="/projects/may-i-stand-up/may-i-stand-up12.jpg" className="lazyload" />
 
 </section>

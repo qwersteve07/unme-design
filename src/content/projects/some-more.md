@@ -4,7 +4,7 @@ titleCn: 三毛寵物旅館
 tags: ["cis", "2d"]
 define: 連鎖寵物旅館 ｜ 連鎖品牌形象規劃設計
 description: "三毛的品牌形象，辨識狗狗品種上的特徵，產生不同店家上的品牌標誌。將寵物直接繪製成旅館也是加深在第一眼視覺中，輕易理解企業的經營內容，更可以從形體上瞭解到多點經營的方便性。"
-thumbnail: "/projects/some-more/some-more01.webp"
+thumbnail: "/projects/some-more/some-more01.jpg"
 contain: 品牌溝通 ｜ 母子品牌規劃 ｜ 相關延伸物設計 ｜ 市場分析與調查 ｜ 空間視覺媒合
 priority: 4
 ---
@@ -23,9 +23,9 @@ priority: 4
 
 <section>
 
-<img alt="some-more02" data-src="/projects/some-more/some-more02.webp" className="lazyload" />
-<img alt="some-more03" data-src="/projects/some-more/some-more03.webp" className="lazyload" />
-<img alt="some-more04" data-src="/projects/some-more/some-more04.webp" className="lazyload" />
-<img alt="some-more05" data-src="/projects/some-more/some-more05.webp" className="lazyload" />
+<img alt="some-more02" data-src="/projects/some-more/some-more02.jpg" className="lazyload" />
+<img alt="some-more03" data-src="/projects/some-more/some-more03.jpg" className="lazyload" />
+<img alt="some-more04" data-src="/projects/some-more/some-more04.jpg" className="lazyload" />
+<img alt="some-more05" data-src="/projects/some-more/some-more05.jpg" className="lazyload" />
 
 </section>

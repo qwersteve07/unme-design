@@ -287,7 +287,7 @@ const Projects = () => {
   const projectsData = [
     {
       id: "up-sports",
-      image: "/projects/up-sports/up-sports01.webp",
+      image: "/projects/up-sports/up-sports01.jpg",
       name: "UP SPORTS",
       tags: ["cis", "2d"],
       define: "健身沙拉品牌 | 品牌設計",
@@ -296,7 +296,7 @@ const Projects = () => {
 
     {
       id: "yogibo-xinyi",
-      image: "/projects/yogibo-xinyi/yogibo-xinyi01.webp",
+      image: "/projects/yogibo-xinyi/yogibo-xinyi01.jpg",
       name: "YOGIBO 信義店",
       tags: ["interior", "3d"],
       define: "懶骨頭沙發品牌 | 百貨專櫃設計",
@@ -305,7 +305,7 @@ const Projects = () => {
     },
     {
       id: "the-misanthrope-society",
-      image: "/projects/the-misanthrope-society/the-misanthrope-society14.webp",
+      image: "/projects/the-misanthrope-society/the-misanthrope-society14.jpg",
       name: "厭世會社咖啡餐酒館",
       tags: ["interior", "3d"],
       define: "商業空間設計 | 餐飲空間設計",
@@ -314,7 +314,7 @@ const Projects = () => {
     },
     {
       id: "grilled-sendwish",
-      image: "/projects/grilled-sendwish/grilled-sendwish01.webp",
+      image: "/projects/grilled-sendwish/grilled-sendwish01.jpg",
       name: "格里歐三明治",
       tags: ["cis", "2d"],
       define: "早餐品牌 | 品牌設計",
@@ -328,7 +328,7 @@ const Projects = () => {
       <div className={styles.top}>
         <div className={styles.image}>
           <img
-            data-src="/projects/voicetube/voicetube08.webp"
+            data-src="/projects/voicetube/voicetube08.jpg"
             className="lazyload"
             alt="voicetube"
           />

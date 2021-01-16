@@ -136,31 +136,31 @@ const About = () => {
   const projectsData = [
     {
       id: "voicetube",
-      image: "/projects/voicetube/voicetube08.webp",
+      image: "/projects/voicetube/voicetube08.jpg",
       tags: ["space-branding", "3d"],
       name: "VOICETUBE",
     },
     {
       id: "yogibo-xinyi",
-      image: "/projects/yogibo-xinyi/yogibo-xinyi01.webp",
+      image: "/projects/yogibo-xinyi/yogibo-xinyi01.jpg",
       tags: ["interior", "3d"],
       name: "YOGIBO 信義店",
     },
     {
       id: "the-misanthrope-society",
-      image: "/projects/the-misanthrope-society/the-misanthrope-society15.webp",
+      image: "/projects/the-misanthrope-society/the-misanthrope-society15.jpg",
       tags: ["interior", "3d"],
       name: "厭世會社咖啡餐酒館",
     },
     {
       id: "grilled-sendwish",
-      image: "/projects/grilled-sendwish/grilled-sendwish01.webp",
+      image: "/projects/grilled-sendwish/grilled-sendwish01.jpg",
       tags: ["cis", "2d"],
       name: "格里歐三明治",
     },
     {
       id: "up",
-      image: "/projects/up-sports/up-sports01.webp",
+      image: "/projects/up-sports/up-sports01.jpg",
       tags: ["cis", "2d"],
       name: "UP SPORTS",
     },

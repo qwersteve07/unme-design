@@ -4,7 +4,7 @@ titleCn: 東燁數位行銷
 tags: ["cis", "2d"]
 define: 行銷公司企業形象設計 ｜ 品牌識別設計
 description: "東燁的理念，是希望藉由行銷讓企業變得更好，用良幣驅逐劣幣的方式改變台灣的社會環境。就像恆星的匯聚過程一樣，將舊時代不必要的元素自然的演化淘汰，用溫柔的進化方式，慢慢形塑傳統產業的新生命。"
-thumbnail: "/projects/dongYe/dongYe01.webp"
+thumbnail: "/projects/dongYe/dongYe01.jpg"
 contain: 理念規劃 ｜ 品牌標誌設計 | 品牌理念溝通 | 相關延伸物設計 | 品牌識別相關諮詢
 priority: 7
 ---
@@ -25,10 +25,10 @@ priority: 7
 
 <section>
 
-<img alt="dongYe02" data-src="/projects/dongYe/dongYe02.webp" className="lazyload" />
-<img alt="dongYe03" data-src="/projects/dongYe/dongYe03.webp" className="lazyload" />
-<img alt="dongYe04" data-src="/projects/dongYe/dongYe04.webp" className="lazyload" />
-<img alt="dongYe05" data-src="/projects/dongYe/dongYe05.webp" className="lazyload" />
-<img alt="dongYe06" data-src="/projects/dongYe/dongYe06.webp" className="lazyload" />
+<img alt="dongYe02" data-src="/projects/dongYe/dongYe02.jpg" className="lazyload" />
+<img alt="dongYe03" data-src="/projects/dongYe/dongYe03.jpg" className="lazyload" />
+<img alt="dongYe04" data-src="/projects/dongYe/dongYe04.jpg" className="lazyload" />
+<img alt="dongYe05" data-src="/projects/dongYe/dongYe05.jpg" className="lazyload" />
+<img alt="dongYe06" data-src="/projects/dongYe/dongYe06.jpg" className="lazyload" />
 
 </section>

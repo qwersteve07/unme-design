@@ -1,8 +1,6 @@
 import Link from "next/link";
 import { useRouter } from "next/router";
-import React, { useEffect } from "react";
-import { useSelector, useDispatch } from "react-redux";
-import { SET_FILTER } from "redux/reducer/projects";
+import React, { useEffect, useState } from "react";
 import classnames from "classnames/bind";
 import fs from "fs";
 import matter from "gray-matter";
@@ -37,9 +35,15 @@ const Filter = ({ currentFilter, data, onSelect }) => {
     );
   }
   return data.map((filter) => {
+    const active = () => {
+      if (filter.id === "all") {
+        return currentFilter === filter.id || currentFilter === "";
+      }
+      return currentFilter === filter.id;
+    };
     const filterClass = cx({
       filter: true,
-      active: currentFilter === filter.id,
+      active: active(),
     });
 
     return (
@@ -56,16 +60,54 @@ const Filter = ({ currentFilter, data, onSelect }) => {
 };
 
 const Projects = ({ projectsData }) => {
-  const state = useSelector((state) => state.projectsReducer);
-  const dispatch = useDispatch();
   const router = useRouter();
+  const [loading, setLoading] = useState(false);
+  const [currentFilter, setCurrentFilter] = useState("");
 
   useEffect(() => {
-    let subPath = router.asPath.split("/")[2] || "";
-    if (subPath) {
-      dispatch({ type: SET_FILTER, payload: subPath });
-    }
-  }, []);
+    let { catag } = router.query;
+    if (catag) setCurrentFilter(catag);
+  }, [router.query.catag]);
+
+  useEffect(() => {
+    if (!currentFilter) return;
+    setLoading(true);
+    let loaded = setTimeout(() => {
+      setLoading(false);
+    }, 500);
+
+    return () => {
+      clearTimeout(loaded);
+    };
+  }, [currentFilter]);
+
+  const filters = [
+    {
+      id: "all",
+      nameEn: "All Projects",
+      nameCn: "全部",
+    },
+    {
+      id: "cis",
+      nameEn: "CIS Design",
+      nameCn: "品牌設計",
+    },
+    {
+      id: "interior",
+      nameEn: "Interior Deisgn",
+      nameCn: "室內設計",
+    },
+    {
+      id: "literature",
+      nameEn: "Product Literature Design",
+      nameCn: "文宣設計",
+    },
+    {
+      id: "space-branding",
+      nameEn: "Space Branding Design",
+      nameCn: "品牌空間設計",
+    },
+  ];
 
   const moreData = [
     {
@@ -88,15 +130,37 @@ const Projects = ({ projectsData }) => {
     return (
       <div className={styles["filter-container"]}>
         <Filter
-          data={state.filters}
+          data={filters}
           onSelect={(id) => {
-            router.push("/projects", `/projects/${id === "all" ? "" : id}`);
-            setTimeout(() => {
-              dispatch({ type: SET_FILTER, payload: id });
-            }, 400);
+            router.push(
+              {
+                pathname: "/projects",
+                query: { catag: id },
+              },
+              undefined,
+              { shallow: true }
+            );
+            setCurrentFilter(id);
           }}
-          currentFilter={state.currentFilter}
+          currentFilter={currentFilter}
         />
+      </div>
+    );
+  };
+
+  const Loading = () => {
+    const loadingClass = cx({
+      loadingWrapper: true,
+      show: loading,
+    });
+    return (
+      <div className={loadingClass}>
+        <div className={styles.loading}>
+          <div />
+          <div />
+          <div />
+          <div />
+        </div>
       </div>
     );
   };
@@ -108,9 +172,13 @@ const Projects = ({ projectsData }) => {
     let filteredProjectData = sortData.filter((data) => {
       let { tags } = data.frontMatter;
       const isFilteredByMain =
-        state.currentFilter === "all" || state.currentFilter === tags[0];
+        currentFilter === "" ||
+        currentFilter === "all" ||
+        currentFilter === tags[0];
       return isFilteredByMain;
     });
+
+    if (loading) return <Loading />;
 
     if (filteredProjectData.length === 0)
       return <div className={styles.empty}>專案進行中，敬請期待</div>;

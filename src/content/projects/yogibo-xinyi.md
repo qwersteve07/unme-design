@@ -4,7 +4,7 @@ titleCn: 信義店
 tags: ["interior", "3d"]
 define: 懶骨頭沙發品牌 ｜ 百貨專櫃設計
 description: "今年的信義專櫃，我們協助Yogibo進入品牌空間的第二個階段：影響力。過往執行的Yogibo台茂、新竹、桃園、台南、台中的多點專櫃長期規劃後，我們利用在不同點為上的佈局與工程規劃，開始鎖定在消費者行為與多彩產品下的專櫃風格創造，來創造專屬「悠式生活」的品牌空間。"
-thumbnail: "/projects/yogibo-xinyi/yogibo-xinyi01.webp"
+thumbnail: "/projects/yogibo-xinyi/yogibo-xinyi01.jpg"
 contain: 櫃位設計 | 視覺設計 | 風格定位 | 市場調查分析 ｜ 動線行為規劃 ｜ 產品陳列優化
 priority: 9
 ---
@@ -49,18 +49,18 @@ priority: 9
 
 <section>
 
-<img alt="yogibo-xinyi02" data-src="/projects/yogibo-xinyi/yogibo-xinyi02.webp" className="lazyload" />
-<img alt="yogibo-xinyi03" data-src="/projects/yogibo-xinyi/yogibo-xinyi03.webp" className="lazyload" />
-<img alt="yogibo-xinyi04" data-src="/projects/yogibo-xinyi/yogibo-xinyi04.webp" className="lazyload" />
-<img alt="yogibo-xinyi05" data-src="/projects/yogibo-xinyi/yogibo-xinyi05.webp" className="lazyload" />
-<img alt="yogibo-xinyi06" data-src="/projects/yogibo-xinyi/yogibo-xinyi06.webp" className="lazyload" />
-<img alt="yogibo-xinyi07" data-src="/projects/yogibo-xinyi/yogibo-xinyi07.webp" className="lazyload" />
-<img alt="yogibo-xinyi08" data-src="/projects/yogibo-xinyi/yogibo-xinyi08.webp" className="lazyload" />
-<img alt="yogibo-xinyi09" data-src="/projects/yogibo-xinyi/yogibo-xinyi09.webp" className="lazyload" />
-<img alt="yogibo-xinyi10" data-src="/projects/yogibo-xinyi/yogibo-xinyi10.webp" className="lazyload" />
-<img alt="yogibo-xinyi11" data-src="/projects/yogibo-xinyi/yogibo-xinyi11.webp" className="lazyload" />
-<img alt="yogibo-xinyi12" data-src="/projects/yogibo-xinyi/yogibo-xinyi12.webp" className="lazyload" />
-<img alt="yogibo-xinyi13" data-src="/projects/yogibo-xinyi/yogibo-xinyi13.webp" className="lazyload" />
-<img alt="yogibo-xinyi14" data-src="/projects/yogibo-xinyi/yogibo-xinyi14.webp" className="lazyload" />
+<img alt="yogibo-xinyi02" data-src="/projects/yogibo-xinyi/yogibo-xinyi02.jpg" className="lazyload" />
+<img alt="yogibo-xinyi03" data-src="/projects/yogibo-xinyi/yogibo-xinyi03.jpg" className="lazyload" />
+<img alt="yogibo-xinyi04" data-src="/projects/yogibo-xinyi/yogibo-xinyi04.jpg" className="lazyload" />
+<img alt="yogibo-xinyi05" data-src="/projects/yogibo-xinyi/yogibo-xinyi05.jpg" className="lazyload" />
+<img alt="yogibo-xinyi06" data-src="/projects/yogibo-xinyi/yogibo-xinyi06.jpg" className="lazyload" />
+<img alt="yogibo-xinyi07" data-src="/projects/yogibo-xinyi/yogibo-xinyi07.jpg" className="lazyload" />
+<img alt="yogibo-xinyi08" data-src="/projects/yogibo-xinyi/yogibo-xinyi08.jpg" className="lazyload" />
+<img alt="yogibo-xinyi09" data-src="/projects/yogibo-xinyi/yogibo-xinyi09.jpg" className="lazyload" />
+<img alt="yogibo-xinyi10" data-src="/projects/yogibo-xinyi/yogibo-xinyi10.jpg" className="lazyload" />
+<img alt="yogibo-xinyi11" data-src="/projects/yogibo-xinyi/yogibo-xinyi11.jpg" className="lazyload" />
+<img alt="yogibo-xinyi12" data-src="/projects/yogibo-xinyi/yogibo-xinyi12.jpg" className="lazyload" />
+<img alt="yogibo-xinyi13" data-src="/projects/yogibo-xinyi/yogibo-xinyi13.jpg" className="lazyload" />
+<img alt="yogibo-xinyi14" data-src="/projects/yogibo-xinyi/yogibo-xinyi14.jpg" className="lazyload" />
 
 </section>
