@@ -189,45 +189,26 @@ const Projects = ({ projectsData }) => {
         id,
       } = data;
 
-      const itemClass = cx({
-        item: true,
-        invert: key % 2 !== 0,
-      });
-
       const Title = () => {
-        const En = () => (
-          <div className={`${styles.title} ${styles.en}`}>{titleEn}</div>
-        );
-        const Cn = () => (
-          <div className={`${styles.title} ${styles.cn}`}>{titleCn}</div>
-        );
         if (titleEn && !titleCn) {
-          return <En />;
+          return titleEn;
         }
         if (!titleEn && titleCn) {
-          return <Cn />;
+          return titleCn;
         }
         return (
-          <div className={styles["title-wrapper"]}>
-            <En />
-            <Cn />
-          </div>
+          <>
+            {titleEn}｜{titleCn}
+          </>
         );
       };
 
       return (
-        <div className={itemClass} key={id}>
-          <div className={styles.info}>
-            <Title />
-            <div className={styles.tags}>
-              <Tags data={tags} />
-            </div>
-            <button>
-              <Link href={`/projects/[id]`} as={`/projects/${id}`}>
-                <a>VIEW PROJECT</a>
-              </Link>
-            </button>
+        <div className={styles.item} key={id}>
+          <div className={styles.tags}>
+            <Tags data={tags} />
           </div>
+
           <div className={styles.image}>
             <Link href={`/projects/[id]`} as={`/projects/${id}`}>
               <div className={styles.thumbnail}>
@@ -239,9 +220,16 @@ const Projects = ({ projectsData }) => {
               </div>
             </Link>
             <div className={styles.intro}>
-              <div className={styles.define}>{define}</div>
               <div className={styles.desc}>{description}</div>
             </div>
+          </div>
+
+          <div className={styles.info}>
+            <div className={styles.title}>
+              <Title />
+            </div>
+
+            <div className={styles.define}>{define}</div>
           </div>
         </div>
       );
