@@ -73,9 +73,12 @@
         letter-spacing: 2px
         +fontHindGuntur
 .tags
-    padding-bottom: 15px
     line-height: 1.5
     border-top: 1px solid white
+    border-bottom: 1px solid white
+    margin-top: 15px
+    padding: 10px 0
+    font-size: 14px
 .define
     font-size: 15px
     color: var(--sub-color-third)
@@ -92,13 +95,14 @@
     transform: translateY(30px)
     +globalTransition
     position: absolute
-    bottom: -10%
-    right: 6%
-    width: 60%
-    background: $grey-light
-    padding: 36px 33px
+    top: 100%
+    left: 0
+    width: 100%
+    height: auto
+    background: var(--main-color-third)
+    padding: 30px
     line-height: 2
-    color: $black-less
+    color: var(--sub-color)
     z-index: 1
 
    
@@ -112,15 +116,19 @@
         position: relative
         cursor: pointer
         img
+            +globalTransition
             position: absolute
             top: 0
             left: 0
             width: 100%
             height: auto
     +hover
+        .thumbnail img
+            transform: scale(1.1)
+            +globalTransition
         .intro
             transform: translateY(0)
-            opacity: 0
+            opacity: 1
             pointer-events: all
             +globalTransition
 
@@ -241,62 +249,28 @@
         font-size: 14px
         align-items: center
     .item
-        margin-bottom: 260px
-        &.invert
-            .info
-                right: 60px
-            .image .intro
-                right: 0
-                left: 0
-
-    .info
-        left: 60px
-        .title
-            font-size: 40px
-
-            .cn
-                font-size: 20px
-
-    .image
-        width: 65%
-    .intro
-        bottom: -40%
-        right: 0
-        width: 90%
-
+        width: calc((100% - 40px) / 2)
+        position: relative
+        margin: 0 40px 70px 0
+        &:nth-of-type(2n)
+            margin-right: 0
+        &:nth-of-type(3n)
+            margin-right: 40px
+        &:nth-of-type(6n)
+            margin-right: 0
 
 +mobileStyle
     .item
-        flex-direction: column-reverse
-        margin: 0 auto 100px
-        align-items: inherit;
-        &.invert
-            .info
-                text-align: left
-            .tags>div>span
-                margin-right: 30px
-                margin-left: 0
-        .tags
-            border: 0 
-            margin-bottom: 15px
-        .info
-            position: static
-            width: auto
-            .title
-                font-size: 25px
-                letter-spacing: 3px
-                margin: 20px 0 10px
-            button
-                margin: 0
-        .image
-            width: auto
-            margin: 0 -25px
-        .intro
-            display: none
-        .thunmnail
-            min-height: 100%
-            width: auto
-
+        width: 100%
+        position: relative
+        margin: 0 0 70px
+        &:nth-of-type(2n)
+            margin-right: 0
+        &:nth-of-type(3n)
+            margin-right: 0
+        &:nth-of-type(6n)
+            margin-right: 0
+    
     .select-filter
         width: 100%
         padding: 10px 0
@@ -306,10 +280,7 @@
         &:focus
             outline: none
     .filter-container
-        margin-bottom: 10px
-        &.sub
-            margin-bottom: 40px
-
+        margin-bottom: 40px
 
     // post
     .post

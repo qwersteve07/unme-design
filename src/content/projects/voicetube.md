@@ -4,7 +4,7 @@ titleCn:
 tags: ["space-branding", "3d"]
 define: 商空設計 | 辦公室設計
 description: "Voicetube透過整理不同語言的資訊，再讓人們透過手機、電腦、平板來學習，創造世界的連結關係。有趣的是，在動畫裡頭的世界與Voicetube的品牌色調，不約而同的都已帶點科技感的紫色為主要空間場景，成為默契般的風格方向，協助我們創造一個專屬於Voicetube的獨特風格。"
-thumbnail: "/projects/voicetube/voicetube08.jpg"
+thumbnail: "/projects/voicetube/voicetube09.jpg"
 contain: 設計規劃 ｜ 品牌視覺連結 ｜ 企業風格訂製 ｜ 施工規劃 ｜ 坪效規劃 ｜ 設計概念
 priority: 10
 ---

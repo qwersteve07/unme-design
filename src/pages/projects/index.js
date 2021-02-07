@@ -205,10 +205,6 @@ const Projects = ({ projectsData }) => {
 
       return (
         <div className={styles.item} key={id}>
-          <div className={styles.tags}>
-            <Tags data={tags} />
-          </div>
-
           <div className={styles.image}>
             <Link href={`/projects/[id]`} as={`/projects/${id}`}>
               <div className={styles.thumbnail}>
@@ -230,6 +226,9 @@ const Projects = ({ projectsData }) => {
             </div>
 
             <div className={styles.define}>{define}</div>
+            <div className={styles.tags}>
+              <Tags data={tags} />
+            </div>
           </div>
         </div>
       );

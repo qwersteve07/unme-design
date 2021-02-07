@@ -4,7 +4,7 @@ titleCn: 厭世會社咖啡餐酒館
 tags: ["interior", "3d"]
 define: 商業空間設計 ｜ 餐飲空間設計
 description: "設計與社會結構的關係，其實是深根蒂固的。厭世會社，是一間以憂鬱患者為出發的社會企業，老闆本身所經歷的憂鬱病史，促使他建立這個地方，提供病友們喘息的空間，甚至創辦病友的交流圈，協助他們翻轉心態，重新面對人權。"
-thumbnail: "/projects/the-misanthrope-society/the-misanthrope-society01.jpg"
+thumbnail: "/projects/the-misanthrope-society/the-misanthrope-society10.jpg"
 contain: 品牌分析 ｜ 品牌視覺連結 ｜ 企業風格訂製 ｜ 3D圖面繪製 ｜ 施工規劃 ｜ 材質設計 ｜ 氛圍營造
 priority: 10
 ---
