@@ -9,7 +9,7 @@ class MyDocument extends Document {
 
   render() {
     return (
-      <Html lang="zh-Hant-TW">
+      <Html>
         <Head>
           <script src="https://smtpjs.com/v3/smtp.js" async />
           {/* Global Site Tag (gtag.js) - Google Analytics */}
