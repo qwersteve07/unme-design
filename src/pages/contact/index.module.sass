@@ -3,12 +3,15 @@
 
 .contact
     h1
+
     p
         margin-bottom: 50px
+
         +gloabalContentStyle
+
     h1
         +fontHindGuntur
-  
+
 .form
     display: flex
     flex-wrap: wrap
@@ -23,7 +26,6 @@
         outline: 0
         width: 100%
         color: var(--sub-color)
-        
 
         +themeTransition
 
@@ -51,7 +53,8 @@
     input
         height: 40px
         border-bottom: 1px solid var(--main-color-third)
-        &.name,&.company,&.phone,&.email
+
+        &.name, &.company, &.phone, &.email
             &.error
                 border-bottom-color: $unme-red
 
@@ -59,14 +62,16 @@
             +themeTransition
 
             border-bottom-color: var(--sub-color)
-        &::-webkit-calendar-picker-indicator 
+
+        &::-webkit-calendar-picker-indicator
             display: none
+
     select
         width: 100%
         padding: 10px 25px 10px 0
         border: 0
         color: var(--sub-color)
-       
+
         &:focus
             outline: none
 
@@ -105,13 +110,15 @@
         fieldset
             width: 100%
             margin: 35px 0 0
+
         textarea
             resize: vertical
+
     .bottom
         flex-direction: column
         align-items: flex-end
 
     .error-message, .success-message
-        align-self: flex-start;
+        align-self: flex-start
         margin-bottom: 20px
         position: static
