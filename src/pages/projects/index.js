@@ -184,6 +184,8 @@ const Projects = ({ projectsData }) => {
       return <div className={styles.empty}>專案進行中，敬請期待</div>;
 
     return filteredProjectData.map((data, key) => {
+      if (data.id === "soundshine-feature") return <></>;
+
       const {
         frontMatter: { titleEn, titleCn, tags, thumbnail, define, description },
         id,

@@ -93,10 +93,6 @@ const App = (props) => {
               "width=device-width,initial-scale=1, viewport-fit=cover,user-scalable=no",
           },
           {
-            name: "charset",
-            property: "UTF-8",
-          },
-          {
             name: "color-scheme",
             content: "dark",
           },

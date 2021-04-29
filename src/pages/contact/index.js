@@ -1,4 +1,4 @@
-import React, { useState, useRef, useEffect } from "react";
+import React, { useState, useRef } from "react";
 import styles from "pages/contact/index.module.sass";
 import classnames from "classnames/bind";
 import validator from "validator";
@@ -84,6 +84,7 @@ const Contact = () => {
     };
 
     if (!preCheck()) return;
+
     setLoading(true);
     setErrorMessage("");
     e.preventDefault();
@@ -106,6 +107,9 @@ const Contact = () => {
     let templateId = "template_408xf4h";
     let userID = "user_4mY5wOOGGrgwMptW1b5zE";
     formRef.current.submit();
+
+    // add google ads tracking code
+    gtag_report_conversion();
 
     emailjs
       .send(serviceId, templateId, params, userID)

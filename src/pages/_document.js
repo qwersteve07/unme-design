@@ -11,21 +11,45 @@ class MyDocument extends Document {
     return (
       <Html>
         <Head>
+          <meta charSet="utf-8" />
+          <meta
+            name="facebook-domain-verification"
+            content="lzu1mlvunf7uxyp0lxxm5ozrc0d4ka"
+          />
           <script src="https://smtpjs.com/v3/smtp.js" async />
           {/* Global Site Tag (gtag.js) - Google Analytics */}
           <script
             async
             src="https://www.googletagmanager.com/gtag/js?id=UA-130589250-1"
           ></script>
+          {/* Global site tag (gtag.js) - Google Ads: 746713809 */}
+          <script
+            async
+            src="https://www.googletagmanager.com/gtag/js?id=AW-746713809"
+          ></script>
+
           <script
             dangerouslySetInnerHTML={{
               __html: `
-              window.dataLayer = window.dataLayer || []; function gtag()
-              {dataLayer.push(arguments)}
-              gtag('js', new Date()); gtag('config', 'UA-130589250-1');
+              window.dataLayer = window.dataLayer || []; 
+              function gtag(){dataLayer.push(arguments)}
+              gtag('js', new Date()); 
+              gtag('config', 'UA-130589250-1');
+              gtag('config', 'AW-746713809');
           `,
             }}
           />
+
+          {/* <!-- Event snippet for 提交待開發客戶表單 conversion page In your html page, add the snippet and call gtag_report_conversion when someone clicks on the chosen link or button. -->  */}
+          <script
+            dangerouslySetInnerHTML={{
+              __html: `
+                  function gtag_report_conversion(url) { var callback = function () { if (typeof(url) != 'undefined') { window.location = url; } }; 
+                  gtag('event', 'conversion', { 'send_to': 'AW-746713809/qH2NCOTljIECENHlh-QC', 'event_callback': callback }); 
+                  return false; } 
+              `,
+            }}
+          ></script>
 
           {/* <!-- Facebook Pixel Code --> */}
           <script
